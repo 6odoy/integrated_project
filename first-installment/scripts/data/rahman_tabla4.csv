@@ -1,0 +1,5 @@
+red,precision,sensibilidad,especificidad,f1
+AlexNet,,,,
+ResNet18,,,,
+DenseNet201,98.0,99.0,97.0,98.1
+SqueezeNet,,,,
