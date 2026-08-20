@@ -1,0 +1,22 @@
+{
+  "semilla": 42,
+  "espec_min": 0.8,
+  "n_boot": 1000,
+  "prevalencia_test": 0.7372505543237251,
+  "hiperparametros": {
+    "Regresion logistica + PCA": {
+      "pca_n": 32,
+      "C": 10.0
+    },
+    "Random Forest": {
+      "n_estimators": 600,
+      "max_depth": null,
+      "min_samples_leaf": 1
+    },
+    "MLP minimo (64 unidades)": {
+      "hidden": 64,
+      "epocas_utiles": 497,
+      "pos_weight": 0.3694564998149872
+    }
+  }
+}

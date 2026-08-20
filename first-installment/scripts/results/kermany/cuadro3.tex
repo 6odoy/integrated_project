@@ -1,0 +1,13 @@
+% Cuadro 3 - generado por src/baseline.py
+\begin{tabular}{lccccc}
+\hline
+\textbf{Modelo} & \textbf{Sens. @esp$\geq$0,80} & \textbf{Especif.} & \textbf{AUC-ROC} & \textbf{AUPRC} & \textbf{F1} \\
+\hline
+Trivial (clase mayoritaria = 1) & 1,000 [1,000; 1,000] & 0,000 [0,000; 0,000] & 0,500 [0,500; 0,500] & 0,737 [0,699; 0,774] & 0,849 [0,823; 0,873] \\
+Regresion logistica + PCA & 0,732 [0,692; 0,770] & 0,751 [0,701; 0,807] & 0,802 [0,774; 0,832] & 0,923 [0,900; 0,943] & 0,804 [0,773; 0,832] \\
+Random Forest & 0,937 [0,918; 0,955] & 0,759 [0,707; 0,815] & 0,947 [0,932; 0,961] & 0,981 [0,973; 0,987] & 0,926 [0,910; 0,942] \\
+MLP minimo (64 unidades) & 0,917 [0,896; 0,939] & 0,802 [0,751; 0,852] & 0,941 [0,925; 0,957] & 0,979 [0,970; 0,985] & 0,923 [0,906; 0,939] \\
+\hline
+\multicolumn{6}{l}{\footnotesize Prevalencia en prueba: 0,737. El AUPRC de un modelo sin senal tiende a la prevalencia.} \\
+\hline
+\end{tabular}
