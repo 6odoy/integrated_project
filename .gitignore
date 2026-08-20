@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+ChestXRay2017.zip
+data/chest_xray/
+data/manifest_kermany.csv
+results/kermany/particion.csv
