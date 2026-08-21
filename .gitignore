@@ -1,6 +1,11 @@
 .venv/
 __pycache__/
+
 ChestXRay2017.zip
-data/chest_xray/
-data/manifest_kermany.csv
-results/kermany/particion.csv
+first-installment/scripts/data/chest_xray/
+first-installment/scripts/data/manifest_kermany.csv
+first-installment/scripts/results/kermany/particion.csv
+
+**/__MACOSX/
+**/._*
+*.DS_Store
