@@ -1,0 +1,58 @@
+\documentclass[11pt]{article}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx,booktabs,array,amsmath,hyperref}
+\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
+\addbibresource{referencias.bib}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+\title{Proyecto integrador: detección de neumonía en radiografías de tórax\\\large Segunda entrega --- Fase 2: replicación y traslado}
+\author{Francy Umbarila \and Juan Delgado \and Andrés Escobar}
+\date{Bogotá, D. C. --- septiembre de 2026}
+\begin{document}
+\maketitle
+\section{Objetivo y protocolo congelado}
+Se replica de forma trazable el enfoque de transferencia de \textcite{rahman2020} para clasificación binaria por imagen: neumonía ($1$) frente a sin hallazgos ($0$). El desarrollo usa Kermany, radiografías pediátricas de Guangzhou \parencite{kermany2018}; BRAX es únicamente una prueba externa de adultos brasileños \parencite{reis2022a}. La métrica decisoria es sensibilidad de neumonía con especificidad mínima de 0,80. AUC-ROC, AUPRC, F1, matriz de confusión, latencia e intervalos bootstrap al 95\% por paciente complementan la evaluación.
+
+El manifiesto contiene \texttt{patient\_id}, \texttt{study\_id}, \texttt{image\_path}, \texttt{view} y \texttt{label}. Se construyó una partición estratificada 70/15/15 por paciente, semilla 42: 4.107/847/902 imágenes y 2.399/514/514 pacientes en entrenamiento/validación/prueba. El código detiene la ejecución ante cualquier paciente compartido. Como limitación de Kermany, los identificadores de pacientes normales se derivan del archivo; este supuesto se conserva y se declara, en vez de reclamar una agrupación clínica que el conjunto no ofrece.
+
+\section{Réplica y transferencia}
+La implementación usa PyTorch y DenseNet121 con pesos ImageNet. DenseNet201 era la opción inicial, pero DenseNet121 reduce el costo de CPU y memoria; por tanto, no se afirma una réplica numérica idéntica con Rahman et al., quienes usaron MATLAB, SGD, otra partición y validación cruzada. La entrada es $224\times224$, la radiografía gris se convierte a RGB y se normaliza con estadísticas ImageNet. Solo entrenamiento recibe afín aleatoria ($\pm10^\circ$, traslación y escala de 5\%); no hay aumento en validación, prueba ni BRAX.
+
+\begin{table}[h]\centering\small
+\caption{Configuración reproducible de Fase 2.}\label{tab:config}
+\begin{tabular}{ll}\toprule
+Elemento & Decisión \\\midrule
+Arquitectura/pesos & DenseNet121 / ImageNet (reducción de DenseNet201 por cómputo)\\
+Pérdida/optimizador & BCE ponderada / Adam con $10^{-4}$ en clasificador\\
+Transferencia A & Extractor congelado; solo clasificador final\\
+Transferencia B & Clasificador y \texttt{denseblock4}; $10^{-5}$ en bloque ajustado\\
+Selección & AUC de validación, ReduceLROnPlateau y parada temprana (paciencia 5)\\
+Semillas & 42, 43 y 44; seis corridas previstas\\
+Umbral & Máxima sensibilidad con especificidad $\geq0,80$, solo validación\\\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Dinámica y evaluación interna}
+Cada corrida guarda configuración, historial por época (pérdida, AUC de entrenamiento y validación, tasa de aprendizaje y norma media de gradiente), checkpoint y predicciones con IDs. El checkpoint de AUC de validación máxima se recarga antes de fijar el umbral y evaluar una única vez el test. Así, la norma de gradiente se mide: cualquier diagnóstico de explosión o desaparición se sustentará en esa serie, no en una inferencia visual.
+
+\begin{figure}[h]\centering
+\includegraphics[width=\textwidth]{figures/training_curves.png}
+\caption{Curvas generadas automáticamente desde los historiales guardados. Si no hay corridas finalizadas, la figura lo declara explícitamente.}\label{fig:curves}
+\end{figure}
+
+\begin{table}[h]\centering\small
+\caption{Resultados internos agregados entre semillas. Este archivo se genera solo a partir de \texttt{metrics.json}.}\label{tab:results}
+\input{generated/table_results.tex}
+\end{table}
+
+La comparación final deberá contrastar la CNN con el mejor baseline de Fase 1 (Random Forest: sensibilidad 0,938 y AUPRC 0,981) en el mismo test. El criterio de éxito exige al menos cinco puntos porcentuales adicionales de sensibilidad, IC 95\% no solapados y ventaja consistente en las tres semillas. No se reajustará el test si el criterio no se cumple.
+
+\section{Traslado a BRAX y limitaciones}
+El script de BRAX filtra adultos con proyección PA/AP y casos binarios inequívocos: neumonía positiva frente a ``sin hallazgos'' negativo; excluye $-1$ e informa imágenes, pacientes y prevalencia tras cada filtro. El checkpoint, preprocesamiento y umbral se reutilizan sin reentrenamiento, ajuste de época, arquitectura ni umbral. BRAX no está disponible localmente al preparar este documento, por lo que no se incluyen métricas externas fabricadas. Sus etiquetas proceden de NLP sobre informes, no de verdad clínica confirmada \parencite{reis2022a}; cualquier diferencia frente a Kermany se atribuirá prudentemente al cambio combinado de edad, país, adquisición, prevalencia y calidad de etiqueta, no a una causa única.
+
+\section{Reproducibilidad}
+Los comandos, rutas relativas, configuración por corrida, partición, predicciones e IC están en \texttt{second-installment/scripts}. Los datos restringidos no se versionan. La ejecución completa de seis corridas en CPU debe documentar su duración; si se reduce, se declarará la pérdida de evidencia de estabilidad. Esta Fase 2 no establece aptitud clínica ni generalización a Colombia; cuantifica una brecha externa antes de considerar tal afirmación \parencite{zech2018}.
+\printbibliography
+\end{document}
