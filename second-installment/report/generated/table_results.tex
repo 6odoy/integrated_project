@@ -1,1 +1,8 @@
-\begin{tabular}{lp{9cm}}\toprule Estado & Evidencia \\ \midrule Pendiente & Ejecute \texttt{make phase2-train}; no se reportan métricas sin una corrida finalizada. \\ \bottomrule\end{tabular}
+\begin{tabular}{lccccc}
+\toprule
+Configuración & Sens. & Espec. & AUC-ROC & AUPRC & F1 \\ 
+\midrule
+Fine-tuning parcial & 0,992 $\pm$ 0,001 & 0,869 $\pm$ 0,016 & 0,996 $\pm$ 0,001 & 0,999 $\pm$ 0,000 & 0,973 $\pm$ 0,003 \\
+Extractor congelado & 0,959 $\pm$ 0,004 & 0,792 $\pm$ 0,008 & 0,978 $\pm$ 0,001 & 0,992 $\pm$ 0,000 & 0,944 $\pm$ 0,001 \\
+\bottomrule
+\end{tabular}

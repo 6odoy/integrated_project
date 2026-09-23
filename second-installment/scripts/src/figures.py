@@ -10,7 +10,7 @@ ap=argparse.ArgumentParser(); ap.add_argument("--results",type=Path,required=Tru
 a=ap.parse_args(); a.figures.mkdir(parents=True,exist_ok=True); a.generated.mkdir(parents=True,exist_ok=True)
 runs=[]
 for path in a.results.glob("kermany/*/seed*/metrics.json"):
-    d=json.loads(path.read_text()); d["run_dir"]=path.parent; runs.append(d)
+    d=json.loads(path.read_text()); d["run_dir"]=path.parent.relative_to(a.results); runs.append(d)
 pd.DataFrame(runs).to_csv(a.generated / "all_runs.csv",index=False)
 if not runs:
     (a.generated / "table_results.tex").write_text("\\begin{tabular}{lp{9cm}}\\toprule Estado & Evidencia \\\\ \\midrule Pendiente & Ejecute \\texttt{make phase2-train}; no se reportan métricas sin una corrida finalizada. \\\\ \\bottomrule\\end{tabular}\n")
@@ -31,7 +31,7 @@ for _, r in summary.iterrows():
 lines += ["\\bottomrule","\\end{tabular}"]; (a.generated/"table_results.tex").write_text("\n".join(lines))
 fig,axes=plt.subplots(1,2,figsize=(10,3.4))
 for d in runs:
-    h=pd.read_csv(Path(d["run_dir"])/"history.csv"); label=("Congelado" if d["mode"]=="frozen" else "Fine-tuning")+f" s{d['seed']}"
+    h=pd.read_csv(a.results/d["run_dir"]/"history.csv"); label=("Congelado" if d["mode"]=="frozen" else "Fine-tuning")+f" s{d['seed']}"
     axes[0].plot(h.epoch,h.train_loss,label=label); axes[1].plot(h.epoch,h.val_auc,label=label)
 axes[0].set(title="Pérdida de entrenamiento",xlabel="Época",ylabel="BCE ponderada"); axes[1].set(title="AUC de validación",xlabel="Época",ylabel="AUC")
 for ax in axes: ax.grid(alpha=.25); ax.legend(fontsize=6,ncol=2)

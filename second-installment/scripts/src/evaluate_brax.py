@@ -14,7 +14,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--manifest", required=True, type=Path); ap.add_argument("--images-root", required=True, type=Path)
 ap.add_argument("--run-dir", required=True, type=Path); ap.add_argument("--out", required=True, type=Path); ap.add_argument("--n-boot", type=int, default=1000)
 a = ap.parse_args(); run = json.loads((a.run_dir / "run_config.json").read_text()); frozen = json.loads((a.run_dir / "metrics.json").read_text())["threshold"]
-df = pd.read_csv(a.manifest); device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
+df = pd.read_csv(a.manifest); device=torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 tf = transforms.Compose([transforms.Resize((224,224)), transforms.ToTensor(), transforms.Normalize([.485,.456,.406],[.229,.224,.225])])
 loader=DataLoader(XrayDataset(df,a.images_root,tf),batch_size=run["batch_size"],shuffle=False,num_workers=0)
 # El checkpoint ya contiene todos los pesos; no se vuelve a descargar ImageNet.

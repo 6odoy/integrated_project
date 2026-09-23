@@ -6,6 +6,10 @@ first-installment/scripts/data/chest_xray/
 first-installment/scripts/data/manifest_kermany.csv
 first-installment/scripts/results/kermany/particion.csv
 
+# Pesos de las corridas de Fase 2: ~27 MB cada uno, se regeneran con make phase2-train.
+second-installment/scripts/results/**/*.pt
+second-installment/scripts/results/training.log
+
 **/__MACOSX/
 **/._*
 *.DS_Store

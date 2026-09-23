@@ -1,0 +1,25 @@
+{
+  "architecture": "DenseNet121",
+  "pretrained_weights": "ImageNet",
+  "image_size": 224,
+  "batch_size": 16,
+  "max_epochs": 30,
+  "early_stopping_patience": 5,
+  "scheduler_patience": 2,
+  "head_learning_rate": 0.0001,
+  "backbone_learning_rate": 1e-05,
+  "weight_decay": 0.0001,
+  "specificity_minimum": 0.8,
+  "augmentation": "RandomAffine(degrees=10, translate=(0.05,0.05), scale=(0.95,1.05)); horizontal flip disabled",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "seed": 43,
+  "mode": "finetune_partial",
+  "pretrained": true,
+  "class_positive_weight": 0.3694564998149872,
+  "dataset": "Kermany only; BRAX not used",
+  "torch": "2.13.0"
+}
