@@ -29,17 +29,19 @@ Pérdida/optimizador & BCE ponderada / Adam con $10^{-4}$ en clasificador\\
 Transferencia A & Extractor congelado; solo clasificador final\\
 Transferencia B & Clasificador y \texttt{denseblock4}; $10^{-5}$ en bloque ajustado\\
 Selección & AUC de validación, ReduceLROnPlateau y parada temprana (paciencia 5)\\
-Semillas & 42, 43 y 44; seis corridas previstas\\
+Semillas & 42, 43 y 44; seis corridas ejecutadas\\
 Umbral & Máxima sensibilidad con especificidad $\geq0,80$, solo validación\\\bottomrule
 \end{tabular}
 \end{table}
 
 \section{Dinámica y evaluación interna}
-Cada corrida guarda configuración, historial por época (pérdida, AUC de entrenamiento y validación, tasa de aprendizaje y norma media de gradiente), checkpoint y predicciones con IDs. El checkpoint de AUC de validación máxima se recarga antes de fijar el umbral y evaluar una única vez el test. Así, la norma de gradiente se mide: cualquier diagnóstico de explosión o desaparición se sustentará en esa serie, no en una inferencia visual.
+Cada corrida guarda configuración, historial por época (pérdida, AUC de entrenamiento y validación, tasa de aprendizaje, norma media de gradiente y duración), checkpoint y predicciones con IDs. El checkpoint de AUC de validación máxima se recarga antes de fijar el umbral y evaluar una única vez el test. Así, la norma de gradiente se mide: cualquier diagnóstico de explosión o desaparición se sustenta en esa serie, no en una inferencia visual. En las seis corridas la norma media permaneció dentro de la banda $[1{,}05;\ 1{,}92]$, con tendencia descendente pero no monótona, sin picos ni acercamiento a cero: no hay evidencia de explosión ni de desaparición de gradiente.
+
+El \texttt{train\_auc} del historial se acumula con los logits producidos durante la propia época, sobre imágenes aumentadas y con los pesos cambiando entre lotes. No equivale a una pasada de evaluación limpia posterior al entrenamiento y tiende a subestimar el desempeño real sobre entrenamiento; se adoptó esta definición para no recorrer la partición de entrenamiento por segunda vez en cada época. El \texttt{val\_auc}, que es la métrica de selección, sí proviene de una pasada de evaluación sin aumento.
 
 \begin{figure}[h]\centering
 \includegraphics[width=\textwidth]{figures/training_curves.png}
-\caption{Curvas generadas automáticamente desde los historiales guardados. Si no hay corridas finalizadas, la figura lo declara explícitamente.}\label{fig:curves}
+\caption{Curvas generadas automáticamente desde los historiales guardados de las seis corridas. Las dos configuraciones se separan desde las primeras épocas y ninguna muestra divergencia.}\label{fig:curves}
 \end{figure}
 
 \begin{table}[h]\centering\small
@@ -47,12 +49,37 @@ Cada corrida guarda configuración, historial por época (pérdida, AUC de entre
 \input{generated/table_results.tex}
 \end{table}
 
-La comparación final deberá contrastar la CNN con el mejor baseline de Fase 1 (Random Forest: sensibilidad 0,938 y AUPRC 0,981) en el mismo test. El criterio de éxito exige al menos cinco puntos porcentuales adicionales de sensibilidad, IC 95\% no solapados y ventaja consistente en las tres semillas. No se reajustará el test si el criterio no se cumple.
+Ambas configuraciones son estables entre semillas: el AUC-ROC varía $\pm0{,}001$ pese a que la época óptima osciló entre 15 y 26. El fine-tuning parcial domina en todas las métricas, con 2.161.153 parámetros entrenables frente a los 1.025 del extractor congelado.
+
+\subsection*{Contraste con el baseline de Fase 1}
+El mejor baseline de Fase 1 es Random Forest, con sensibilidad 0,938 (IC 95\% $[0{,}918;\ 0{,}955]$) y AUPRC 0,981. La comparación es legítima porque ambas fases evalúan la misma partición de prueba: 902 imágenes de 514 pacientes, 665 positivas y 237 negativas, con prevalencia 0,7373 idéntica hasta el decimosexto decimal. El criterio de éxito exige al menos cinco puntos porcentuales adicionales de sensibilidad, IC 95\% no solapados y ventaja consistente en las tres semillas.
+
+\begin{table}[h]\centering\small
+\caption{Evaluación del criterio de éxito frente a Random Forest.}\label{tab:criterio}
+\begin{tabular}{lcc}\toprule
+Requisito & Extractor congelado & Fine-tuning parcial \\\midrule
+Ventaja $\geq5$ puntos de sensibilidad & $+2{,}26$ \quad no cumple & $\mathbf{+5{,}56}$ \quad cumple\\
+IC 95\% no solapados & no cumple & cumple\\
+Ventaja en las tres semillas & cumple & cumple\\
+Latencia por imagen & 13,7 ms & 11,9 ms\\\bottomrule
+\end{tabular}
+\end{table}
+
+El fine-tuning parcial satisface los cuatro requisitos cuantificables: sus cotas inferiores por semilla ($0{,}985$, $0{,}987$ y $0{,}984$) quedan por encima de la cota superior del baseline ($0{,}955$), de modo que los intervalos no se solapan en ninguna corrida. El extractor congelado mejora al baseline, pero con $+2{,}26$ puntos no alcanza el umbral fijado y sus intervalos sí se solapan. Conforme a lo acordado, el test no se reajusta: se reporta que una de las dos configuraciones cumple y la otra no.
+
+Queda pendiente el requisito cualitativo del protocolo, la plausibilidad clínica de los mapas Grad-CAM, que corresponde a Fase 3. Hasta entonces no se afirma que la CNN esté justificada, solo que supera los criterios numéricos.
+
+\subsection*{Especificidad por debajo del mínimo en el extractor congelado}
+Las tres corridas congeladas quedan bajo la especificidad mínima de 0,80 en test (0,781, 0,797 y 0,797), pese a que el umbral se fijó en validación para satisfacerla. El origen es metodológico: el umbral se elige como el de máxima sensibilidad sujeto a $\mathrm{FPR}\leq0{,}20$, es decir, exactamente en el borde de la restricción. Sin margen, cualquier variación muestral entre validación y test la desplaza, y en esta configuración lo hizo sistemáticamente hacia abajo. Los IC 95\% de especificidad contienen 0,80 en las tres semillas ($[0{,}725;\ 0{,}833]$, $[0{,}748;\ 0{,}847]$ y $[0{,}747;\ 0{,}848]$), de modo que el incumplimiento no es concluyente. El fine-tuning parcial no presenta el problema (0,869 $\pm$ 0,016): al ser más separable, el borde de la restricción deja holgura. No se modificó el criterio de umbral tras observar el test, porque hacerlo contaminaría la selección con información de la partición de prueba.
 
 \section{Traslado a BRAX y limitaciones}
 El script de BRAX filtra adultos con proyección PA/AP y casos binarios inequívocos: neumonía positiva frente a ``sin hallazgos'' negativo; excluye $-1$ e informa imágenes, pacientes y prevalencia tras cada filtro. El checkpoint, preprocesamiento y umbral se reutilizan sin reentrenamiento, ajuste de época, arquitectura ni umbral. BRAX no está disponible localmente al preparar este documento, por lo que no se incluyen métricas externas fabricadas. Sus etiquetas proceden de NLP sobre informes, no de verdad clínica confirmada \parencite{reis2022a}; cualquier diferencia frente a Kermany se atribuirá prudentemente al cambio combinado de edad, país, adquisición, prevalencia y calidad de etiqueta, no a una causa única.
 
 \section{Reproducibilidad}
-Los comandos, rutas relativas, configuración por corrida, partición, predicciones e IC están en \texttt{second-installment/scripts}. Los datos restringidos no se versionan. La ejecución completa de seis corridas en CPU debe documentar su duración; si se reduce, se declarará la pérdida de evidencia de estabilidad. Esta Fase 2 no establece aptitud clínica ni generalización a Colombia; cuantifica una brecha externa antes de considerar tal afirmación \parencite{zech2018}.
+Los comandos, rutas relativas, configuración por corrida, partición, predicciones e IC están en \texttt{second-installment/scripts}. Los datos restringidos no se versionan, y tampoco los checkpoints: pesan 27 MB cada uno y se regeneran con \texttt{make phase2-train}. Sí se versionan las métricas, historiales, configuraciones y predicciones de las seis corridas, que son la evidencia que consume este informe.
+
+Las seis corridas se completaron sin reducción alguna del plan, de modo que la evidencia de estabilidad entre semillas está intacta. La duración total fue de 73,4 minutos sobre la GPU integrada de un equipo Apple Silicon mediante el backend MPS de PyTorch, entre 7,7 y 15,8 minutos por corrida. Tres ajustes de ejecución, ninguno de los cuales altera la definición del experimento, hicieron viable ese tiempo: seleccionar MPS cuando CUDA no está disponible; mantener en memoria las imágenes ya decodificadas y redimensionadas como enteros de 8 bits, lo que reduce la lectura de disco de una vez por época a una vez por corrida y evita que el antivirus de endpoint inspeccione miles de aperturas de archivo en cada pasada; y derivar \texttt{train\_auc} de la pasada de entrenamiento en lugar de recorrer esa partición por segunda vez. El almacenamiento en memoria antepone la misma operación de redimensionado que antes aplicaba el \emph{transform}, por lo que el resultado es numéricamente equivalente.
+
+Esta Fase 2 no establece aptitud clínica ni generalización a Colombia; cuantifica una brecha externa antes de considerar tal afirmación \parencite{zech2018}.
 \printbibliography
 \end{document}
