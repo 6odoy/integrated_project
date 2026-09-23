@@ -7,8 +7,10 @@ a=ap.parse_args(); cfg=json.loads(Path(a.config).read_text())
 for mode in ("frozen","finetune_partial"):
  for seed in cfg["seeds"]:
     out=Path(a.results)/"kermany"/mode/f"seed{seed}"
-    # metrics.json solo existe si train.py llegó al final; permite reanudar tras una interrupción.
-    if (out/"metrics.json").exists():
+    # Una corrida reutilizable requiere tanto las métricas como el checkpoint.
+    # Los checkpoints no se versionan; si faltan, hay que regenerarlos para que
+    # BRAX pueda cargar exactamente el modelo que produjo las predicciones.
+    if (out/"metrics.json").exists() and (out/"best_checkpoint.pt").exists():
         print(f"[omitida] {mode}/seed{seed} ya completa"); continue
     command=[sys.executable,str(Path(__file__).with_name("train.py")),"--partition",a.partition,"--images-root",a.images_root,"--config",a.config,"--mode",mode,"--seed",str(seed),"--out",str(out),"--n-boot",str(a.n_boot)]
     if a.no_pretrained: command.append("--no-pretrained")

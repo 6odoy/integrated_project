@@ -1,0 +1,53 @@
+{
+  "sensitivity": 0.9368421052631579,
+  "specificity": 0.759493670886076,
+  "sensitivity_at_specificity_minimum": NaN,
+  "specificity_constraint_satisfied": false,
+  "auc_roc": 0.9468703404079819,
+  "auprc": 0.9809589377734628,
+  "f1": 0.9263940520446097,
+  "tp": 623,
+  "fn": 42,
+  "tn": 180,
+  "fp": 57,
+  "model": "Random Forest sobre histograma de intensidad (Fase 1)",
+  "seed": 42,
+  "hyperparameters_selected_on_validation": {
+    "n_estimators": 600,
+    "max_depth": null,
+    "min_samples_leaf": 1
+  },
+  "best_validation_auc": 0.9632784148142015,
+  "threshold": 0.365,
+  "threshold_from": "Kermany validation only; specificity_minimum=0.80",
+  "patients": 514,
+  "images": 902,
+  "prevalence": 0.7372505543237251,
+  "partition": "second-installment/scripts/results/metadata/partition_kermany.csv",
+  "bootstrap_95": {
+    "sensitivity": [
+      0.9179456824512534,
+      0.95513
+    ],
+    "specificity": [
+      0.7065591883676989,
+      0.8149779735682819
+    ],
+    "sensitivity_at_specificity_minimum": [
+      NaN,
+      NaN
+    ],
+    "auc_roc": [
+      0.9317458049909236,
+      0.9605072628034249
+    ],
+    "auprc": [
+      0.9732312436188412,
+      0.9870660294576986
+    ],
+    "f1": [
+      0.9097237942561184,
+      0.9422319492691116
+    ]
+  }
+}

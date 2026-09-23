@@ -2,9 +2,9 @@
 
 The Deep Learning project that critically replicates Rahman et al.'s (2020)
 approach to pneumonia detection in chest X-rays. Beyond reproducing the method,
-it evaluates whether a model trained on pediatric images from Guangzhou
-(Kermany) retains its sensitivity when evaluated, without retraining, on an
-adult Latin American population (BRAX).
+it evaluates both its direct domain shift and its patient-level local
+adaptation from pediatric images from Guangzhou (Kermany) to an adult Latin
+American population (BRAX).
 
 The first installment contains the article review, local problem framing, and a
 reproducible baseline: [`first-installment/report/main.tex`](first-installment/report/main.tex).
@@ -14,9 +14,9 @@ tests it internally on Kermany:
 
 ## Research question and scope
 
-> Does a pretrained CNN fine-tuned on Kermany retain sufficient sensitivity to
-> support triage when evaluated on an adult Latin American population (BRAX), and
-> does it outperform a classical baseline under an equivalent data split?
+> Does a pretrained CNN fine-tuned on Kermany, and then adapted with an
+> isolated local BRAX partition, retain sufficient sensitivity for triage and
+> outperform a classical baseline under an equivalent data split?
 
 The task is binary image-level classification: `1 = pneumonia` and `0 = no
 findings`. Pneumonia sensitivity is prioritized, subject to a minimum
@@ -31,7 +31,7 @@ for triage, not a clinical system ready for diagnosis or deployment.
 | Role | Dataset | Population and use |
 |---|---|---|
 | Training, validation, and internal testing | Chest X-Ray Pneumonia / Kermany | Pediatric chest X-rays from Guangzhou. A patient-level 70/15/15 split is rebuilt; Kaggle's original split is not used. |
-| Planned external evaluation | BRAX | Adult chest X-rays from Hospital Albert Einstein, São Paulo. Only frontal images with positive/negative labels are used; it does not participate in training or tuning. |
+| Local adaptation and isolated external test | BRAX | Adult chest X-rays from Hospital Albert Einstein, São Paulo. Only frontal binary cases are used; patient-level `adapt_train/adapt_val/external_test` prevents test leakage. |
 | Alternative if BRAX is unavailable | PadChest | Adult Spanish dataset for external evaluation. |
 
 The external evaluation measures the domain gap between pediatric Guangzhou and
@@ -49,9 +49,9 @@ cases (`-1`) are excluded from binary evaluation and reserved for Phase 3.
   budget; the reduction is declared in the report.
 - Completed (Phase 2): internal Kermany testing of both transfer
   configurations, six runs in 73.4 minutes.
-- Blocked (Phase 2): external BRAX evaluation. `prepare_brax.py` and
-  `evaluate_brax.py` are written and parameterized, but the dataset is not
-  available locally, so no external metric is reported.
+- Ready to execute (Phase 2): BRAX adaptation and isolated external test.
+  `prepare_brax.py` and `adapt_brax.py` implement the protocol, but BRAX is
+  not available locally, so no local-transfer metric is reported.
 - Next (Phase 3): Grad-CAM audit, uncertainty analysis, and assessment of
   shortcuts such as text, hospital markers, or regions outside the lung
   parenchyma.
@@ -147,13 +147,21 @@ run practical on machines whose endpoint security software inspects every file
 open. It prepends the same resize the transform used to apply, so results are
 numerically equivalent.
 
-BRAX stays out of training and selection. After obtaining it legally, normalize
-its metadata and score a finished run against it:
+After obtaining BRAX legally, normalize its metadata into a pre-registered
+patient-level adaptation split. `external_test` stays out of training,
+early stopping, threshold selection, and model selection; `adapt_train` and
+`adapt_val` are the local transfer data:
 
 ```bash
 python second-installment/scripts/src/prepare_brax.py --metadata <csv> --out <out.csv>
-python second-installment/scripts/src/evaluate_brax.py --manifest <out.csv> \
-  --images-root <brax-images> --run-dir <run> --out <results>
+python second-installment/scripts/src/adapt_brax.py --manifest <out.csv> \
+  --images-root <brax-images> --source-run <kermany-run> \
+  --config second-installment/scripts/configs/densenet121.json \
+  --mode frozen --out <results-frozen>
+python second-installment/scripts/src/adapt_brax.py --manifest <out.csv> \
+  --images-root <brax-images> --source-run <kermany-run> \
+  --config second-installment/scripts/configs/densenet121.json \
+  --mode finetune_partial --out <results-partial>
 ```
 
 ## Reproducible baseline design

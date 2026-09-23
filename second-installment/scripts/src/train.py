@@ -60,6 +60,16 @@ def predict(model, loader, device):
         labels.extend(y.numpy()); patients.extend(p); studies.extend(s)
     return np.asarray(labels), np.asarray(scores), np.asarray(patients), np.asarray(studies)
 
+@torch.inference_mode()
+def evaluate_loss(model, loader, loss_fn, device):
+    """BCE ponderada de evaluación agregada por imagen, sin actualización."""
+    model.eval(); total, n = 0.0, 0
+    for x, y, _, _ in loader:
+        logits = model(x.to(device)).flatten()
+        loss = loss_fn(logits, y.float().to(device))
+        total += float(loss) * len(y); n += len(y)
+    return total / max(n, 1)
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--partition", required=True, type=Path); ap.add_argument("--images-root", required=True, type=Path)
@@ -102,7 +112,12 @@ def main():
         # no equivale a una pasada limpia posterior, pero evita recorrer el train dos veces.
         yv, sv, _, _ = predict(model, loaders["val"], device)
         train_auc = roc_auc_score(np.concatenate(train_labels), np.concatenate(train_scores)); val_auc = roc_auc_score(yv, sv); scheduler.step(val_auc)
-        history.append({"epoch":epoch, "train_loss":float(np.mean(losses)), "train_auc":train_auc, "val_auc":val_auc, "lr_head":optimizer.param_groups[0]["lr"], "gradient_norm":float(np.mean(grad_norms)), "epoch_seconds":time.perf_counter()-epoch_started})
+        # train_loss usa aumentos; val_loss se mide sin aumentos, con la misma BCE ponderada.
+        val_loss = evaluate_loss(model, loaders["val"], loss_fn, device)
+        history.append({"epoch":epoch, "train_loss":float(np.mean(losses)), "val_loss":val_loss,
+                        "train_auc":train_auc, "val_auc":val_auc, "lr_head":optimizer.param_groups[0]["lr"],
+                        "lr_backbone":optimizer.param_groups[1]["lr"] if len(optimizer.param_groups) > 1 else np.nan,
+                        "gradient_norm":float(np.mean(grad_norms)), "epoch_seconds":time.perf_counter()-epoch_started})
         if val_auc > best_auc:
             best_auc, best_epoch, stale = val_auc, epoch, 0; torch.save(model.state_dict(), args.out / "best_checkpoint.pt")
         else: stale += 1

@@ -29,10 +29,48 @@ for _, r in summary.iterrows():
     values = " & ".join(fmt(r, k) for k in ("sensitivity", "specificity", "auc_roc", "auprc", "f1"))
     lines.append(r.configuration + " & " + values + " " + chr(92) * 2)
 lines += ["\\bottomrule","\\end{tabular}"]; (a.generated/"table_results.tex").write_text("\n".join(lines))
-fig,axes=plt.subplots(1,2,figsize=(10,3.4))
+# IC95% bootstrap por paciente: se preservan por corrida, sin promediar límites.
+ci_lines=["Configuración,semilla,sensibilidad_IC95,especificidad_IC95,auc_roc_IC95,auprc_IC95"]
+def ci(value, interval):
+    return "--" if not isinstance(interval,(list,tuple)) or len(interval)!=2 else f"{value:.3f} [{interval[0]:.3f}, {interval[1]:.3f}]"
+for d in sorted(runs,key=lambda x:(x["mode"],x["seed"])):
+    boot=d.get("bootstrap_95",{}); name="Congelado" if d["mode"]=="frozen" else "Fine-tuning parcial"
+    ci_lines.append(",".join([name,str(d["seed"]),ci(d["sensitivity"],boot.get("sensitivity")),ci(d["specificity"],boot.get("specificity")),ci(d["auc_roc"],boot.get("auc_roc")),ci(d["auprc"],boot.get("auprc"))]))
+(a.generated/"bootstrap_95_by_run.csv").write_text("\n".join(ci_lines)+"\n")
+
+# Suma de semillas: inspección de FN/FP, explícitamente no un modelo adicional.
+confusions={}
+for d in runs:
+    pth=a.results/d["run_dir"] / "predictions_kermany_test.csv"
+    if pth.exists():
+        p=pd.read_csv(pth); cm=np.array([[((p.label==0)&(p.prediction==0)).sum(),((p.label==0)&(p.prediction==1)).sum()],[((p.label==1)&(p.prediction==0)).sum(),((p.label==1)&(p.prediction==1)).sum()]])
+        confusions[d["mode"]]=confusions.get(d["mode"],np.zeros((2,2),dtype=int))+cm
+cm_rows=[]
+for mode,cm in sorted(confusions.items()):
+    for actual,row in zip(("negativa","positiva"),cm): cm_rows.append({"configuracion":mode,"real":actual,"pred_negativa":row[0],"pred_positiva":row[1]})
+pd.DataFrame(cm_rows).to_csv(a.generated/"confusion_matrices.csv",index=False)
+
+fig,axes=plt.subplots(2,2,figsize=(10,6.4),sharex="col"); legacy_loss=False
 for d in runs:
     h=pd.read_csv(a.results/d["run_dir"]/"history.csv"); label=("Congelado" if d["mode"]=="frozen" else "Fine-tuning")+f" s{d['seed']}"
-    axes[0].plot(h.epoch,h.train_loss,label=label); axes[1].plot(h.epoch,h.val_auc,label=label)
-axes[0].set(title="Pérdida de entrenamiento",xlabel="Época",ylabel="BCE ponderada"); axes[1].set(title="AUC de validación",xlabel="Época",ylabel="AUC")
-for ax in axes: ax.grid(alpha=.25); ax.legend(fontsize=6,ncol=2)
+    axes[0,0].plot(h.epoch,h.train_loss,label=label)
+    if "val_loss" in h: axes[0,0].plot(h.epoch,h.val_loss,linestyle="--",color=axes[0,0].lines[-1].get_color())
+    else: legacy_loss=True
+    axes[0,1].plot(h.epoch,h.train_auc,label=label); axes[0,1].plot(h.epoch,h.val_auc,linestyle="--",color=axes[0,1].lines[-1].get_color())
+    axes[1,0].plot(h.epoch,h.lr_head,label=label)
+    axes[1,1].plot(h.epoch,h.gradient_norm,label=label)
+axes[0,0].set(title="Pérdida BCE ponderada",ylabel="Pérdida")
+axes[0,1].set(title="AUC (continua: train; discontinua: val)",ylabel="AUC")
+axes[1,0].set(title="Tasa de aprendizaje — cabeza",xlabel="Época",ylabel="LR",yscale="log")
+axes[1,1].set(title="Norma media del gradiente",xlabel="Época",ylabel="Norma",yscale="log")
+if legacy_loss: axes[0,0].text(.01,.02,"Historial legado: sin pérdida de validación",transform=axes[0,0].transAxes,fontsize=7)
+for ax in axes.flat: ax.grid(alpha=.25); ax.legend(fontsize=6,ncol=2)
 fig.tight_layout(); fig.savefig(a.figures/"training_curves.png",dpi=200); plt.close(fig)
+
+if confusions:
+    fig,axes=plt.subplots(1,len(confusions),figsize=(4.1*len(confusions),3.5),squeeze=False)
+    for ax,(mode,cm) in zip(axes.flat,sorted(confusions.items())):
+        ax.imshow(cm,cmap="Blues")
+        for (i,j),value in np.ndenumerate(cm): ax.text(j,i,str(value),ha="center",va="center",fontsize=11)
+        ax.set(xticks=[0,1],yticks=[0,1],xticklabels=["Negativa","Positiva"],yticklabels=["Negativa","Positiva"],xlabel="Predicción",ylabel="Etiqueta real",title="Congelado" if mode=="frozen" else "Fine-tuning parcial")
+    fig.suptitle("Matriz acumulada de 3 semillas (conteos, no modelo adicional)",fontsize=10); fig.tight_layout(); fig.savefig(a.figures/"confusion_matrices.png",dpi=200); plt.close(fig)

@@ -1,0 +1,5 @@
+configuracion,real,pred_negativa,pred_positiva
+finetune_partial,negativa,618,93
+finetune_partial,positiva,15,1980
+frozen,negativa,563,148
+frozen,positiva,81,1914
