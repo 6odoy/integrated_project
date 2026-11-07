@@ -1,4 +1,4 @@
-# Entorno reproducible para la primera entrega.
+# Entorno reproducible del proyecto (las tres entregas).
 # Probado con Python 3.13; usar Python >=3.11 y <3.14.
 numpy==2.5.2
 pandas==3.0.5
@@ -6,3 +6,8 @@ scikit-learn==1.9.0
 Pillow==12.3.0
 matplotlib==3.11.1
 torch==2.13.0
+torchvision==0.28.0
+scipy==1.18.1
+# GPU NVIDIA con driver < 525 (CUDA 11.x): instalar en su lugar
+#   pip install torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cu118
+# Con esa variante se ejecutaron las corridas de la entrega final (GTX 1650).

@@ -9,9 +9,11 @@ Nombres de archivo:
 
 LIMITACIONES QUE HAY QUE DECLARAR EN LA ENTREGA
 -----------------------------------------------
-1. El paciente solo es recuperable en los positivos (prefijo personN). En los
-   NORMAL no hay identificador de paciente: cada archivo se trata como un
-   paciente distinto, lo que puede subestimar el agrupamiento.
+1. En los positivos el paciente es el prefijo personN. En los NORMAL no hay
+   identificador explicito, pero los nombres IM-XXXX-0001, IM-XXXX-0001-0001 e
+   IM-XXXX-0001-0002 comparten prefijo y, a la vista, al mismo nino. Se agrupa
+   de forma conservadora por (NORMAL2-)IM-XXXX: si fueran pacientes distintos,
+   solo se pierde algo de aleatoriedad; si no, se evita una fuga entre splits.
 2. La numeracion personN se reinicia entre train/ y test/, asi que el id se
    prefija con la carpeta de origen para no fusionar pacientes distintos.
 3. No hay etiquetas de vista: todas son frontales pediatricas. Se marca AP.
@@ -26,6 +28,7 @@ from pathlib import Path
 import pandas as pd
 
 RE_PERSONA = re.compile(r"person(\d+)", re.I)
+RE_NORMAL = re.compile(r"^((?:NORMAL2-)?IM-\d+)", re.I)
 
 PROYECTO = Path(__file__).resolve().parents[1]
 
@@ -48,7 +51,11 @@ for origen in ("train", "test", "val"):
                 continue
             m = RE_PERSONA.search(nombre)
             # id prefijado con la carpeta: personN se reinicia entre train y test
-            pid = f"{origen}_person{m.group(1)}" if m else f"{origen}_{os.path.splitext(nombre)[0]}"
+            if m:
+                pid = f"{origen}_person{m.group(1)}"
+            else:
+                n = RE_NORMAL.match(nombre)
+                pid = f"{origen}_{n.group(1) if n else os.path.splitext(nombre)[0]}"
             filas.append(dict(
                 patient_id=pid,
                 study_id=os.path.splitext(nombre)[0],

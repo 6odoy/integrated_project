@@ -14,7 +14,8 @@ if [[ -d "$DATA_DIR/chest_xray" ]]; then
 fi
 
 command -v curl >/dev/null || { echo "Se requiere curl." >&2; exit 1; }
-command -v unzip >/dev/null || { echo "Se requiere unzip." >&2; exit 1; }
+# unzip es opcional: sin él se descomprime con el módulo zipfile de Python.
+command -v unzip >/dev/null || command -v python3 >/dev/null || { echo "Se requiere unzip o python3." >&2; exit 1; }
 command -v sha256sum >/dev/null || { echo "Se requiere sha256sum." >&2; exit 1; }
 
 mkdir -p "$DATA_DIR"
@@ -32,5 +33,9 @@ else
         --output "$ARCHIVE" "$URL"
     echo "$SHA256  $ARCHIVE" | sha256sum --check --status
 fi
-unzip -q "$ARCHIVE" -d "$DATA_DIR"
+if command -v unzip >/dev/null; then
+    unzip -q "$ARCHIVE" -d "$DATA_DIR"
+else
+    python3 -m zipfile -e "$ARCHIVE" "$DATA_DIR"
+fi
 echo "Dataset disponible en $DATA_DIR/chest_xray"
