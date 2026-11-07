@@ -17,6 +17,8 @@ help:
 	@echo "  make phase3-audit     Elige el modelo final por validación; Grad-CAM, pruebas y fallas."
 	@echo "  make phase3-report    Tablas y figuras de la entrega final."
 	@echo "  make final            Todo lo anterior en orden; reanudable tras un corte."
+	@echo "  make resume           Igual que final, en segundo plano y supervisado (reinicia si se atasca)."
+	@echo "  make status           Etapas terminadas, estado del supervisor y uso de GPU."
 
 download-kermany:
 	bash first-installment/scripts/download_kermany.sh
@@ -84,3 +86,24 @@ final:
 	$(MAKE) phase3-audit
 	$(MAKE) phase3-report
 	$(MAKE) phase3-replication
+
+# Lo mismo, desatendido: corre en segundo plano bajo un supervisor que lo
+# reinicia si se cae o se queda sin actividad. Tras apagar el equipo, basta con
+# volver a ejecutar `make resume`; `make status` muestra en qué va.
+.PHONY: resume status
+resume:
+	@mkdir -p logs
+	@if [ -f logs/watchdog.pid ] && grep -qs supervise_final.sh /proc/$$(cat logs/watchdog.pid)/cmdline; then \
+	  echo "Ya hay una supervisión activa (pid $$(cat logs/watchdog.pid))."; \
+	else \
+	  rm -f logs/ALERTA.txt; \
+	  nohup setsid bash $(P3)/supervise_final.sh > /dev/null 2>&1 < /dev/null & \
+	  echo "Supervisión iniciada. Progreso: make status"; \
+	fi
+
+status:
+	@echo "Etapas terminadas:"; ls logs/stages 2>/dev/null | sed 's/\.done$$//; s/^/  /'
+	@test ! -f logs/ALERTA.txt || { echo "*** ALERTA ***"; cat logs/ALERTA.txt; }
+	@echo "Supervisor:"; tail -n 4 logs/watchdog.log 2>/dev/null | sed 's/^/  /'
+	@echo "Últimas líneas:"; tail -n 4 logs/final.log 2>/dev/null | cut -c1-160 | sed 's/^/  /'
+	@nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader 2>/dev/null | sed 's/^/GPU: /' || true
