@@ -21,6 +21,21 @@ make phase3-replication  # brecha frente a Rahman et al.: umbral y partición po
 
 Todas las etapas son reanudables: una corrida con `metrics.json` no se repite.
 
+### Ejecución desatendida
+
+```bash
+make resume   # corre todo (`make final`) en segundo plano, bajo supervisión
+make status   # etapas terminadas, últimas líneas del log y uso de GPU
+```
+
+`run_final.sh` ejecuta las etapas en orden y deja una marca por etapa en
+`logs/stages/`. `supervise_final.sh` lo reinicia si el proceso muere o si pasan
+30 minutos sin que se escriba nada en `logs/final.log` ni en los resultados.
+Tras tres reinicios seguidos sin que termine ninguna etapa se detiene y deja
+`logs/ALERTA.txt`, porque un error que se repite no se arregla reintentando. Si
+el equipo se apaga, basta con volver a ejecutar `make resume`. Para repetir una
+etapa ya marcada, borra su archivo en `logs/stages/`.
+
 ## Datos
 
 `prepare_nih.py` decide todo desde los metadatos, antes de descargar imágenes:
@@ -51,8 +66,8 @@ y extrae solo las imágenes de la partición, verificando el CRC32 de cada una.
 | `compare_paired.py` | Bootstrap pareado por paciente de cada diferencia |
 | `run_audit.py` | Elige el modelo final por AUC medio en `adapt_val` y lo audita |
 | `audit_gradcam.py` | Grad-CAM contra las cajas del radiólogo y masa en el marco periférico |
-| `audit_tests.py` | Pruebas de respuesta conocida, entradas fuera de dominio y retención de Kermany |
-| `audit_failures.py` | Subgrupos, perfil de errores, calibración y valor predictivo |
+| `audit_tests.py` | Pruebas de respuesta conocida, entradas fuera de dominio y test pediátrico de Kermany |
+| `audit_failures.py` | Subgrupos, perfil de errores, calibración (temperatura y Platt) y valor predictivo |
 | `replication_gap.py` | Por qué la especificidad difiere de la de Rahman et al. |
 
 ## Cambios respecto de la Fase 2

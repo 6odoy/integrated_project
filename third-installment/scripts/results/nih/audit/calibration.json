@@ -1,0 +1,52 @@
+{
+  "Kermany sin adaptar": {
+    "ece": 0.23552721788227765,
+    "brier": 0.22509506868822388,
+    "mean_predicted": 0.4785162657363208,
+    "observed_prevalence": 0.25
+  },
+  "Final (adaptado)": {
+    "ece": 0.16516536424326145,
+    "brier": 0.13875161955710524,
+    "mean_predicted": 0.4151653642432614,
+    "observed_prevalence": 0.25
+  },
+  "Final + temperatura (T=0.96)": {
+    "ece": 0.1628601443375871,
+    "brier": 0.13822225618323747,
+    "mean_predicted": 0.4128601443375871,
+    "observed_prevalence": 0.25
+  },
+  "Final + Platt": {
+    "ece": 0.04204682082512846,
+    "brier": 0.10758148564725885,
+    "mean_predicted": 0.2710798743873501,
+    "observed_prevalence": 0.25
+  },
+  "temperature_fitted_on": "NIH adapt_val",
+  "temperature": 0.9607918229434101,
+  "platt_slope": 0.9692531931937799,
+  "platt_intercept": -1.0162008200524721,
+  "predictive_values": [
+    {
+      "prevalence": 0.02,
+      "ppv": 0.08172826652785005,
+      "npv": 0.9961245580636389
+    },
+    {
+      "prevalence": 0.05,
+      "ppv": 0.1866825208085612,
+      "npv": 0.9900662251655629
+    },
+    {
+      "prevalence": 0.1,
+      "ppv": 0.32640332640332637,
+      "npv": 0.9792576419213974
+    },
+    {
+      "prevalence": 0.25,
+      "ppv": 0.5924528301886791,
+      "npv": 0.9402515723270439
+    }
+  ]
+}

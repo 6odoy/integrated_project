@@ -1,0 +1,1485 @@
+patient_id,study_id,label,view,age,sex,finding_labels,pneumonia_only,has_bbox,audit_reserved,score,prediction
+nih_6,00000006_000,0,PA,81,M,No Finding,False,False,False,0.869237,1
+nih_47,00000047_002,0,PA,73,F,No Finding,False,False,False,0.5415487,1
+nih_90,00000090_006,0,PA,67,F,No Finding,False,False,False,0.98622,1
+nih_96,00000096_008,0,PA,67,F,No Finding,False,False,False,0.9716476,1
+nih_104,00000104_001,0,PA,69,F,No Finding,False,False,False,0.7296866,1
+nih_150,00000150_002,1,AP,55,F,Atelectasis|Infiltration|Pneumonia,False,True,True,0.8231429,1
+nih_152,00000152_000,0,PA,65,M,No Finding,False,False,False,0.73339957,1
+nih_173,00000173_001,0,PA,68,F,No Finding,False,False,False,0.824568,1
+nih_181,00000181_027,0,AP,50,F,No Finding,False,False,False,0.99854314,1
+nih_193,00000193_019,1,AP,54,M,Pneumonia,True,True,True,0.99807113,1
+nih_261,00000261_002,1,AP,39,F,Pneumonia,True,False,False,0.89185375,1
+nih_261,00000261_007,1,PA,41,F,Infiltration|Pneumonia,False,False,False,0.87863725,1
+nih_274,00000274_001,0,PA,51,F,No Finding,False,False,False,0.988836,1
+nih_276,00000276_000,0,PA,64,M,No Finding,False,False,False,0.92495936,1
+nih_280,00000280_000,0,PA,42,M,No Finding,False,False,False,0.8689062,1
+nih_285,00000285_004,0,PA,49,M,No Finding,False,False,False,0.8410191,1
+nih_295,00000295_000,0,PA,55,F,No Finding,False,False,False,0.74417686,1
+nih_305,00000305_002,0,AP,78,M,No Finding,False,False,False,0.9801635,1
+nih_312,00000312_000,0,PA,86,M,No Finding,False,False,False,0.6111606,1
+nih_325,00000325_000,0,AP,81,M,No Finding,False,False,False,0.9801427,1
+nih_340,00000340_002,0,PA,78,F,No Finding,False,False,False,0.62366164,1
+nih_408,00000408_000,0,PA,74,F,No Finding,False,False,False,0.15587951,1
+nih_445,00000445_000,0,PA,63,F,No Finding,False,False,False,0.9533102,1
+nih_461,00000461_002,0,PA,87,F,No Finding,False,False,False,0.85319334,1
+nih_464,00000464_000,0,PA,73,F,No Finding,False,False,False,0.78578216,1
+nih_494,00000494_007,0,PA,68,F,No Finding,False,False,False,0.8852957,1
+nih_496,00000496_000,0,AP,56,F,No Finding,False,False,False,0.92549175,1
+nih_497,00000497_000,0,PA,21,M,No Finding,False,False,False,0.19781886,1
+nih_502,00000502_012,0,AP,43,M,No Finding,False,False,False,0.99141777,1
+nih_506,00000506_013,1,AP,27,M,Edema|Effusion|Pneumonia,False,True,True,0.99082094,1
+nih_506,00000506_015,1,AP,27,M,Edema|Effusion|Infiltration|Pneumonia,False,False,True,0.995861,1
+nih_506,00000506_016,1,AP,27,M,Edema|Effusion|Pneumonia,False,False,True,0.9992755,1
+nih_561,00000561_002,0,PA,58,M,No Finding,False,False,False,0.94785696,1
+nih_577,00000577_002,0,PA,75,M,No Finding,False,False,False,0.58839345,1
+nih_615,00000615_000,0,PA,77,F,No Finding,False,False,False,0.7703005,1
+nih_620,00000620_002,0,PA,53,F,No Finding,False,False,False,0.58640003,1
+nih_626,00000626_000,0,PA,46,M,No Finding,False,False,False,0.8306419,1
+nih_670,00000670_000,0,PA,53,F,No Finding,False,False,False,0.81855696,1
+nih_674,00000674_000,0,PA,74,F,No Finding,False,False,False,0.34290734,1
+nih_744,00000744_000,0,PA,68,M,No Finding,False,False,False,0.84483826,1
+nih_759,00000759_000,0,PA,63,M,No Finding,False,False,False,0.98300904,1
+nih_813,00000813_000,0,PA,27,F,No Finding,False,False,False,0.65922844,1
+nih_834,00000834_000,0,PA,67,M,No Finding,False,False,False,0.94351244,1
+nih_835,00000835_000,0,PA,67,F,No Finding,False,False,False,0.6752913,1
+nih_855,00000855_000,0,PA,36,M,No Finding,False,False,False,0.7472185,1
+nih_877,00000877_030,1,AP,38,M,Edema|Effusion|Infiltration|Pneumonia,False,False,False,0.9856442,1
+nih_887,00000887_000,0,PA,64,M,No Finding,False,False,False,0.99380577,1
+nih_927,00000927_003,0,AP,54,M,No Finding,False,False,False,0.91876775,1
+nih_946,00000946_000,0,PA,45,M,No Finding,False,False,False,0.9531831,1
+nih_969,00000969_000,0,PA,79,F,No Finding,False,False,False,0.40859962,1
+nih_988,00000988_001,0,PA,61,M,No Finding,False,False,False,0.8897747,1
+nih_992,00000992_001,0,PA,51,F,No Finding,False,False,False,0.21097478,1
+nih_1018,00001018_005,1,AP,59,M,Pneumonia,True,False,False,0.9649051,1
+nih_1032,00001032_000,0,PA,43,M,No Finding,False,False,False,0.30059487,1
+nih_1059,00001059_004,0,PA,61,F,No Finding,False,False,False,0.98842174,1
+nih_1070,00001070_000,0,PA,83,M,No Finding,False,False,False,0.861467,1
+nih_1117,00001117_000,0,PA,84,M,No Finding,False,False,False,0.9649976,1
+nih_1122,00001122_021,0,AP,18,M,No Finding,False,False,False,0.9947339,1
+nih_1127,00001127_000,0,PA,43,M,No Finding,False,False,False,0.89366573,1
+nih_1153,00001153_003,0,AP,64,M,No Finding,False,False,False,0.850224,1
+nih_1226,00001226_000,0,AP,80,M,No Finding,False,False,False,0.9994062,1
+nih_1250,00001250_001,1,PA,66,F,Atelectasis|Pneumonia,False,False,False,0.82015544,1
+nih_1250,00001250_006,1,AP,66,F,Infiltration|Pneumonia,False,False,False,0.9789893,1
+nih_1251,00001251_001,0,PA,45,F,No Finding,False,False,False,0.5045574,1
+nih_1273,00001273_000,0,PA,65,F,No Finding,False,False,False,0.84079987,1
+nih_1280,00001280_000,0,PA,33,F,No Finding,False,False,False,0.8499881,1
+nih_1288,00001288_000,0,PA,49,M,No Finding,False,False,False,0.98077524,1
+nih_1338,00001338_000,0,PA,60,M,No Finding,False,False,False,0.98942673,1
+nih_1350,00001350_000,0,PA,65,F,No Finding,False,False,False,0.72364724,1
+nih_1352,00001352_000,0,PA,47,F,No Finding,False,False,False,0.5034705,1
+nih_1419,00001419_000,0,PA,37,M,No Finding,False,False,False,0.639908,1
+nih_1470,00001470_003,0,AP,56,F,No Finding,False,False,False,0.9696445,1
+nih_1492,00001492_003,0,PA,63,M,No Finding,False,False,False,0.9801174,1
+nih_1500,00001500_000,0,PA,62,F,No Finding,False,False,False,0.7219771,1
+nih_1504,00001504_011,1,AP,70,M,Edema|Pleural_Thickening|Pneumonia,False,False,False,0.99384093,1
+nih_1528,00001528_001,0,AP,51,F,No Finding,False,False,False,0.99115306,1
+nih_1596,00001596_000,0,PA,59,M,No Finding,False,False,False,0.5299128,1
+nih_1599,00001599_000,0,PA,43,M,No Finding,False,False,False,0.7375368,1
+nih_1649,00001649_000,0,PA,42,F,No Finding,False,False,False,0.84596443,1
+nih_1675,00001675_000,0,PA,41,M,No Finding,False,False,False,0.8715319,1
+nih_1677,00001677_000,0,PA,46,F,No Finding,False,False,False,0.5158087,1
+nih_1738,00001738_001,0,AP,56,M,No Finding,False,False,False,0.79968,1
+nih_1742,00001742_001,0,AP,51,F,No Finding,False,False,False,0.99106735,1
+nih_1745,00001745_001,1,PA,53,M,Infiltration|Pneumonia,False,False,False,0.9798079,1
+nih_1749,00001749_002,1,PA,48,M,Pneumonia,True,False,False,0.7900594,1
+nih_1749,00001749_003,1,PA,49,M,Pneumonia,True,False,False,0.97341883,1
+nih_1771,00001771_000,0,PA,62,F,No Finding,False,False,False,0.9145775,1
+nih_1798,00001798_000,0,PA,37,M,No Finding,False,False,False,0.8014124,1
+nih_1820,00001820_000,0,PA,46,M,No Finding,False,False,False,0.8338124,1
+nih_1840,00001840_000,0,PA,63,M,No Finding,False,False,False,0.95753974,1
+nih_1872,00001872_004,1,PA,39,M,Infiltration|Pneumonia,False,False,False,0.9624874,1
+nih_1895,00001895_003,0,PA,75,M,No Finding,False,False,False,0.9840481,1
+nih_1921,00001921_006,0,AP,40,M,No Finding,False,False,False,0.91543484,1
+nih_1933,00001933_000,1,PA,40,F,Consolidation|Pneumonia,False,True,True,0.40291592,1
+nih_1934,00001934_002,0,PA,32,M,No Finding,False,False,False,0.79539216,1
+nih_1962,00001962_000,1,PA,71,F,Atelectasis|Pneumonia,False,False,False,0.712272,1
+nih_1973,00001973_000,0,PA,58,M,No Finding,False,False,False,0.6570369,1
+nih_2040,00002040_000,0,PA,41,F,No Finding,False,False,False,0.8294555,1
+nih_2043,00002043_000,0,PA,55,F,No Finding,False,False,False,0.24585304,1
+nih_2050,00002050_001,0,PA,47,F,No Finding,False,False,False,0.6190972,1
+nih_2068,00002068_000,0,PA,39,F,No Finding,False,False,False,0.49117988,1
+nih_2076,00002076_000,0,PA,56,F,No Finding,False,False,False,0.46586892,1
+nih_2125,00002125_000,0,PA,53,M,No Finding,False,False,False,0.95710117,1
+nih_2162,00002162_000,0,PA,56,M,No Finding,False,False,False,0.73090726,1
+nih_2164,00002164_000,0,PA,38,F,No Finding,False,False,False,0.95052946,1
+nih_2213,00002213_002,0,PA,89,F,No Finding,False,False,False,0.9770179,1
+nih_2290,00002290_000,0,PA,37,F,No Finding,False,False,False,0.85137475,1
+nih_2291,00002291_000,0,PA,23,M,No Finding,False,False,False,0.49496615,1
+nih_2303,00002303_000,0,PA,32,F,No Finding,False,False,False,0.44336128,1
+nih_2352,00002352_000,0,PA,25,M,No Finding,False,False,False,0.28241554,1
+nih_2380,00002380_002,0,AP,43,M,No Finding,False,False,False,0.96731645,1
+nih_2411,00002411_001,0,PA,43,M,No Finding,False,False,False,0.74890727,1
+nih_2449,00002449_000,0,PA,27,F,No Finding,False,False,False,0.7534996,1
+nih_2451,00002451_007,1,PA,48,F,Pneumonia,True,False,False,0.56933737,1
+nih_2511,00002511_000,0,AP,51,F,No Finding,False,False,False,0.9578873,1
+nih_2512,00002512_001,0,PA,59,M,No Finding,False,False,False,0.6333453,1
+nih_2531,00002531_000,0,PA,30,M,No Finding,False,False,False,0.9082977,1
+nih_2554,00002554_001,0,AP,37,F,No Finding,False,False,False,0.8437116,1
+nih_2592,00002592_000,0,PA,35,M,No Finding,False,False,False,0.952131,1
+nih_2651,00002651_001,0,PA,48,F,No Finding,False,False,False,0.7902418,1
+nih_2665,00002665_001,1,PA,45,F,Atelectasis|Pneumonia,False,False,False,0.8881626,1
+nih_2698,00002698_000,0,PA,51,M,No Finding,False,False,False,0.35942668,1
+nih_2705,00002705_001,0,PA,60,F,No Finding,False,False,False,0.8128869,1
+nih_2713,00002713_000,0,AP,51,F,No Finding,False,False,False,0.9690406,1
+nih_2720,00002720_009,0,PA,62,F,No Finding,False,False,False,0.93337584,1
+nih_2725,00002725_000,0,PA,49,M,No Finding,False,False,False,0.9597888,1
+nih_2736,00002736_001,0,PA,48,F,No Finding,False,False,False,0.7816255,1
+nih_2766,00002766_000,0,PA,47,F,No Finding,False,False,False,0.91303325,1
+nih_2785,00002785_000,0,AP,42,M,No Finding,False,False,False,0.9614557,1
+nih_2793,00002793_006,0,PA,58,F,No Finding,False,False,False,0.953791,1
+nih_2846,00002846_013,1,PA,34,M,Consolidation|Effusion|Infiltration|Pneumonia,False,False,False,0.90127695,1
+nih_2908,00002908_000,0,PA,28,M,No Finding,False,False,False,0.8222967,1
+nih_2915,00002915_002,0,PA,26,F,No Finding,False,False,False,0.2970358,1
+nih_2938,00002938_000,0,PA,27,M,No Finding,False,False,False,0.73481494,1
+nih_2944,00002944_000,0,PA,67,F,No Finding,False,False,False,0.98180974,1
+nih_2959,00002959_001,0,AP,59,M,No Finding,False,False,False,0.98093665,1
+nih_2973,00002973_001,0,PA,28,M,No Finding,False,False,False,0.51348555,1
+nih_2980,00002980_000,1,PA,64,M,Infiltration|Pneumonia,False,True,True,0.98077375,1
+nih_2999,00002999_000,0,PA,51,M,No Finding,False,False,False,0.8803051,1
+nih_3013,00003013_010,0,AP,58,M,No Finding,False,False,False,0.98974913,1
+nih_3028,00003028_006,1,AP,57,F,Edema|Pneumonia,False,True,True,0.9981254,1
+nih_3028,00003028_050,1,AP,57,F,Edema|Pneumonia,False,False,True,0.9924735,1
+nih_3064,00003064_026,1,AP,35,M,Pneumonia,True,False,True,0.9782347,1
+nih_3064,00003064_035,1,PA,35,M,Effusion|Infiltration|Pleural_Thickening|Pneumonia,False,True,True,0.8430164,1
+nih_3077,00003077_000,0,PA,47,F,No Finding,False,False,False,0.5822642,1
+nih_3094,00003094_003,0,PA,49,F,No Finding,False,False,False,0.9932967,1
+nih_3095,00003095_001,1,PA,51,M,Atelectasis|Pneumonia,False,False,False,0.9425402,1
+nih_3096,00003096_000,0,PA,57,M,No Finding,False,False,False,0.95448023,1
+nih_3133,00003133_003,0,PA,42,F,No Finding,False,False,False,0.68844205,1
+nih_3145,00003145_000,0,AP,38,M,No Finding,False,False,False,0.9275158,1
+nih_3177,00003177_003,0,PA,35,F,No Finding,False,False,False,0.48837942,1
+nih_3191,00003191_003,0,PA,49,F,No Finding,False,False,False,0.38223997,1
+nih_3216,00003216_000,0,PA,71,F,No Finding,False,False,False,0.46844763,1
+nih_3239,00003239_001,0,PA,65,F,No Finding,False,False,False,0.9912288,1
+nih_3245,00003245_000,0,PA,67,M,No Finding,False,False,False,0.95358616,1
+nih_3248,00003248_007,1,PA,18,M,Pneumonia,True,False,False,0.9300354,1
+nih_3315,00003315_001,0,AP,40,F,No Finding,False,False,False,0.94576967,1
+nih_3383,00003383_005,0,PA,52,M,No Finding,False,False,False,0.3919248,1
+nih_3391,00003391_001,1,PA,55,M,Effusion|Pneumonia,False,True,True,0.9848378,1
+nih_3391,00003391_002,1,PA,55,M,Effusion|Pneumonia,False,False,True,0.8092036,1
+nih_3459,00003459_021,0,AP,52,F,No Finding,False,False,False,0.99927264,1
+nih_3471,00003471_000,0,PA,42,M,No Finding,False,False,False,0.9766248,1
+nih_3495,00003495_000,0,PA,47,F,No Finding,False,False,False,0.5060216,1
+nih_3527,00003527_002,1,PA,47,F,Atelectasis|Pneumonia,False,False,False,0.08407721,0
+nih_3528,00003528_017,1,AP,46,M,Edema|Infiltration|Pneumonia,False,False,True,0.9990282,1
+nih_3528,00003528_024,1,AP,46,M,Atelectasis|Pneumonia,False,True,True,0.9894509,1
+nih_3528,00003528_037,1,AP,46,M,Infiltration|Pneumonia,False,False,True,0.9949491,1
+nih_3528,00003528_043,1,AP,46,M,Pneumonia,True,False,True,0.95737284,1
+nih_3555,00003555_000,0,PA,42,M,No Finding,False,False,False,0.8775737,1
+nih_3570,00003570_000,0,AP,20,M,No Finding,False,False,False,0.7832924,1
+nih_3593,00003593_005,1,PA,64,M,Effusion|Pneumonia,False,False,False,0.44848716,1
+nih_3593,00003593_006,1,PA,64,M,Effusion|Pneumonia,False,False,False,0.5937989,1
+nih_3626,00003626_000,0,AP,54,F,No Finding,False,False,False,0.7439747,1
+nih_3628,00003628_002,0,AP,31,F,No Finding,False,False,False,0.9678706,1
+nih_3683,00003683_006,0,PA,67,F,No Finding,False,False,False,0.91512007,1
+nih_3684,00003684_002,0,AP,58,M,No Finding,False,False,False,0.7820278,1
+nih_3699,00003699_000,1,PA,51,M,Edema|Infiltration|Pneumonia,False,False,False,0.982216,1
+nih_3700,00003700_000,0,PA,64,F,No Finding,False,False,False,0.87585425,1
+nih_3705,00003705_000,0,PA,61,M,No Finding,False,False,False,0.5929523,1
+nih_3717,00003717_000,0,PA,47,M,No Finding,False,False,False,0.9550942,1
+nih_3718,00003718_000,0,AP,27,F,No Finding,False,False,False,0.92183405,1
+nih_3722,00003722_022,0,PA,55,M,No Finding,False,False,False,0.7277208,1
+nih_3774,00003774_000,0,PA,60,F,No Finding,False,False,False,0.5890627,1
+nih_3778,00003778_002,0,PA,45,F,No Finding,False,False,False,0.19247885,1
+nih_3779,00003779_005,0,PA,59,M,No Finding,False,False,False,0.964802,1
+nih_3789,00003789_000,1,AP,41,M,Nodule|Pneumonia,False,True,True,0.9922994,1
+nih_3814,00003814_001,0,AP,58,F,No Finding,False,False,False,0.9938053,1
+nih_3821,00003821_001,0,PA,79,M,No Finding,False,False,False,0.99354726,1
+nih_3838,00003838_000,0,PA,51,F,No Finding,False,False,False,0.15578863,1
+nih_3868,00003868_003,0,PA,54,M,No Finding,False,False,False,0.8046705,1
+nih_3882,00003882_002,0,PA,51,M,No Finding,False,False,False,0.9231351,1
+nih_3894,00003894_005,1,PA,79,M,Nodule|Pneumonia,False,True,True,0.9865841,1
+nih_3942,00003942_000,0,PA,37,M,No Finding,False,False,False,0.931417,1
+nih_3949,00003949_000,0,PA,43,F,No Finding,False,False,False,0.020765573,0
+nih_4007,00004007_013,0,AP,30,F,No Finding,False,False,False,0.9553276,1
+nih_4057,00004057_000,0,PA,36,M,No Finding,False,False,False,0.6274412,1
+nih_4144,00004144_007,0,PA,72,F,No Finding,False,False,False,0.6007017,1
+nih_4147,00004147_000,0,PA,34,F,No Finding,False,False,False,0.9491093,1
+nih_4177,00004177_000,0,PA,48,M,No Finding,False,False,False,0.91702867,1
+nih_4189,00004189_000,0,PA,64,F,No Finding,False,False,False,0.17648968,1
+nih_4206,00004206_000,0,PA,52,F,No Finding,False,False,False,0.94070375,1
+nih_4236,00004236_000,0,PA,46,M,No Finding,False,False,False,0.99282914,1
+nih_4254,00004254_000,0,PA,38,F,No Finding,False,False,False,0.21452515,1
+nih_4322,00004322_000,0,PA,22,M,No Finding,False,False,False,0.33465776,1
+nih_4338,00004338_001,0,AP,49,M,No Finding,False,False,False,0.9947314,1
+nih_4344,00004344_002,1,AP,46,F,Pneumonia,True,True,True,0.9765604,1
+nih_4344,00004344_035,1,AP,48,F,Edema|Pneumonia,False,False,True,0.99832696,1
+nih_4344,00004344_036,1,AP,48,F,Cardiomegaly|Edema|Infiltration|Pneumonia,False,False,True,0.9969265,1
+nih_4362,00004362_000,0,PA,29,F,No Finding,False,False,False,0.08392368,0
+nih_4369,00004369_000,0,PA,44,M,No Finding,False,False,False,0.43686053,1
+nih_4432,00004432_000,0,PA,48,M,No Finding,False,False,False,0.91307926,1
+nih_4440,00004440_000,0,PA,67,M,No Finding,False,False,False,0.71443856,1
+nih_4508,00004508_013,1,AP,37,M,Atelectasis|Consolidation|Edema|Infiltration|Pneumonia,False,False,False,0.9951533,1
+nih_4533,00004533_020,1,AP,34,M,Edema|Effusion|Infiltration|Pneumonia,False,False,False,0.9893652,1
+nih_4536,00004536_000,0,PA,60,F,No Finding,False,False,False,0.5068803,1
+nih_4538,00004538_000,0,AP,72,F,No Finding,False,False,False,0.97541386,1
+nih_4563,00004563_000,0,PA,55,M,No Finding,False,False,False,0.8386513,1
+nih_4572,00004572_000,0,PA,37,M,No Finding,False,False,False,0.6334322,1
+nih_4625,00004625_010,0,PA,46,F,No Finding,False,False,False,0.9236395,1
+nih_4641,00004641_000,1,PA,42,F,Effusion|Pleural_Thickening|Pneumonia,False,False,False,0.35376194,1
+nih_4680,00004680_003,0,AP,30,M,No Finding,False,False,False,0.9675639,1
+nih_4705,00004705_001,0,AP,39,F,No Finding,False,False,False,0.8992825,1
+nih_4746,00004746_012,0,AP,39,F,No Finding,False,False,False,0.96547526,1
+nih_4772,00004772_004,0,PA,49,F,No Finding,False,False,False,0.3224807,1
+nih_4782,00004782_000,0,PA,32,F,No Finding,False,False,False,0.8247049,1
+nih_4789,00004789_000,0,PA,47,F,No Finding,False,False,False,0.8819292,1
+nih_4798,00004798_006,0,PA,32,F,No Finding,False,False,False,0.4760691,1
+nih_4808,00004808_003,1,PA,31,M,Atelectasis|Pneumonia,False,False,True,0.6890504,1
+nih_4808,00004808_009,1,AP,34,M,Infiltration|Pneumonia,False,False,True,0.997332,1
+nih_4808,00004808_090,1,AP,37,M,Edema|Infiltration|Pneumonia,False,True,True,0.99906117,1
+nih_4808,00004808_101,1,AP,37,M,Edema|Infiltration|Pneumonia,False,False,True,0.9993218,1
+nih_4877,00004877_001,0,PA,52,M,No Finding,False,False,False,0.32969922,1
+nih_4888,00004888_000,0,PA,24,F,No Finding,False,False,False,0.5280006,1
+nih_4890,00004890_000,0,PA,21,F,No Finding,False,False,False,0.59110254,1
+nih_4893,00004893_027,1,AP,29,M,Pneumonia,True,False,True,0.9924265,1
+nih_4893,00004893_070,1,AP,33,M,Pneumonia,True,True,True,0.9940499,1
+nih_4911,00004911_001,0,PA,47,F,No Finding,False,False,False,0.48083055,1
+nih_4917,00004917_013,0,AP,49,M,No Finding,False,False,False,0.99805826,1
+nih_4918,00004918_000,0,AP,63,M,No Finding,False,False,False,0.7981277,1
+nih_4935,00004935_000,0,AP,59,M,No Finding,False,False,False,0.99503607,1
+nih_4975,00004975_005,0,PA,33,M,No Finding,False,False,False,0.8801192,1
+nih_5032,00005032_000,1,PA,52,M,Pneumonia,True,False,False,0.98856133,1
+nih_5055,00005055_000,0,PA,29,F,No Finding,False,False,False,0.53389156,1
+nih_5090,00005090_003,1,PA,57,F,Atelectasis|Pneumonia,False,False,False,0.8151623,1
+nih_5125,00005125_000,0,AP,70,F,No Finding,False,False,False,0.9923199,1
+nih_5140,00005140_014,0,PA,51,F,No Finding,False,False,False,0.4720786,1
+nih_5171,00005171_001,0,PA,34,M,No Finding,False,False,False,0.75422466,1
+nih_5247,00005247_000,0,AP,40,M,No Finding,False,False,False,0.8045072,1
+nih_5258,00005258_000,0,PA,50,M,No Finding,False,False,False,0.57068944,1
+nih_5262,00005262_000,0,PA,20,M,No Finding,False,False,False,0.7337026,1
+nih_5280,00005280_004,0,AP,29,M,No Finding,False,False,False,0.9518507,1
+nih_5308,00005308_002,0,AP,42,F,No Finding,False,False,False,0.9382376,1
+nih_5320,00005320_000,0,PA,32,F,No Finding,False,False,False,0.12148295,0
+nih_5322,00005322_000,0,PA,53,M,No Finding,False,False,False,0.90581006,1
+nih_5340,00005340_000,0,PA,35,M,No Finding,False,False,False,0.44167742,1
+nih_5353,00005353_000,1,AP,30,M,Consolidation|Pneumonia,False,True,True,0.98605853,1
+nih_5424,00005424_000,0,PA,70,F,No Finding,False,False,False,0.88993156,1
+nih_5430,00005430_000,0,PA,45,F,No Finding,False,False,False,0.63484585,1
+nih_5455,00005455_000,0,PA,53,F,No Finding,False,False,False,0.8801048,1
+nih_5480,00005480_000,0,AP,42,F,No Finding,False,False,False,0.958482,1
+nih_5502,00005502_004,0,AP,22,F,No Finding,False,False,False,0.4600207,1
+nih_5529,00005529_000,0,PA,68,M,No Finding,False,False,False,0.36994627,1
+nih_5532,00005532_004,1,PA,38,F,Cardiomegaly|Pneumonia,False,False,True,0.9986174,1
+nih_5532,00005532_022,1,PA,40,F,Infiltration|Pneumonia,False,True,True,0.99104905,1
+nih_5549,00005549_000,0,PA,25,M,No Finding,False,False,False,0.7465921,1
+nih_5561,00005561_001,0,PA,37,F,No Finding,False,False,False,0.5337557,1
+nih_5567,00005567_000,1,AP,53,M,Effusion|Pneumonia,False,True,True,0.9169478,1
+nih_5567,00005567_002,1,AP,53,M,Atelectasis|Effusion|Pneumonia,False,False,True,0.9531762,1
+nih_5567,00005567_016,1,PA,49,M,Emphysema|Pneumonia,False,False,True,0.99177295,1
+nih_5567,00005567_017,1,PA,50,M,Pneumonia,True,False,True,0.9937449,1
+nih_5567,00005567_025,1,PA,53,M,Pneumonia,True,True,True,0.97961116,1
+nih_5595,00005595_000,0,PA,52,M,No Finding,False,False,False,0.86127234,1
+nih_5616,00005616_000,0,PA,57,F,No Finding,False,False,False,0.38662,1
+nih_5624,00005624_001,0,PA,51,M,No Finding,False,False,False,0.6850665,1
+nih_5638,00005638_000,1,PA,64,M,Pneumonia,True,False,False,0.957642,1
+nih_5673,00005673_003,1,PA,41,M,Pneumonia,True,False,False,0.9809184,1
+nih_5714,00005714_000,0,PA,55,F,No Finding,False,False,False,0.92095065,1
+nih_5778,00005778_001,1,PA,58,M,Pneumonia,True,False,False,0.9100483,1
+nih_5816,00005816_000,0,PA,36,M,No Finding,False,False,False,0.53732383,1
+nih_5817,00005817_000,0,PA,35,F,No Finding,False,False,False,0.3896209,1
+nih_5832,00005832_026,1,AP,44,M,Infiltration|Pneumonia,False,False,False,0.9993369,1
+nih_5856,00005856_000,0,PA,32,M,No Finding,False,False,False,0.754025,1
+nih_5857,00005857_000,0,PA,28,F,No Finding,False,False,False,0.35108244,1
+nih_5869,00005869_001,1,PA,35,F,Pneumothorax|Pneumonia,False,True,True,0.66219145,1
+nih_5871,00005871_000,0,AP,56,F,No Finding,False,False,False,0.9817947,1
+nih_5901,00005901_001,0,PA,47,F,No Finding,False,False,False,0.48724452,1
+nih_5902,00005902_000,0,AP,30,F,No Finding,False,False,False,0.9040637,1
+nih_5931,00005931_000,0,PA,40,M,No Finding,False,False,False,0.9414618,1
+nih_5955,00005955_000,0,PA,60,F,No Finding,False,False,False,0.16602188,1
+nih_5974,00005974_000,0,AP,47,F,No Finding,False,False,False,0.9870129,1
+nih_6007,00006007_001,0,PA,48,M,No Finding,False,False,False,0.9265218,1
+nih_6019,00006019_000,0,PA,55,M,No Finding,False,False,False,0.96190864,1
+nih_6024,00006024_012,1,PA,66,M,Infiltration|Pneumonia,False,False,False,0.88259643,1
+nih_6112,00006112_000,0,PA,56,F,No Finding,False,False,False,0.84697616,1
+nih_6114,00006114_000,0,AP,55,M,No Finding,False,False,False,0.93393344,1
+nih_6160,00006160_017,0,AP,65,F,No Finding,False,False,False,0.4333502,1
+nih_6162,00006162_008,1,AP,77,M,Infiltration|Pneumonia,False,False,False,0.99607736,1
+nih_6174,00006174_001,0,PA,62,F,No Finding,False,False,False,0.13948613,1
+nih_6175,00006175_000,0,PA,37,M,No Finding,False,False,False,0.87255174,1
+nih_6211,00006211_000,0,PA,32,F,No Finding,False,False,False,0.52999824,1
+nih_6245,00006245_001,0,PA,47,M,No Finding,False,False,False,0.6472971,1
+nih_6256,00006256_000,0,PA,39,M,No Finding,False,False,False,0.35191482,1
+nih_6268,00006268_000,0,PA,41,M,No Finding,False,False,False,0.89066714,1
+nih_6311,00006311_000,0,PA,39,F,No Finding,False,False,False,0.29948613,1
+nih_6341,00006341_001,0,AP,44,F,No Finding,False,False,False,0.9207782,1
+nih_6370,00006370_000,0,AP,85,F,No Finding,False,False,False,0.9465409,1
+nih_6400,00006400_000,0,PA,24,F,No Finding,False,False,False,0.07462506,0
+nih_6413,00006413_003,0,PA,34,M,No Finding,False,False,False,0.9028376,1
+nih_6437,00006437_000,0,PA,19,M,No Finding,False,False,False,0.7563208,1
+nih_6455,00006455_001,0,PA,32,M,No Finding,False,False,False,0.93757296,1
+nih_6466,00006466_000,0,PA,33,M,No Finding,False,False,False,0.9393416,1
+nih_6521,00006521_003,0,PA,55,F,No Finding,False,False,False,0.3475948,1
+nih_6583,00006583_001,0,PA,44,F,No Finding,False,False,False,0.6417115,1
+nih_6614,00006614_003,0,PA,31,F,No Finding,False,False,False,0.6303678,1
+nih_6617,00006617_000,0,PA,55,F,No Finding,False,False,False,0.25295505,1
+nih_6655,00006655_000,0,AP,39,F,No Finding,False,False,False,0.982864,1
+nih_6680,00006680_000,0,PA,69,M,No Finding,False,False,False,0.9887477,1
+nih_6695,00006695_007,0,AP,61,F,No Finding,False,False,False,0.9940268,1
+nih_6712,00006712_002,0,AP,44,M,No Finding,False,False,False,0.9607411,1
+nih_6713,00006713_001,1,PA,71,M,Atelectasis|Pneumonia,False,False,False,0.8393243,1
+nih_6717,00006717_007,1,PA,58,F,Pneumonia,True,False,False,0.28414282,1
+nih_6759,00006759_001,1,PA,78,M,Pneumonia,True,False,False,0.9953955,1
+nih_6764,00006764_001,0,AP,67,F,No Finding,False,False,False,0.9441032,1
+nih_6771,00006771_000,0,PA,25,M,No Finding,False,False,False,0.47192523,1
+nih_6772,00006772_000,0,PA,39,M,No Finding,False,False,False,0.1353031,1
+nih_6801,00006801_000,0,PA,51,M,No Finding,False,False,False,0.34018144,1
+nih_6806,00006806_000,0,AP,48,F,No Finding,False,False,False,0.7487252,1
+nih_6825,00006825_000,0,PA,34,M,No Finding,False,False,False,0.45919666,1
+nih_6836,00006836_000,0,AP,74,F,No Finding,False,False,False,0.9993692,1
+nih_6839,00006839_000,0,PA,35,F,No Finding,False,False,False,0.10616999,0
+nih_6856,00006856_000,0,AP,18,F,No Finding,False,False,False,0.86605084,1
+nih_6865,00006865_000,0,PA,33,M,No Finding,False,False,False,0.66725767,1
+nih_6890,00006890_000,0,PA,31,M,No Finding,False,False,False,0.31113335,1
+nih_6899,00006899_000,0,PA,35,F,No Finding,False,False,False,0.45699832,1
+nih_6932,00006932_001,0,PA,37,M,No Finding,False,False,False,0.9588879,1
+nih_6960,00006960_014,0,AP,18,M,No Finding,False,False,False,0.9961753,1
+nih_6962,00006962_006,0,PA,31,M,No Finding,False,False,False,0.969689,1
+nih_7006,00007006_000,0,AP,32,F,No Finding,False,False,False,0.81446135,1
+nih_7018,00007018_047,1,AP,28,M,Edema|Infiltration|Pneumonia,False,False,False,0.9851953,1
+nih_7035,00007035_000,0,PA,66,M,No Finding,False,False,False,0.9710712,1
+nih_7072,00007072_001,0,AP,46,F,No Finding,False,False,False,0.9951776,1
+nih_7109,00007109_020,1,PA,38,F,Fibrosis|Pneumonia,False,False,False,0.87825733,1
+nih_7109,00007109_027,1,PA,39,F,Fibrosis|Pneumonia,False,False,False,0.9617333,1
+nih_7134,00007134_000,0,PA,29,M,No Finding,False,False,False,0.84450233,1
+nih_7167,00007167_001,0,PA,48,M,No Finding,False,False,False,0.8460164,1
+nih_7168,00007168_001,0,AP,58,M,No Finding,False,False,False,0.8410056,1
+nih_7199,00007199_001,0,PA,32,M,No Finding,False,False,False,0.96108407,1
+nih_7244,00007244_005,0,PA,53,F,No Finding,False,False,False,0.6334653,1
+nih_7286,00007286_000,0,PA,51,M,No Finding,False,False,False,0.5897322,1
+nih_7313,00007313_000,0,PA,58,M,No Finding,False,False,False,0.9355191,1
+nih_7331,00007331_000,0,PA,50,M,No Finding,False,False,False,0.52882504,1
+nih_7354,00007354_027,1,AP,43,M,Edema|Infiltration|Mass|Pneumonia,False,False,False,0.9914281,1
+nih_7355,00007355_009,0,PA,54,F,No Finding,False,False,False,0.7907793,1
+nih_7365,00007365_000,0,PA,59,M,No Finding,False,False,False,0.6148384,1
+nih_7433,00007433_000,0,PA,28,M,No Finding,False,False,False,0.8265653,1
+nih_7444,00007444_003,1,PA,38,M,Pneumonia,True,True,True,0.96322066,1
+nih_7450,00007450_007,0,PA,59,M,No Finding,False,False,False,0.7278756,1
+nih_7466,00007466_000,0,PA,23,M,No Finding,False,False,False,0.76458365,1
+nih_7474,00007474_000,0,PA,64,M,No Finding,False,False,False,0.95708907,1
+nih_7480,00007480_000,0,PA,59,M,No Finding,False,False,False,0.5156072,1
+nih_7488,00007488_000,0,PA,67,F,No Finding,False,False,False,0.86802775,1
+nih_7517,00007517_000,0,PA,52,F,No Finding,False,False,False,0.9157952,1
+nih_7523,00007523_013,0,PA,27,F,No Finding,False,False,False,0.6200635,1
+nih_7530,00007530_000,0,PA,30,M,No Finding,False,False,False,0.8069611,1
+nih_7536,00007536_000,0,PA,42,M,No Finding,False,False,False,0.46591046,1
+nih_7611,00007611_000,0,PA,62,M,No Finding,False,False,False,0.100016624,0
+nih_7618,00007618_005,0,PA,60,M,No Finding,False,False,False,0.9789985,1
+nih_7629,00007629_001,1,PA,52,M,Atelectasis|Pneumonia,False,True,True,0.88917804,1
+nih_7629,00007629_002,1,AP,52,M,Atelectasis|Pneumonia,False,False,True,0.9943427,1
+nih_7669,00007669_000,0,PA,49,M,No Finding,False,False,False,0.94162846,1
+nih_7727,00007727_000,0,PA,42,M,No Finding,False,False,False,0.9177914,1
+nih_7728,00007728_013,1,AP,34,M,Infiltration|Pneumonia,False,True,True,0.9670067,1
+nih_7735,00007735_008,1,AP,29,M,Atelectasis|Pneumonia,False,False,True,0.9066544,1
+nih_7735,00007735_018,1,AP,30,M,Pneumonia,True,True,True,0.8182308,1
+nih_7810,00007810_005,0,PA,38,F,No Finding,False,False,False,0.3920025,1
+nih_7901,00007901_000,0,PA,31,F,No Finding,False,False,False,0.79979014,1
+nih_7953,00007953_001,0,AP,72,F,No Finding,False,False,False,0.98688656,1
+nih_7971,00007971_000,0,PA,30,M,No Finding,False,False,False,0.6390295,1
+nih_7979,00007979_003,0,AP,49,M,No Finding,False,False,False,0.98806435,1
+nih_7991,00007991_001,0,AP,51,F,No Finding,False,False,False,0.97098494,1
+nih_7997,00007997_000,0,AP,45,F,No Finding,False,False,False,0.99233466,1
+nih_8008,00008008_046,1,PA,23,F,Effusion|Pneumonia,False,False,False,0.9482918,1
+nih_8009,00008009_030,0,AP,19,M,No Finding,False,False,False,0.99662435,1
+nih_8012,00008012_003,0,AP,26,M,No Finding,False,False,False,0.6940054,1
+nih_8039,00008039_007,0,PA,37,M,No Finding,False,False,False,0.52535415,1
+nih_8048,00008048_000,0,AP,30,M,No Finding,False,False,False,0.90377116,1
+nih_8114,00008114_002,0,AP,65,M,No Finding,False,False,False,0.9776844,1
+nih_8148,00008148_000,0,PA,37,F,No Finding,False,False,False,0.34604973,1
+nih_8190,00008190_006,0,PA,22,M,No Finding,False,False,False,0.56810385,1
+nih_8210,00008210_000,0,AP,56,M,No Finding,False,False,False,0.99264,1
+nih_8226,00008226_001,0,PA,45,M,No Finding,False,False,False,0.7738745,1
+nih_8235,00008235_000,0,PA,48,F,No Finding,False,False,False,0.7422944,1
+nih_8291,00008291_009,1,AP,33,F,Edema|Pneumonia,False,True,True,0.9754494,1
+nih_8291,00008291_011,1,AP,33,F,Edema|Pneumonia,False,True,True,0.9466364,1
+nih_8325,00008325_000,0,PA,39,M,No Finding,False,False,False,0.5228698,1
+nih_8345,00008345_005,0,AP,57,F,No Finding,False,False,False,0.99334866,1
+nih_8347,00008347_009,1,AP,42,F,Edema|Effusion|Infiltration|Pneumonia,False,False,False,0.95912665,1
+nih_8360,00008360_001,0,PA,64,M,No Finding,False,False,False,0.8098897,1
+nih_8365,00008365_000,1,AP,70,F,Cardiomegaly|Pneumonia,False,False,False,0.92759305,1
+nih_8392,00008392_000,0,PA,49,M,No Finding,False,False,False,0.54721475,1
+nih_8420,00008420_002,0,PA,57,F,No Finding,False,False,False,0.9741082,1
+nih_8423,00008423_001,0,PA,55,M,No Finding,False,False,False,0.73773694,1
+nih_8433,00008433_001,0,AP,59,F,No Finding,False,False,False,0.9656002,1
+nih_8461,00008461_000,0,PA,31,F,No Finding,False,False,False,0.96675783,1
+nih_8597,00008597_001,0,AP,44,M,No Finding,False,False,False,0.8464539,1
+nih_8598,00008598_000,0,AP,52,F,No Finding,False,False,False,0.9864042,1
+nih_8643,00008643_000,0,PA,23,F,No Finding,False,False,False,0.17839332,1
+nih_8668,00008668_000,0,PA,51,F,No Finding,False,False,False,0.4005587,1
+nih_8687,00008687_004,0,PA,43,F,No Finding,False,False,False,0.37754482,1
+nih_8691,00008691_005,1,AP,52,F,Effusion|Pneumonia,False,False,False,0.97719425,1
+nih_8727,00008727_009,1,PA,54,M,Pneumonia,True,True,True,0.7349243,1
+nih_8806,00008806_005,0,PA,39,F,No Finding,False,False,False,0.93791693,1
+nih_8834,00008834_000,0,PA,63,M,No Finding,False,False,False,0.9251795,1
+nih_8851,00008851_000,0,PA,36,F,No Finding,False,False,False,0.88009095,1
+nih_8864,00008864_001,0,PA,39,F,No Finding,False,False,False,0.6797766,1
+nih_8866,00008866_003,0,PA,20,M,No Finding,False,False,False,0.8798972,1
+nih_8911,00008911_005,0,AP,63,M,No Finding,False,False,False,0.94501436,1
+nih_8944,00008944_000,0,PA,21,F,No Finding,False,False,False,0.72769636,1
+nih_8945,00008945_000,0,PA,61,F,No Finding,False,False,False,0.56160873,1
+nih_8951,00008951_000,0,PA,55,M,No Finding,False,False,False,0.909228,1
+nih_8992,00008992_000,0,PA,52,M,No Finding,False,False,False,0.54999924,1
+nih_8996,00008996_000,0,PA,33,F,No Finding,False,False,False,0.8833157,1
+nih_9037,00009037_000,0,PA,46,M,No Finding,False,False,False,0.71393913,1
+nih_9058,00009058_002,0,PA,56,F,No Finding,False,False,False,0.9159896,1
+nih_9071,00009071_000,0,PA,55,F,No Finding,False,False,False,0.8727766,1
+nih_9107,00009107_006,1,AP,46,M,Edema|Mass|Pneumonia,False,True,True,0.98299617,1
+nih_9206,00009206_000,0,PA,69,M,No Finding,False,False,False,0.9228673,1
+nih_9209,00009209_000,0,PA,35,F,No Finding,False,False,False,0.8190223,1
+nih_9229,00009229_003,1,AP,35,M,Pneumonia,True,True,True,0.9954899,1
+nih_9245,00009245_001,1,PA,20,F,Infiltration|Pneumonia,False,False,False,0.76794726,1
+nih_9347,00009347_000,0,PA,32,F,No Finding,False,False,False,0.17630258,1
+nih_9350,00009350_006,0,AP,42,F,No Finding,False,False,False,0.36956063,1
+nih_9357,00009357_000,0,PA,33,M,No Finding,False,False,False,0.9680656,1
+nih_9402,00009402_000,0,PA,52,F,No Finding,False,False,False,0.8875323,1
+nih_9471,00009471_000,0,PA,24,M,No Finding,False,False,False,0.43340287,1
+nih_9499,00009499_000,0,PA,43,M,No Finding,False,False,False,0.5731783,1
+nih_9505,00009505_003,0,PA,65,M,No Finding,False,False,False,0.5360357,1
+nih_9507,00009507_001,1,PA,59,M,Consolidation|Hernia|Infiltration|Pneumonia,False,False,True,0.9238313,1
+nih_9507,00009507_002,1,PA,59,M,Effusion|Hernia|Pneumonia,False,False,True,0.7082097,1
+nih_9507,00009507_004,1,PA,60,M,Hernia|Infiltration|Pneumonia,False,True,True,0.5603986,1
+nih_9507,00009507_018,1,AP,60,M,Edema|Pneumonia,False,False,True,0.9831352,1
+nih_9522,00009522_000,0,PA,53,M,No Finding,False,False,False,0.7703172,1
+nih_9540,00009540_000,0,PA,64,M,No Finding,False,False,False,0.45297128,1
+nih_9562,00009562_002,0,AP,35,F,No Finding,False,False,False,0.9971244,1
+nih_9583,00009583_001,0,AP,20,F,No Finding,False,False,False,0.6389632,1
+nih_9600,00009600_007,1,PA,64,F,Atelectasis|Infiltration|Pleural_Thickening|Pneumonia,False,False,False,0.8703172,1
+nih_9608,00009608_034,1,AP,30,M,Edema|Infiltration|Pleural_Thickening|Pneumonia,False,False,True,0.9932904,1
+nih_9608,00009608_037,1,AP,30,M,Mass|Pneumonia,False,True,True,0.99825364,1
+nih_9609,00009609_014,0,PA,56,M,No Finding,False,False,False,0.99327856,1
+nih_9619,00009619_001,0,AP,54,M,No Finding,False,False,False,0.99464405,1
+nih_9632,00009632_000,0,PA,64,F,No Finding,False,False,False,0.2071968,1
+nih_9659,00009659_006,0,AP,34,M,No Finding,False,False,False,0.9986091,1
+nih_9674,00009674_000,0,PA,54,M,No Finding,False,False,False,0.88696074,1
+nih_9691,00009691_016,0,PA,52,F,No Finding,False,False,False,0.80006003,1
+nih_9730,00009730_006,0,AP,41,M,No Finding,False,False,False,0.9985833,1
+nih_9732,00009732_000,0,PA,49,M,No Finding,False,False,False,0.9641472,1
+nih_9736,00009736_001,0,AP,65,F,No Finding,False,False,False,0.9987237,1
+nih_9745,00009745_001,0,AP,44,F,No Finding,False,False,False,0.9408198,1
+nih_9782,00009782_000,0,PA,54,M,No Finding,False,False,False,0.8852775,1
+nih_9819,00009819_000,0,PA,51,F,No Finding,False,False,False,0.92304105,1
+nih_9833,00009833_000,0,PA,24,M,No Finding,False,False,False,0.20831445,1
+nih_9863,00009863_007,1,AP,40,F,Atelectasis|Consolidation|Edema|Infiltration|Pneumonia,False,False,True,0.984037,1
+nih_9863,00009863_035,1,AP,40,F,Edema|Pneumonia,False,False,True,0.99669576,1
+nih_9863,00009863_043,1,AP,40,F,Edema|Infiltration|Pneumonia,False,False,True,0.917936,1
+nih_9863,00009863_058,1,AP,40,F,Pneumonia,True,True,True,0.97286665,1
+nih_9863,00009863_059,1,AP,40,F,Pneumonia,True,False,True,0.99251103,1
+nih_9866,00009866_002,0,PA,38,F,No Finding,False,False,False,0.2881545,1
+nih_9877,00009877_001,0,AP,30,M,No Finding,False,False,False,0.91034293,1
+nih_9894,00009894_013,0,PA,57,F,No Finding,False,False,False,0.29032946,1
+nih_9911,00009911_000,0,PA,47,F,No Finding,False,False,False,0.7638541,1
+nih_9912,00009912_005,0,AP,27,M,No Finding,False,False,False,0.9678103,1
+nih_9965,00009965_000,0,PA,58,M,No Finding,False,False,False,0.6416047,1
+nih_9994,00009994_000,0,PA,61,M,No Finding,False,False,False,0.77687013,1
+nih_10007,00010007_132,0,AP,58,M,No Finding,False,False,False,0.9977946,1
+nih_10024,00010024_000,0,PA,54,F,No Finding,False,False,False,0.91050154,1
+nih_10066,00010066_007,1,PA,25,M,Atelectasis|Effusion|Infiltration|Pneumonia,False,False,False,0.97095764,1
+nih_10120,00010120_008,1,AP,49,M,Infiltration|Pneumonia,False,False,True,0.9827618,1
+nih_10120,00010120_010,1,AP,49,M,Infiltration|Pneumonia,False,True,True,0.9964862,1
+nih_10120,00010120_029,1,PA,54,M,Infiltration|Pneumonia,False,False,True,0.845162,1
+nih_10169,00010169_000,0,PA,67,M,No Finding,False,False,False,0.3950607,1
+nih_10202,00010202_000,0,PA,52,M,No Finding,False,False,False,0.73945636,1
+nih_10211,00010211_000,0,PA,48,F,No Finding,False,False,False,0.81336397,1
+nih_10214,00010214_000,0,PA,56,M,No Finding,False,False,False,0.9702918,1
+nih_10242,00010242_000,0,PA,53,F,No Finding,False,False,False,0.80561477,1
+nih_10277,00010277_000,1,PA,60,M,Infiltration|Mass|Nodule|Pleural_Thickening|Effusion|Pneumonia,False,True,True,0.6545827,1
+nih_10294,00010294_021,1,AP,49,M,Edema|Pneumonia,False,False,False,0.99831545,1
+nih_10306,00010306_001,0,PA,68,M,No Finding,False,False,False,0.46700266,1
+nih_10349,00010349_000,0,AP,29,F,No Finding,False,False,False,0.86309505,1
+nih_10352,00010352_022,1,AP,31,M,Edema|Infiltration|Pneumonia,False,False,False,0.9831328,1
+nih_10447,00010447_018,1,AP,63,F,Infiltration|Pneumonia,False,True,True,0.9396841,1
+nih_10474,00010474_000,0,AP,38,F,No Finding,False,False,False,0.93672776,1
+nih_10519,00010519_001,0,PA,59,F,No Finding,False,False,False,0.36424294,1
+nih_10539,00010539_000,0,AP,46,M,No Finding,False,False,False,0.976611,1
+nih_10541,00010541_000,0,PA,51,F,No Finding,False,False,False,0.26206854,1
+nih_10550,00010550_000,0,AP,56,M,No Finding,False,False,False,0.9876628,1
+nih_10558,00010558_000,0,PA,32,M,No Finding,False,False,False,0.16487019,1
+nih_10610,00010610_003,1,PA,27,M,Consolidation|Pneumonia,False,True,True,0.8202321,1
+nih_10622,00010622_000,0,PA,73,M,No Finding,False,False,False,0.9272179,1
+nih_10652,00010652_000,1,PA,43,F,Atelectasis|Pneumonia,False,True,True,0.9945851,1
+nih_10652,00010652_003,1,AP,44,F,Consolidation|Infiltration|Pneumonia,False,False,True,0.99643123,1
+nih_10683,00010683_005,0,PA,40,F,No Finding,False,False,False,0.3733386,1
+nih_10780,00010780_007,1,AP,34,M,Edema|Infiltration|Pneumonia,False,False,False,0.9949595,1
+nih_10811,00010811_000,0,PA,64,F,No Finding,False,False,False,0.8201354,1
+nih_10816,00010816_001,0,PA,49,F,No Finding,False,False,False,0.17499653,1
+nih_10828,00010828_023,1,AP,44,M,Atelectasis|Pneumonia,False,True,True,0.9958402,1
+nih_10866,00010866_001,0,AP,56,M,No Finding,False,False,False,0.9825111,1
+nih_10888,00010888_006,0,AP,68,F,No Finding,False,False,False,0.84150356,1
+nih_10895,00010895_000,0,PA,55,M,No Finding,False,False,False,0.8638992,1
+nih_10899,00010899_000,0,PA,36,F,No Finding,False,False,False,0.58389395,1
+nih_10958,00010958_000,0,PA,49,F,No Finding,False,False,False,0.44995275,1
+nih_10970,00010970_001,0,PA,42,F,No Finding,False,False,False,0.81465733,1
+nih_10980,00010980_001,0,AP,51,M,No Finding,False,False,False,0.9495372,1
+nih_10994,00010994_001,0,PA,49,M,No Finding,False,False,False,0.9542384,1
+nih_11013,00011013_000,0,PA,52,F,No Finding,False,False,False,0.8753008,1
+nih_11045,00011045_000,0,PA,41,F,No Finding,False,False,False,0.6223048,1
+nih_11104,00011104_004,1,PA,60,M,Infiltration|Nodule|Pneumonia,False,False,False,0.6835788,1
+nih_11136,00011136_002,1,PA,31,M,Consolidation|Effusion|Pneumonia,False,True,True,0.83007985,1
+nih_11139,00011139_002,0,PA,56,F,No Finding,False,False,False,0.99510336,1
+nih_11140,00011140_013,1,AP,39,F,Edema|Infiltration|Pneumonia,False,False,False,0.9996351,1
+nih_11184,00011184_000,0,PA,35,F,No Finding,False,False,False,0.6691763,1
+nih_11191,00011191_001,0,PA,20,M,No Finding,False,False,False,0.4522218,1
+nih_11219,00011219_000,0,PA,42,F,No Finding,False,False,False,0.70692056,1
+nih_11237,00011237_006,1,AP,55,F,Consolidation|Infiltration|Pleural_Thickening|Pneumonia,False,True,True,0.9951994,1
+nih_11237,00011237_066,1,AP,56,F,Infiltration|Pneumonia,False,False,True,0.9927164,1
+nih_11237,00011237_067,1,AP,56,F,Infiltration|Pneumonia,False,False,True,0.9914705,1
+nih_11237,00011237_112,1,AP,56,F,Edema|Infiltration|Pneumonia,False,False,True,0.9990701,1
+nih_11242,00011242_000,0,PA,40,M,No Finding,False,False,False,0.5988992,1
+nih_11246,00011246_000,0,PA,40,M,No Finding,False,False,False,0.9176929,1
+nih_11249,00011249_000,0,PA,66,M,No Finding,False,False,False,0.6301562,1
+nih_11262,00011262_000,0,PA,50,M,No Finding,False,False,False,0.43109524,1
+nih_11341,00011341_000,0,PA,59,M,No Finding,False,False,False,0.78569394,1
+nih_11366,00011366_002,1,AP,60,M,Edema|Pneumonia|Infiltration,False,True,True,0.99929464,1
+nih_11402,00011402_007,1,AP,59,M,Atelectasis|Cardiomegaly|Consolidation|Effusion|Infiltration|Pneumonia,False,True,True,0.9991412,1
+nih_11411,00011411_000,0,PA,59,M,No Finding,False,False,False,0.50369954,1
+nih_11444,00011444_000,0,PA,40,F,No Finding,False,False,False,0.68362355,1
+nih_11447,00011447_000,0,AP,67,F,No Finding,False,False,False,0.97511864,1
+nih_11448,00011448_002,0,AP,32,M,No Finding,False,False,False,0.9860351,1
+nih_11475,00011475_000,0,PA,40,M,No Finding,False,False,False,0.69316727,1
+nih_11514,00011514_015,1,AP,45,M,Pneumonia,True,True,True,0.9978993,1
+nih_11515,00011515_000,0,PA,38,F,No Finding,False,False,False,0.4977944,1
+nih_11544,00011544_010,1,PA,49,M,Infiltration|Pneumonia|Pneumothorax,False,False,False,0.4464366,1
+nih_11550,00011550_000,0,PA,46,M,No Finding,False,False,False,0.8487848,1
+nih_11560,00011560_000,0,PA,63,M,No Finding,False,False,False,0.7892607,1
+nih_11583,00011583_000,1,PA,67,M,Infiltration|Pneumonia,False,True,True,0.9486566,1
+nih_11583,00011583_007,1,AP,67,M,Edema|Infiltration|Pneumonia,False,False,True,0.96153915,1
+nih_11604,00011604_000,0,PA,44,F,No Finding,False,False,False,0.97356737,1
+nih_11616,00011616_000,0,PA,46,M,No Finding,False,False,False,0.6770346,1
+nih_11638,00011638_000,1,PA,66,F,Atelectasis|Pneumonia,False,False,False,0.9501155,1
+nih_11651,00011651_001,0,PA,56,F,No Finding,False,False,False,0.3849552,1
+nih_11652,00011652_003,0,AP,52,M,No Finding,False,False,False,0.9974421,1
+nih_11670,00011670_000,0,PA,35,F,No Finding,False,False,False,0.31199172,1
+nih_11690,00011690_001,0,AP,34,M,No Finding,False,False,False,0.9336456,1
+nih_11714,00011714_000,0,AP,37,F,No Finding,False,False,False,0.9783029,1
+nih_11736,00011736_000,0,PA,24,M,No Finding,False,False,False,0.22417705,1
+nih_11751,00011751_007,0,PA,22,M,No Finding,False,False,False,0.97949183,1
+nih_11784,00011784_000,0,PA,53,M,No Finding,False,False,False,0.81591254,1
+nih_11803,00011803_000,0,PA,41,M,No Finding,False,False,False,0.8662712,1
+nih_11827,00011827_010,1,PA,30,F,Atelectasis|Consolidation|Pneumonia,False,False,False,0.23086098,1
+nih_11831,00011831_008,1,PA,56,F,Emphysema|Pneumothorax|Pneumonia,False,True,True,0.6635498,1
+nih_11831,00011831_015,1,PA,56,F,Edema|Emphysema|Infiltration|Mass|Pneumonia,False,False,True,0.9331171,1
+nih_11848,00011848_000,0,PA,64,F,No Finding,False,False,False,0.73257494,1
+nih_11877,00011877_009,0,AP,53,F,No Finding,False,False,False,0.9973111,1
+nih_11895,00011895_001,0,PA,55,F,No Finding,False,False,False,0.68572307,1
+nih_11906,00011906_002,0,AP,66,F,No Finding,False,False,False,0.993672,1
+nih_11945,00011945_011,1,PA,33,F,Consolidation|Pneumonia,False,False,False,0.89377505,1
+nih_11955,00011955_004,0,PA,54,F,No Finding,False,False,False,0.9166336,1
+nih_11973,00011973_015,1,PA,62,M,Pneumonia,True,False,False,0.94054645,1
+nih_11991,00011991_000,0,PA,65,M,No Finding,False,False,False,0.97212887,1
+nih_12021,00012021_081,1,AP,25,M,Infiltration|Pneumonia,False,True,True,0.99872017,1
+nih_12035,00012035_002,0,PA,33,F,No Finding,False,False,False,0.8095321,1
+nih_12039,00012039_000,0,PA,49,F,No Finding,False,False,False,0.47715375,1
+nih_12045,00012045_005,1,AP,43,F,Atelectasis|Effusion|Pneumonia,False,True,True,0.99179864,1
+nih_12074,00012074_000,0,PA,50,M,No Finding,False,False,False,0.9680485,1
+nih_12094,00012094_009,1,AP,63,F,Pneumonia,True,False,True,0.9862526,1
+nih_12094,00012094_011,1,AP,63,F,Pneumonia,True,True,True,0.9745963,1
+nih_12094,00012094_033,1,PA,63,F,Pneumonia|Pneumothorax,False,False,True,0.986485,1
+nih_12096,00012096_000,0,AP,54,M,No Finding,False,False,False,0.9777599,1
+nih_12099,00012099_000,0,PA,59,M,No Finding,False,False,False,0.9331771,1
+nih_12103,00012103_002,0,PA,43,F,No Finding,False,False,False,0.7200674,1
+nih_12105,00012105_000,0,PA,54,F,No Finding,False,False,False,0.92049176,1
+nih_12109,00012109_000,0,PA,54,F,No Finding,False,False,False,0.79178715,1
+nih_12114,00012114_009,0,AP,44,F,No Finding,False,False,False,0.99726295,1
+nih_12141,00012141_013,1,AP,31,M,Edema|Effusion|Infiltration|Pneumonia,False,True,True,0.9991831,1
+nih_12141,00012141_022,1,AP,31,M,Edema|Effusion|Pleural_Thickening|Pneumonia,False,False,True,0.98953027,1
+nih_12167,00012167_000,0,PA,26,F,No Finding,False,False,False,0.9041085,1
+nih_12212,00012212_000,0,PA,51,M,No Finding,False,False,False,0.69367975,1
+nih_12220,00012220_002,0,PA,23,F,No Finding,False,False,False,0.9771872,1
+nih_12236,00012236_012,1,AP,48,M,Atelectasis|Effusion|Pneumonia,False,False,False,0.99785197,1
+nih_12237,00012237_000,0,PA,66,F,No Finding,False,False,False,0.9531844,1
+nih_12261,00012261_001,1,AP,60,M,Atelectasis|Cardiomegaly|Pneumonia,False,True,True,0.9928948,1
+nih_12299,00012299_001,0,PA,22,M,No Finding,False,False,False,0.7471092,1
+nih_12362,00012362_000,0,PA,45,F,No Finding,False,False,False,0.848718,1
+nih_12371,00012371_000,0,PA,57,M,No Finding,False,False,False,0.75344527,1
+nih_12480,00012480_001,0,AP,51,F,No Finding,False,False,False,0.967129,1
+nih_12510,00012510_000,0,PA,52,M,No Finding,False,False,False,0.92557657,1
+nih_12576,00012576_004,1,PA,59,M,Effusion|Pneumothorax|Pneumonia,False,True,True,0.99129885,1
+nih_12636,00012636_003,0,PA,33,M,No Finding,False,False,False,0.942091,1
+nih_12686,00012686_000,0,PA,37,M,No Finding,False,False,False,0.9693784,1
+nih_12723,00012723_000,0,PA,66,F,No Finding,False,False,False,0.9079918,1
+nih_12749,00012749_000,0,PA,39,F,No Finding,False,False,False,0.88631135,1
+nih_12828,00012828_000,0,AP,39,F,No Finding,False,False,False,0.5541997,1
+nih_12834,00012834_000,1,AP,33,M,Edema|Infiltration|Pneumonia,False,False,True,0.9604122,1
+nih_12834,00012834_050,1,AP,33,M,Edema|Pneumonia,False,False,True,0.99763286,1
+nih_12834,00012834_085,1,AP,33,M,Pneumonia,True,False,True,0.99887663,1
+nih_12834,00012834_091,1,AP,33,M,Edema|Pneumonia,False,False,True,0.98953176,1
+nih_12834,00012834_112,1,AP,33,M,Edema|Infiltration|Pleural_Thickening|Pneumonia,False,False,True,0.9995271,1
+nih_12834,00012834_113,1,AP,33,M,Consolidation|Edema|Effusion|Pneumonia,False,True,True,0.9990722,1
+nih_12834,00012834_145,1,AP,33,M,Edema|Infiltration|Pleural_Thickening|Pneumonia,False,False,True,0.99680555,1
+nih_12834,00012834_155,1,AP,34,M,Consolidation|Edema|Infiltration|Pleural_Thickening|Pneumonia,False,False,True,0.99876237,1
+nih_12837,00012837_000,0,PA,44,M,No Finding,False,False,False,0.92921335,1
+nih_12847,00012847_000,0,PA,59,F,No Finding,False,False,False,0.881017,1
+nih_12849,00012849_000,0,PA,26,M,No Finding,False,False,False,0.45908174,1
+nih_12876,00012876_000,0,PA,35,M,No Finding,False,False,False,0.90424097,1
+nih_12884,00012884_000,0,PA,22,M,No Finding,False,False,False,0.9785907,1
+nih_12897,00012897_000,0,PA,55,F,No Finding,False,False,False,0.8367909,1
+nih_12901,00012901_000,0,AP,37,F,No Finding,False,False,False,0.9682971,1
+nih_12922,00012922_000,0,PA,61,M,No Finding,False,False,False,0.7708661,1
+nih_12937,00012937_004,0,AP,23,F,No Finding,False,False,False,0.9850424,1
+nih_12949,00012949_000,0,PA,74,M,No Finding,False,False,False,0.7096976,1
+nih_12952,00012952_005,0,AP,41,F,No Finding,False,False,False,0.95191824,1
+nih_13014,00013014_000,0,PA,50,F,No Finding,False,False,False,0.8544697,1
+nih_13034,00013034_000,0,AP,69,F,No Finding,False,False,False,0.86383736,1
+nih_13045,00013045_003,1,PA,48,M,Infiltration|Pneumonia,False,False,False,0.9750021,1
+nih_13056,00013056_000,0,PA,35,M,No Finding,False,False,False,0.89731956,1
+nih_13077,00013077_002,0,PA,65,M,No Finding,False,False,False,0.9429482,1
+nih_13084,00013084_000,0,PA,50,F,No Finding,False,False,False,0.7969424,1
+nih_13087,00013087_000,0,PA,59,M,No Finding,False,False,False,0.23904523,1
+nih_13126,00013126_000,0,PA,37,F,No Finding,False,False,False,0.44301024,1
+nih_13127,00013127_000,0,PA,32,M,No Finding,False,False,False,0.6777639,1
+nih_13145,00013145_001,0,PA,59,M,No Finding,False,False,False,0.37730733,1
+nih_13173,00013173_000,0,PA,43,M,No Finding,False,False,False,0.87556577,1
+nih_13176,00013176_002,0,PA,54,F,No Finding,False,False,False,0.492576,1
+nih_13238,00013238_000,0,PA,60,M,No Finding,False,False,False,0.86065817,1
+nih_13272,00013272_005,1,PA,51,M,Pneumonia,True,True,True,0.9976597,1
+nih_13274,00013274_000,0,PA,55,M,No Finding,False,False,False,0.74428236,1
+nih_13281,00013281_000,0,PA,62,M,No Finding,False,False,False,0.6719929,1
+nih_13283,00013283_004,0,PA,58,F,No Finding,False,False,False,0.96233946,1
+nih_13292,00013292_000,0,PA,78,M,No Finding,False,False,False,0.71183294,1
+nih_13328,00013328_003,0,AP,27,M,No Finding,False,False,False,0.99696344,1
+nih_13345,00013345_000,0,PA,64,F,No Finding,False,False,False,0.14177129,1
+nih_13357,00013357_000,0,AP,53,M,No Finding,False,False,False,0.98180294,1
+nih_13367,00013367_000,0,PA,48,M,No Finding,False,False,False,0.9387494,1
+nih_13371,00013371_000,0,PA,73,F,No Finding,False,False,False,0.96838945,1
+nih_13376,00013376_000,1,PA,36,M,Nodule|Pneumonia,False,False,False,0.74907744,1
+nih_13376,00013376_001,1,PA,36,M,Nodule|Pneumonia,False,False,False,0.8187037,1
+nih_13390,00013390_000,0,PA,39,F,No Finding,False,False,False,0.762033,1
+nih_13391,00013391_005,1,PA,45,F,Infiltration|Pneumonia,False,True,True,0.7920257,1
+nih_13447,00013447_012,1,PA,45,F,Pneumonia,True,False,False,0.92350876,1
+nih_13461,00013461_011,1,AP,27,M,Edema|Pneumonia,False,True,True,0.9972964,1
+nih_13477,00013477_000,0,PA,57,M,No Finding,False,False,False,0.71463966,1
+nih_13499,00013499_002,1,AP,33,M,Infiltration|Mass|Pneumonia,False,False,False,0.99075973,1
+nih_13514,00013514_000,0,PA,41,F,No Finding,False,False,False,0.9357609,1
+nih_13518,00013518_001,0,PA,45,M,No Finding,False,False,False,0.9815029,1
+nih_13528,00013528_000,0,PA,59,M,No Finding,False,False,False,0.8917763,1
+nih_13551,00013551_000,0,PA,74,M,No Finding,False,False,False,0.828781,1
+nih_13584,00013584_001,0,PA,61,M,No Finding,False,False,False,0.96096593,1
+nih_13594,00013594_034,1,AP,47,M,Consolidation|Effusion|Infiltration|Pneumonia,False,False,False,0.9997155,1
+nih_13599,00013599_000,0,PA,55,F,No Finding,False,False,False,0.8805642,1
+nih_13625,00013625_069,1,AP,65,M,Pneumonia,True,True,True,0.9942905,1
+nih_13625,00013625_078,1,AP,65,M,Edema|Infiltration|Pneumonia,False,False,True,0.99928457,1
+nih_13657,00013657_000,0,PA,34,M,No Finding,False,False,False,0.661537,1
+nih_13659,00013659_019,1,AP,62,F,Consolidation|Mass|Pneumonia|Pneumothorax,False,True,True,0.99314004,1
+nih_13663,00013663_000,0,PA,44,M,No Finding,False,False,False,0.8918285,1
+nih_13673,00013673_007,1,AP,46,M,Edema|Infiltration|Mass|Nodule|Pneumonia,False,False,False,0.9907176,1
+nih_13765,00013765_003,0,PA,36,F,No Finding,False,False,False,0.40267578,1
+nih_13817,00013817_000,0,PA,40,M,No Finding,False,False,False,0.91713506,1
+nih_13855,00013855_001,0,PA,43,F,No Finding,False,False,False,0.19754212,1
+nih_13857,00013857_001,0,PA,61,F,No Finding,False,False,False,0.8716444,1
+nih_13893,00013893_000,0,PA,55,M,No Finding,False,False,False,0.69771725,1
+nih_13967,00013967_000,0,PA,31,F,No Finding,False,False,False,0.8446781,1
+nih_13992,00013992_005,1,AP,59,M,Pneumonia,True,True,True,0.9885466,1
+nih_13992,00013992_016,1,AP,59,M,Atelectasis|Effusion|Infiltration|Pneumonia,False,False,True,0.977594,1
+nih_13992,00013992_023,1,AP,60,M,Edema|Effusion|Infiltration|Pneumonia,False,False,True,0.95622534,1
+nih_13992,00013992_028,1,AP,60,M,Edema|Infiltration|Pneumonia,False,False,True,0.99593323,1
+nih_13992,00013992_029,1,AP,60,M,Atelectasis|Consolidation|Infiltration|Pneumonia,False,False,True,0.9963045,1
+nih_13993,00013993_004,1,PA,41,M,Effusion|Infiltration|Pneumonia,False,False,True,0.98499936,1
+nih_13993,00013993_013,1,AP,42,M,Edema|Infiltration|Pneumonia,False,True,True,0.992875,1
+nih_13993,00013993_046,1,AP,42,M,Pneumonia,True,False,True,0.99945825,1
+nih_13993,00013993_077,1,AP,42,M,Edema|Effusion|Infiltration|Pneumonia,False,True,True,0.99909425,1
+nih_13993,00013993_079,1,AP,42,M,Edema|Effusion|Pneumonia,False,False,True,0.9994948,1
+nih_13993,00013993_100,1,AP,43,M,Atelectasis|Consolidation|Effusion|Infiltration|Pneumonia,False,False,True,0.99235195,1
+nih_13993,00013993_124,1,PA,44,M,Effusion|Infiltration|Pneumonia,False,False,True,0.84832215,1
+nih_13997,00013997_000,1,PA,28,M,Pneumonia,True,False,False,0.94246936,1
+nih_14022,00014022_010,1,AP,65,M,Effusion|Pneumonia,False,False,True,0.9987134,1
+nih_14022,00014022_015,1,AP,65,M,Effusion|Pneumonia,False,False,True,0.9965294,1
+nih_14022,00014022_054,1,AP,66,M,Fibrosis|Pneumonia,False,True,True,0.99305904,1
+nih_14022,00014022_085,1,AP,66,M,Edema|Pneumonia,False,False,True,0.9958526,1
+nih_14022,00014022_086,1,AP,66,M,Effusion|Pneumonia,False,False,True,0.99931407,1
+nih_14022,00014022_102,1,AP,66,M,Pneumonia,True,False,True,0.99242026,1
+nih_14052,00014052_011,0,AP,71,M,No Finding,False,False,False,0.9581155,1
+nih_14073,00014073_007,0,PA,57,M,No Finding,False,False,False,0.9735318,1
+nih_14074,00014074_002,1,PA,72,F,Atelectasis|Effusion|Pneumonia|Pneumothorax,False,False,False,0.9233724,1
+nih_14089,00014089_004,0,AP,39,M,No Finding,False,False,False,0.9715821,1
+nih_14125,00014125_042,1,AP,28,M,Edema|Pneumonia,False,True,True,0.99670035,1
+nih_14125,00014125_044,1,AP,28,M,Edema|Pneumonia,False,False,True,0.98455065,1
+nih_14125,00014125_048,1,AP,28,M,Edema|Pneumonia,False,False,True,0.93594706,1
+nih_14167,00014167_003,0,PA,42,F,No Finding,False,False,False,0.40102732,1
+nih_14177,00014177_007,1,PA,38,M,Effusion|Pneumonia,False,False,True,0.9299844,1
+nih_14177,00014177_009,1,AP,38,M,Consolidation|Pneumonia,False,True,True,0.99052596,1
+nih_14177,00014177_011,1,AP,38,M,Effusion|Infiltration|Pneumonia,False,False,True,0.9864036,1
+nih_14178,00014178_011,0,AP,59,F,No Finding,False,False,False,0.96905464,1
+nih_14197,00014197_000,1,PA,57,M,Infiltration|Pneumonia,False,False,True,0.98427296,1
+nih_14197,00014197_002,1,AP,58,M,Infiltration|Pneumonia,False,False,True,0.9638244,1
+nih_14197,00014197_010,1,PA,61,M,Atelectasis|Infiltration|Pneumonia,False,True,True,0.8403099,1
+nih_14197,00014197_031,1,PA,57,M,Atelectasis|Pneumonia,False,False,True,0.8362692,1
+nih_14238,00014238_000,0,PA,55,F,No Finding,False,False,False,0.6957705,1
+nih_14264,00014264_008,0,PA,57,M,No Finding,False,False,False,0.9424196,1
+nih_14293,00014293_000,0,PA,51,F,No Finding,False,False,False,0.75316006,1
+nih_14294,00014294_011,1,PA,37,M,Pneumonia,True,True,True,0.78925604,1
+nih_14339,00014339_000,0,PA,49,F,No Finding,False,False,False,0.62609446,1
+nih_14341,00014341_000,0,PA,50,M,No Finding,False,False,False,0.5830371,1
+nih_14368,00014368_004,0,PA,59,F,No Finding,False,False,False,0.48815292,1
+nih_14372,00014372_000,0,PA,28,F,No Finding,False,False,False,0.6183074,1
+nih_14386,00014386_000,0,PA,53,M,No Finding,False,False,False,0.9709136,1
+nih_14398,00014398_040,0,AP,56,F,No Finding,False,False,False,0.9976907,1
+nih_14467,00014467_000,0,PA,62,M,No Finding,False,False,False,0.31511274,1
+nih_14468,00014468_000,0,PA,56,M,No Finding,False,False,False,0.516154,1
+nih_14485,00014485_000,0,PA,37,M,No Finding,False,False,False,0.67972386,1
+nih_14525,00014525_005,0,AP,57,M,No Finding,False,False,False,0.6654743,1
+nih_14530,00014530_010,0,PA,48,F,No Finding,False,False,False,0.5449372,1
+nih_14616,00014616_011,1,AP,49,M,Pneumonia,True,False,False,0.9962767,1
+nih_14630,00014630_000,0,PA,54,F,No Finding,False,False,False,0.44502354,1
+nih_14703,00014703_001,0,PA,64,M,No Finding,False,False,False,0.71650666,1
+nih_14706,00014706_013,1,PA,20,F,Cardiomegaly|Effusion|Infiltration|Pneumonia,False,False,False,0.8756383,1
+nih_14712,00014712_000,0,PA,30,M,No Finding,False,False,False,0.7896848,1
+nih_14740,00014740_000,0,PA,74,M,No Finding,False,False,False,0.8256433,1
+nih_14747,00014747_000,0,PA,25,M,No Finding,False,False,False,0.83836776,1
+nih_14765,00014765_000,0,PA,57,M,No Finding,False,False,False,0.98499006,1
+nih_14785,00014785_001,0,PA,19,M,No Finding,False,False,False,0.4768344,1
+nih_14806,00014806_000,0,PA,55,F,No Finding,False,False,False,0.8908026,1
+nih_14808,00014808_000,0,AP,32,F,No Finding,False,False,False,0.6082485,1
+nih_14827,00014827_009,0,PA,50,M,No Finding,False,False,False,0.95032704,1
+nih_14839,00014839_017,1,AP,30,F,Infiltration|Pneumothorax|Pneumonia,False,True,True,0.99801034,1
+nih_14857,00014857_000,0,PA,26,F,No Finding,False,False,False,0.36643362,1
+nih_14871,00014871_005,1,AP,54,F,Atelectasis|Consolidation|Pneumonia,False,False,False,0.99874,1
+nih_14871,00014871_006,1,AP,54,F,Atelectasis|Consolidation|Pneumonia,False,False,False,0.9934831,1
+nih_14894,00014894_000,0,PA,26,M,No Finding,False,False,False,0.9444515,1
+nih_14904,00014904_001,0,PA,41,F,No Finding,False,False,False,0.7460632,1
+nih_14908,00014908_000,0,PA,39,F,No Finding,False,False,False,0.33619046,1
+nih_14913,00014913_000,0,PA,70,M,No Finding,False,False,False,0.85828114,1
+nih_14921,00014921_000,0,PA,52,F,No Finding,False,False,False,0.625627,1
+nih_14943,00014943_001,0,PA,79,M,No Finding,False,False,False,0.96696955,1
+nih_14956,00014956_010,1,AP,42,M,Atelectasis|Mass|Nodule|Pneumonia,False,True,True,0.9908546,1
+nih_14975,00014975_000,0,PA,53,M,No Finding,False,False,False,0.7024094,1
+nih_14979,00014979_001,0,PA,45,M,No Finding,False,False,False,0.6551358,1
+nih_15000,00015000_009,0,PA,28,M,No Finding,False,False,False,0.48634258,1
+nih_15063,00015063_001,0,PA,49,M,No Finding,False,False,False,0.8609208,1
+nih_15069,00015069_000,1,PA,25,M,Infiltration|Pneumonia,False,False,True,0.9737179,1
+nih_15069,00015069_001,1,PA,25,M,Infiltration|Pneumonia,False,True,True,0.7123656,1
+nih_15079,00015079_001,0,AP,37,M,No Finding,False,False,False,0.9346899,1
+nih_15090,00015090_006,1,PA,53,M,Atelectasis|Effusion|Infiltration|Pneumonia,False,True,True,0.97507316,1
+nih_15096,00015096_000,0,PA,36,M,No Finding,False,False,False,0.87823784,1
+nih_15112,00015112_002,0,AP,54,M,No Finding,False,False,False,0.99855036,1
+nih_15113,00015113_000,0,PA,25,M,No Finding,False,False,False,0.27684143,1
+nih_15147,00015147_004,0,AP,56,F,No Finding,False,False,False,0.9969765,1
+nih_15160,00015160_016,1,AP,39,F,Atelectasis|Edema|Infiltration|Pneumonia,False,False,False,0.99160284,1
+nih_15170,00015170_001,0,AP,52,F,No Finding,False,False,False,0.9516831,1
+nih_15190,00015190_002,0,PA,51,M,No Finding,False,False,False,0.7804544,1
+nih_15252,00015252_000,0,PA,61,F,No Finding,False,False,False,0.91032517,1
+nih_15259,00015259_000,0,AP,27,F,No Finding,False,False,False,0.84409165,1
+nih_15273,00015273_000,1,PA,50,M,Pneumonia,True,False,False,0.99322635,1
+nih_15346,00015346_000,0,PA,56,F,No Finding,False,False,False,0.9101683,1
+nih_15389,00015389_000,0,PA,45,F,No Finding,False,False,False,0.5031947,1
+nih_15406,00015406_010,1,AP,37,M,Consolidation|Infiltration|Pneumonia,False,False,False,0.9169713,1
+nih_15453,00015453_000,0,PA,32,M,No Finding,False,False,False,0.89379674,1
+nih_15470,00015470_000,0,PA,24,M,No Finding,False,False,False,0.6469754,1
+nih_15487,00015487_004,0,AP,25,M,No Finding,False,False,False,0.9096437,1
+nih_15600,00015600_001,0,AP,24,M,No Finding,False,False,False,0.98574835,1
+nih_15605,00015605_007,1,AP,31,F,Edema|Effusion|Infiltration|Pneumonia,False,False,True,0.99950707,1
+nih_15605,00015605_012,1,PA,32,F,Consolidation|Effusion|Infiltration|Pneumonia,False,False,True,0.9945813,1
+nih_15605,00015605_036,1,AP,32,F,Edema|Infiltration|Pneumonia,False,False,True,0.99531806,1
+nih_15605,00015605_051,1,AP,32,F,Pneumonia,True,True,True,0.99928075,1
+nih_15605,00015605_052,1,AP,32,F,Edema|Infiltration|Pneumonia,False,False,True,0.9978059,1
+nih_15626,00015626_000,0,PA,48,F,No Finding,False,False,False,0.74348605,1
+nih_15662,00015662_001,0,PA,63,M,No Finding,False,False,False,0.84698814,1
+nih_15709,00015709_000,0,PA,46,F,No Finding,False,False,False,0.4857488,1
+nih_15715,00015715_000,0,PA,61,F,No Finding,False,False,False,0.5719881,1
+nih_15717,00015717_003,0,AP,43,M,No Finding,False,False,False,0.8889845,1
+nih_15746,00015746_000,0,PA,26,M,No Finding,False,False,False,0.9004824,1
+nih_15761,00015761_000,0,PA,28,F,No Finding,False,False,False,0.42843798,1
+nih_15839,00015839_000,0,PA,48,F,No Finding,False,False,False,0.49853143,1
+nih_15845,00015845_011,1,PA,79,F,Atelectasis|Consolidation|Infiltration|Mass|Pneumonia,False,False,False,0.973505,1
+nih_15856,00015856_000,0,PA,65,M,No Finding,False,False,False,0.9690257,1
+nih_15864,00015864_001,0,PA,71,M,No Finding,False,False,False,0.9567694,1
+nih_15867,00015867_000,0,PA,33,M,No Finding,False,False,False,0.92636967,1
+nih_15872,00015872_000,0,PA,23,M,No Finding,False,False,False,0.4831612,1
+nih_15922,00015922_000,0,PA,36,M,No Finding,False,False,False,0.98027277,1
+nih_15947,00015947_000,0,PA,49,F,No Finding,False,False,False,0.21428435,1
+nih_15954,00015954_000,0,PA,36,M,No Finding,False,False,False,0.779143,1
+nih_15988,00015988_000,0,PA,35,M,No Finding,False,False,False,0.9749469,1
+nih_15992,00015992_001,0,PA,61,M,No Finding,False,False,False,0.44084832,1
+nih_16011,00016011_007,1,AP,27,F,Consolidation|Effusion|Pneumonia,False,False,False,0.9908099,1
+nih_16011,00016011_009,1,PA,27,F,Effusion|Pneumonia,False,False,False,0.9766709,1
+nih_16011,00016011_011,1,PA,27,F,Pneumonia,True,False,False,0.96912956,1
+nih_16064,00016064_010,1,PA,55,M,Effusion|Mass|Pneumonia,False,True,True,0.99902415,1
+nih_16092,00016092_011,0,PA,28,M,No Finding,False,False,False,0.9245427,1
+nih_16154,00016154_000,0,PA,45,F,No Finding,False,False,False,0.5648917,1
+nih_16165,00016165_001,0,AP,19,M,No Finding,False,False,False,0.9861871,1
+nih_16170,00016170_000,0,AP,62,F,No Finding,False,False,False,0.99612635,1
+nih_16188,00016188_000,0,PA,37,F,No Finding,False,False,False,0.56777734,1
+nih_16244,00016244_003,0,PA,61,F,No Finding,False,False,False,0.9985514,1
+nih_16250,00016250_000,0,PA,45,F,No Finding,False,False,False,0.74451107,1
+nih_16291,00016291_012,1,AP,53,M,Infiltration|Pneumonia,False,True,True,0.98822266,1
+nih_16291,00016291_015,1,PA,53,M,Pneumonia,True,False,True,0.95657116,1
+nih_16291,00016291_020,1,AP,53,M,Infiltration|Pneumonia,False,True,True,0.99567115,1
+nih_16291,00016291_049,1,AP,54,M,Infiltration|Pneumonia,False,False,True,0.9796897,1
+nih_16291,00016291_054,1,AP,54,M,Cardiomegaly|Consolidation|Pneumonia,False,False,True,0.97529966,1
+nih_16348,00016348_002,0,AP,48,F,No Finding,False,False,False,0.9996866,1
+nih_16452,00016452_005,0,AP,53,M,No Finding,False,False,False,0.8876723,1
+nih_16467,00016467_001,0,AP,61,M,No Finding,False,False,False,0.9617538,1
+nih_16475,00016475_008,0,AP,68,M,No Finding,False,False,False,0.9870473,1
+nih_16478,00016478_003,0,AP,35,F,No Finding,False,False,False,0.8572355,1
+nih_16488,00016488_000,0,PA,76,M,No Finding,False,False,False,0.9652089,1
+nih_16536,00016536_000,0,PA,74,M,No Finding,False,False,False,0.92582065,1
+nih_16596,00016596_000,0,PA,31,M,No Finding,False,False,False,0.94263977,1
+nih_16659,00016659_001,0,PA,19,F,No Finding,False,False,False,0.5854373,1
+nih_16705,00016705_002,1,PA,24,M,Pneumonia,True,False,True,0.98624516,1
+nih_16705,00016705_003,1,PA,24,M,Pneumonia,True,False,True,0.98629653,1
+nih_16705,00016705_004,1,AP,24,M,Pneumonia,True,False,True,0.9845206,1
+nih_16705,00016705_005,1,AP,24,M,Infiltration|Pneumonia,False,False,True,0.99594975,1
+nih_16705,00016705_006,1,AP,24,M,Consolidation|Infiltration|Pneumonia,False,True,True,0.86301976,1
+nih_16716,00016716_013,0,AP,44,F,No Finding,False,False,False,0.9894348,1
+nih_16732,00016732_017,1,AP,79,F,Atelectasis|Effusion|Pneumonia,False,False,True,0.9995204,1
+nih_16732,00016732_027,1,AP,79,F,Effusion|Infiltration|Pneumonia,False,True,True,0.98780805,1
+nih_16738,00016738_000,0,PA,50,F,No Finding,False,False,False,0.8533639,1
+nih_16790,00016790_004,0,PA,29,M,No Finding,False,False,False,0.9649738,1
+nih_16818,00016818_000,0,AP,25,M,No Finding,False,False,False,0.9552859,1
+nih_16831,00016831_003,0,PA,21,M,No Finding,False,False,False,0.2510522,1
+nih_16892,00016892_001,0,PA,54,M,No Finding,False,False,False,0.22296306,1
+nih_16903,00016903_000,0,PA,23,F,No Finding,False,False,False,0.9246035,1
+nih_16907,00016907_000,0,PA,37,F,No Finding,False,False,False,0.59896755,1
+nih_16909,00016909_000,0,PA,50,F,No Finding,False,False,False,0.9833304,1
+nih_16939,00016939_000,0,PA,47,M,No Finding,False,False,False,0.9034382,1
+nih_16949,00016949_001,0,PA,70,M,No Finding,False,False,False,0.92993385,1
+nih_16951,00016951_001,0,AP,77,F,No Finding,False,False,False,0.977303,1
+nih_16973,00016973_000,0,PA,40,M,No Finding,False,False,False,0.73124707,1
+nih_16986,00016986_008,0,AP,45,M,No Finding,False,False,False,0.9917738,1
+nih_16990,00016990_002,0,AP,61,M,No Finding,False,False,False,0.9097619,1
+nih_17018,00017018_000,0,PA,44,F,No Finding,False,False,False,0.68943846,1
+nih_17057,00017057_000,0,PA,42,M,No Finding,False,False,False,0.8534034,1
+nih_17070,00017070_001,1,AP,61,M,Edema|Effusion|Pneumonia,False,False,False,0.9830897,1
+nih_17118,00017118_000,0,PA,43,F,No Finding,False,False,False,0.7618272,1
+nih_17126,00017126_000,0,PA,53,M,No Finding,False,False,False,0.099414065,0
+nih_17128,00017128_000,0,PA,43,F,No Finding,False,False,False,0.38751033,1
+nih_17138,00017138_033,1,AP,23,M,Effusion|Infiltration|Pneumonia,False,False,False,0.9875163,1
+nih_17138,00017138_039,1,AP,23,M,Edema|Effusion|Pneumonia,False,False,False,0.9937442,1
+nih_17138,00017138_056,1,AP,23,M,Edema|Pneumonia,False,False,False,0.9813193,1
+nih_17138,00017138_057,1,AP,23,M,Edema|Infiltration|Pneumonia,False,False,False,0.9936433,1
+nih_17138,00017138_058,1,AP,23,M,Infiltration|Pneumonia,False,False,False,0.9462485,1
+nih_17138,00017138_059,1,AP,23,M,Edema|Emphysema|Infiltration|Pneumonia,False,False,False,0.9959698,1
+nih_17138,00017138_060,1,AP,23,M,Edema|Emphysema|Infiltration|Pneumonia,False,False,False,0.9864291,1
+nih_17138,00017138_066,1,AP,23,M,Edema|Pneumonia,False,False,False,0.9426358,1
+nih_17138,00017138_068,1,AP,23,M,Pneumonia,True,False,False,0.99426335,1
+nih_17140,00017140_000,0,PA,31,M,No Finding,False,False,False,0.47937095,1
+nih_17185,00017185_000,0,PA,49,M,No Finding,False,False,False,0.7554029,1
+nih_17191,00017191_001,1,PA,45,M,Cardiomegaly|Effusion|Pneumonia,False,False,False,0.8884781,1
+nih_17195,00017195_000,0,PA,27,F,No Finding,False,False,False,0.86346847,1
+nih_17211,00017211_000,0,PA,70,F,No Finding,False,False,False,0.29920712,1
+nih_17215,00017215_001,0,AP,46,F,No Finding,False,False,False,0.99227494,1
+nih_17225,00017225_004,0,AP,70,F,No Finding,False,False,False,0.97832644,1
+nih_17233,00017233_001,0,PA,60,F,No Finding,False,False,False,0.679107,1
+nih_17236,00017236_034,1,AP,46,M,Pneumonia,True,False,True,0.97968334,1
+nih_17236,00017236_074,1,AP,46,M,Edema|Infiltration|Pneumonia,False,False,True,0.9874812,1
+nih_17236,00017236_075,1,AP,46,M,Pneumonia,True,True,True,0.97404987,1
+nih_17236,00017236_101,1,AP,46,M,Edema|Infiltration|Pneumonia,False,False,True,0.99588263,1
+nih_17236,00017236_103,1,AP,46,M,Edema|Pneumonia,False,False,True,0.99767953,1
+nih_17236,00017236_104,1,AP,46,M,Edema|Pneumonia,False,False,True,0.9979961,1
+nih_17255,00017255_001,1,PA,26,F,Atelectasis|Pneumonia,False,False,False,0.9952573,1
+nih_17303,00017303_000,0,PA,36,F,No Finding,False,False,False,0.96312934,1
+nih_17304,00017304_000,0,PA,24,M,No Finding,False,False,False,0.92963326,1
+nih_17335,00017335_000,0,PA,47,M,No Finding,False,False,False,0.81557,1
+nih_17337,00017337_000,0,PA,60,F,No Finding,False,False,False,0.4350372,1
+nih_17339,00017339_000,0,PA,29,F,No Finding,False,False,False,0.9476488,1
+nih_17418,00017418_000,0,PA,63,M,No Finding,False,False,False,0.95313,1
+nih_17447,00017447_000,0,PA,30,M,No Finding,False,False,False,0.6554149,1
+nih_17465,00017465_000,0,PA,60,M,No Finding,False,False,False,0.5308975,1
+nih_17482,00017482_000,0,PA,43,F,No Finding,False,False,False,0.84889054,1
+nih_17492,00017492_000,0,PA,60,M,No Finding,False,False,False,0.9124635,1
+nih_17494,00017494_000,0,PA,50,M,No Finding,False,False,False,0.8122989,1
+nih_17518,00017518_002,0,AP,21,F,No Finding,False,False,False,0.9860308,1
+nih_17549,00017549_002,1,PA,31,M,Atelectasis|Infiltration|Pneumonia,False,False,False,0.991117,1
+nih_17550,00017550_000,0,PA,40,M,No Finding,False,False,False,0.755235,1
+nih_17562,00017562_001,0,AP,62,M,No Finding,False,False,False,0.98490703,1
+nih_17565,00017565_000,0,PA,70,M,No Finding,False,False,False,0.9886176,1
+nih_17649,00017649_000,0,PA,54,M,No Finding,False,False,False,0.7928874,1
+nih_17659,00017659_000,1,PA,54,F,Pneumonia,True,False,False,0.39200142,1
+nih_17674,00017674_001,0,PA,31,F,No Finding,False,False,False,0.90406895,1
+nih_17701,00017701_001,0,PA,19,M,No Finding,False,False,False,0.1937461,1
+nih_17702,00017702_000,0,PA,63,F,No Finding,False,False,False,0.22546065,1
+nih_17704,00017704_001,0,PA,58,F,No Finding,False,False,False,0.97385174,1
+nih_17705,00017705_002,0,PA,52,M,No Finding,False,False,False,0.93990403,1
+nih_17710,00017710_009,1,AP,44,F,Consolidation|Pneumonia,False,True,True,0.9829185,1
+nih_17722,00017722_000,0,PA,31,M,No Finding,False,False,False,0.6145284,1
+nih_17747,00017747_039,1,AP,30,M,Atelectasis|Infiltration|Pneumonia,False,False,False,0.9898712,1
+nih_17753,00017753_001,1,AP,62,M,Infiltration|Pneumonia,False,False,False,0.9966158,1
+nih_17753,00017753_002,1,AP,62,M,Infiltration|Pneumonia,False,False,False,0.98909634,1
+nih_17753,00017753_027,1,AP,62,M,Consolidation|Pneumonia,False,False,False,0.99910814,1
+nih_17766,00017766_000,0,PA,68,F,No Finding,False,False,False,0.38218558,1
+nih_17779,00017779_000,0,PA,35,M,No Finding,False,False,False,0.96515,1
+nih_17846,00017846_006,1,AP,40,F,Edema|Infiltration|Pneumonia,False,False,False,0.9782889,1
+nih_17846,00017846_007,1,AP,40,F,Edema|Infiltration|Pneumonia,False,False,False,0.94621205,1
+nih_17858,00017858_001,0,AP,53,M,No Finding,False,False,False,0.9743852,1
+nih_17892,00017892_000,0,PA,55,F,No Finding,False,False,False,0.8196407,1
+nih_17905,00017905_000,0,PA,35,F,No Finding,False,False,False,0.75270617,1
+nih_17906,00017906_009,0,PA,22,M,No Finding,False,False,False,0.78688395,1
+nih_17927,00017927_006,0,PA,25,M,No Finding,False,False,False,0.9542494,1
+nih_17940,00017940_000,0,PA,39,M,No Finding,False,False,False,0.59632874,1
+nih_17952,00017952_008,1,PA,52,M,Atelectasis|Pneumonia,False,True,True,0.90072906,1
+nih_17973,00017973_005,0,AP,61,M,No Finding,False,False,False,0.9841553,1
+nih_17985,00017985_003,0,AP,58,M,No Finding,False,False,False,0.9900718,1
+nih_18091,00018091_025,0,AP,41,M,No Finding,False,False,False,0.9986583,1
+nih_18142,00018142_001,0,AP,43,F,No Finding,False,False,False,0.94742626,1
+nih_18164,00018164_000,0,PA,57,M,No Finding,False,False,False,0.78227144,1
+nih_18182,00018182_015,1,PA,30,F,Atelectasis|Pneumonia,False,False,False,0.382756,1
+nih_18187,00018187_011,1,AP,32,F,Consolidation|Pneumonia,False,False,False,0.95619106,1
+nih_18187,00018187_038,1,AP,32,F,Edema|Infiltration|Pneumonia,False,False,False,0.9718089,1
+nih_18235,00018235_000,0,PA,32,M,No Finding,False,False,False,0.81744856,1
+nih_18237,00018237_028,1,PA,30,F,Pneumonia,True,False,False,0.4331231,1
+nih_18271,00018271_000,0,PA,56,M,No Finding,False,False,False,0.8774522,1
+nih_18272,00018272_000,0,PA,48,M,No Finding,False,False,False,0.3045223,1
+nih_18274,00018274_000,0,PA,44,M,No Finding,False,False,False,0.96925306,1
+nih_18379,00018379_000,0,PA,58,M,No Finding,False,False,False,0.72750837,1
+nih_18393,00018393_000,1,PA,47,F,Mass|Infiltration|Pneumonia,False,True,True,0.80186784,1
+nih_18403,00018403_004,0,AP,20,M,No Finding,False,False,False,0.8787724,1
+nih_18423,00018423_000,0,PA,51,F,No Finding,False,False,False,0.7293667,1
+nih_18465,00018465_002,0,PA,62,M,No Finding,False,False,False,0.9950459,1
+nih_18469,00018469_000,0,AP,55,M,No Finding,False,False,False,0.97308785,1
+nih_18527,00018527_011,1,AP,55,F,Edema|Infiltration|Mass|Pneumonia,False,False,False,0.9784535,1
+nih_18527,00018527_012,1,AP,55,F,Edema|Infiltration|Pneumonia,False,False,False,0.98844504,1
+nih_18544,00018544_001,0,AP,42,M,No Finding,False,False,False,0.9718188,1
+nih_18615,00018615_025,0,AP,20,M,No Finding,False,False,False,0.99294996,1
+nih_18619,00018619_000,0,PA,57,F,No Finding,False,False,False,0.67028534,1
+nih_18630,00018630_002,0,AP,54,M,No Finding,False,False,False,0.93902194,1
+nih_18698,00018698_001,0,AP,61,M,No Finding,False,False,False,0.82988656,1
+nih_18721,00018721_007,1,AP,41,M,Consolidation|Pneumonia,False,False,False,0.994759,1
+nih_18730,00018730_000,0,AP,18,M,No Finding,False,False,False,0.9577985,1
+nih_18739,00018739_002,0,AP,65,M,No Finding,False,False,False,0.9960854,1
+nih_18780,00018780_000,0,PA,55,M,No Finding,False,False,False,0.9590216,1
+nih_18936,00018936_000,0,PA,47,M,No Finding,False,False,False,0.8380428,1
+nih_18945,00018945_000,0,PA,47,F,No Finding,False,False,False,0.9860336,1
+nih_18946,00018946_000,0,PA,27,F,No Finding,False,False,False,0.32252845,1
+nih_18969,00018969_000,0,PA,55,F,No Finding,False,False,False,0.8579557,1
+nih_18970,00018970_000,0,PA,29,M,No Finding,False,False,False,0.7317957,1
+nih_18976,00018976_000,0,PA,38,M,No Finding,False,False,False,0.6941137,1
+nih_19007,00019007_002,0,AP,64,M,No Finding,False,False,False,0.95916057,1
+nih_19080,00019080_000,0,PA,20,M,No Finding,False,False,False,0.6522143,1
+nih_19081,00019081_000,0,PA,38,F,No Finding,False,False,False,0.5567328,1
+nih_19129,00019129_001,0,PA,36,F,No Finding,False,False,False,0.73949176,1
+nih_19141,00019141_003,0,PA,54,F,No Finding,False,False,False,0.33259094,1
+nih_19154,00019154_003,1,PA,58,F,Infiltration|Pneumonia,False,False,False,0.96766037,1
+nih_19157,00019157_008,1,AP,57,M,Edema|Effusion|Infiltration|Pneumonia,False,True,True,0.99609333,1
+nih_19171,00019171_000,0,PA,57,F,No Finding,False,False,False,0.9802202,1
+nih_19201,00019201_008,0,AP,59,M,No Finding,False,False,False,0.91879004,1
+nih_19216,00019216_005,0,PA,62,M,No Finding,False,False,False,0.93268996,1
+nih_19240,00019240_005,0,AP,63,M,No Finding,False,False,False,0.9824843,1
+nih_19241,00019241_001,0,AP,40,M,No Finding,False,False,False,0.782032,1
+nih_19303,00019303_000,0,PA,37,F,No Finding,False,False,False,0.18462679,1
+nih_19337,00019337_000,0,PA,34,F,No Finding,False,False,False,0.4038708,1
+nih_19341,00019341_000,0,PA,77,M,No Finding,False,False,False,0.9381686,1
+nih_19362,00019362_000,0,PA,47,M,No Finding,False,False,False,0.8385902,1
+nih_19393,00019393_000,0,AP,52,F,No Finding,False,False,False,0.98385113,1
+nih_19436,00019436_001,0,AP,50,M,No Finding,False,False,False,0.9221767,1
+nih_19446,00019446_001,0,PA,59,M,No Finding,False,False,False,0.9774554,1
+nih_19479,00019479_003,0,AP,33,F,No Finding,False,False,False,0.8033706,1
+nih_19520,00019520_000,0,PA,65,M,No Finding,False,False,False,0.9613966,1
+nih_19521,00019521_004,0,PA,19,M,No Finding,False,False,False,0.9314167,1
+nih_19655,00019655_000,0,PA,47,M,No Finding,False,False,False,0.822696,1
+nih_19661,00019661_000,0,PA,25,M,No Finding,False,False,False,0.9917385,1
+nih_19750,00019750_009,1,AP,61,M,Edema|Infiltration|Pneumonia,False,False,False,0.9478708,1
+nih_19750,00019750_010,1,AP,61,M,Effusion|Infiltration|Pneumonia,False,False,False,0.71749836,1
+nih_19750,00019750_022,1,AP,61,M,Edema|Infiltration|Pneumonia,False,False,False,0.9910193,1
+nih_19750,00019750_031,1,PA,57,M,Pneumonia,True,False,False,0.99413496,1
+nih_19765,00019765_010,1,AP,71,M,Atelectasis|Infiltration|Pneumonia,False,True,True,0.9911946,1
+nih_19775,00019775_000,0,PA,52,M,No Finding,False,False,False,0.9473715,1
+nih_19782,00019782_000,0,PA,47,M,No Finding,False,False,False,0.63165313,1
+nih_19863,00019863_008,1,PA,35,F,Infiltration|Pneumonia|Pneumothorax,False,False,True,0.99732214,1
+nih_19863,00019863_010,1,AP,35,F,Atelectasis|Infiltration|Pneumonia,False,True,True,0.99575657,1
+nih_19865,00019865_013,1,PA,22,M,Pneumonia,True,False,False,0.7342561,1
+nih_19865,00019865_014,1,PA,23,M,Infiltration|Pneumonia,False,False,False,0.9046805,1
+nih_19896,00019896_003,0,PA,61,F,No Finding,False,False,False,0.93416697,1
+nih_19897,00019897_000,0,PA,70,M,No Finding,False,False,False,0.9137198,1
+nih_19899,00019899_014,1,AP,64,M,Atelectasis|Effusion|Pneumonia,False,False,False,0.99974996,1
+nih_19902,00019902_000,0,PA,49,F,No Finding,False,False,False,0.17420244,1
+nih_19944,00019944_000,0,PA,84,M,No Finding,False,False,False,0.99961865,1
+nih_19960,00019960_000,0,PA,60,M,No Finding,False,False,False,0.46753445,1
+nih_19963,00019963_000,0,PA,65,F,No Finding,False,False,False,0.67221665,1
+nih_19969,00019969_000,0,PA,68,F,No Finding,False,False,False,0.962484,1
+nih_19981,00019981_007,0,AP,41,F,No Finding,False,False,False,0.9944623,1
+nih_19995,00019995_001,0,PA,34,F,No Finding,False,False,False,0.8113621,1
+nih_20060,00020060_007,0,PA,58,F,No Finding,False,False,False,0.7661175,1
+nih_20161,00020161_000,0,PA,41,M,No Finding,False,False,False,0.7949759,1
+nih_20168,00020168_000,0,PA,54,F,No Finding,False,False,False,0.78972787,1
+nih_20184,00020184_004,1,PA,25,M,Infiltration|Nodule|Pneumonia,False,False,False,0.99189174,1
+nih_20196,00020196_000,0,PA,23,F,No Finding,False,False,False,0.5426877,1
+nih_20223,00020223_000,0,AP,59,M,No Finding,False,False,False,0.9936586,1
+nih_20259,00020259_002,1,AP,52,F,Consolidation|Infiltration|Pneumonia,False,True,True,0.93031424,1
+nih_20276,00020276_000,0,PA,25,F,No Finding,False,False,False,0.38802004,1
+nih_20307,00020307_006,0,PA,31,F,No Finding,False,False,False,0.13458599,1
+nih_20334,00020334_001,0,PA,39,F,No Finding,False,False,False,0.86556745,1
+nih_20352,00020352_000,0,PA,44,F,No Finding,False,False,False,0.4490733,1
+nih_20358,00020358_000,0,PA,20,M,No Finding,False,False,False,0.78256065,1
+nih_20376,00020376_000,0,PA,51,F,No Finding,False,False,False,0.8826182,1
+nih_20412,00020412_000,0,PA,32,F,No Finding,False,False,False,0.63733286,1
+nih_20452,00020452_000,0,PA,44,M,No Finding,False,False,False,0.9063442,1
+nih_20511,00020511_000,0,PA,44,F,No Finding,False,False,False,0.834785,1
+nih_20632,00020632_000,0,PA,79,M,No Finding,False,False,False,0.9913653,1
+nih_20655,00020655_000,0,PA,42,F,No Finding,False,False,False,0.55231154,1
+nih_20657,00020657_002,0,PA,64,M,No Finding,False,False,False,0.8396208,1
+nih_20662,00020662_001,0,PA,27,M,No Finding,False,False,False,0.96139735,1
+nih_20780,00020780_000,0,PA,52,M,No Finding,False,False,False,0.64581555,1
+nih_20796,00020796_000,0,PA,48,M,No Finding,False,False,False,0.96876454,1
+nih_20845,00020845_002,1,PA,51,F,Pneumonia,True,True,True,0.9327858,1
+nih_20856,00020856_000,0,PA,46,F,No Finding,False,False,False,0.5854946,1
+nih_20866,00020866_000,0,PA,34,F,No Finding,False,False,False,0.24585673,1
+nih_20910,00020910_000,0,PA,53,M,No Finding,False,False,False,0.9141233,1
+nih_20923,00020923_001,0,PA,59,M,No Finding,False,False,False,0.99229276,1
+nih_20958,00020958_002,0,AP,68,M,No Finding,False,False,False,0.64119405,1
+nih_21008,00021008_001,0,PA,47,F,No Finding,False,False,False,0.7023569,1
+nih_21070,00021070_001,1,AP,32,M,Edema|Nodule|Pneumonia,False,False,False,0.96778136,1
+nih_21118,00021118_008,0,PA,48,M,No Finding,False,False,False,0.71007323,1
+nih_21140,00021140_000,0,PA,45,M,No Finding,False,False,False,0.97174925,1
+nih_21172,00021172_001,0,AP,23,F,No Finding,False,False,False,0.9155764,1
+nih_21190,00021190_000,0,PA,58,M,No Finding,False,False,False,0.7112157,1
+nih_21192,00021192_000,0,PA,56,F,No Finding,False,False,False,0.8058498,1
+nih_21235,00021235_000,0,PA,47,F,No Finding,False,False,False,0.9379271,1
+nih_21251,00021251_008,0,AP,52,M,No Finding,False,False,False,0.52021664,1
+nih_21303,00021303_005,1,AP,55,M,Effusion|Infiltration|Pneumonia,False,True,True,0.84297884,1
+nih_21332,00021332_000,0,PA,68,M,No Finding,False,False,False,0.9568273,1
+nih_21336,00021336_000,0,PA,60,M,No Finding,False,False,False,0.89276755,1
+nih_21383,00021383_003,0,AP,40,M,No Finding,False,False,False,0.9353619,1
+nih_21394,00021394_000,0,PA,74,M,No Finding,False,False,False,0.81804556,1
+nih_21396,00021396_000,0,PA,55,M,No Finding,False,False,False,0.88084096,1
+nih_21455,00021455_004,0,PA,54,M,No Finding,False,False,False,0.9896604,1
+nih_21458,00021458_000,1,PA,60,F,Cardiomegaly|Nodule|Pneumonia,False,True,True,0.9855343,1
+nih_21489,00021489_013,1,AP,31,M,Infiltration|Pneumonia,False,True,True,0.9863874,1
+nih_21491,00021491_000,0,PA,55,M,No Finding,False,False,False,0.9775737,1
+nih_21499,00021499_026,0,AP,68,M,No Finding,False,False,False,0.95059735,1
+nih_21539,00021539_003,0,AP,23,M,No Finding,False,False,False,0.92975724,1
+nih_21545,00021545_000,0,PA,69,M,No Finding,False,False,False,0.9802219,1
+nih_21550,00021550_000,0,AP,51,F,No Finding,False,False,False,0.9952319,1
+nih_21577,00021577_000,0,PA,56,F,No Finding,False,False,False,0.20530947,1
+nih_21584,00021584_001,1,PA,46,M,Pneumonia,True,False,False,0.9067589,1
+nih_21598,00021598_001,0,PA,64,F,No Finding,False,False,False,0.22643815,1
+nih_21601,00021601_001,0,PA,49,M,No Finding,False,False,False,0.95340127,1
+nih_21612,00021612_001,0,PA,41,F,No Finding,False,False,False,0.44225556,1
+nih_21626,00021626_001,0,AP,54,F,No Finding,False,False,False,0.90939504,1
+nih_21670,00021670_004,1,PA,41,M,Atelectasis|Pneumonia,False,True,True,0.98911065,1
+nih_21673,00021673_000,0,PA,62,M,No Finding,False,False,False,0.9560795,1
+nih_21711,00021711_011,0,PA,71,M,No Finding,False,False,False,0.99889755,1
+nih_21712,00021712_000,0,PA,35,M,No Finding,False,False,False,0.67570585,1
+nih_21766,00021766_001,1,AP,19,M,Consolidation|Pneumonia,False,False,False,0.9834594,1
+nih_21772,00021772_011,1,PA,62,M,Nodule|Pneumonia,False,True,True,0.98666954,1
+nih_21774,00021774_000,0,AP,78,F,No Finding,False,False,False,0.99698025,1
+nih_21782,00021782_009,0,PA,34,F,No Finding,False,False,False,0.86068124,1
+nih_21818,00021818_024,1,PA,37,M,Consolidation|Infiltration|Pneumonia,False,False,True,0.9614748,1
+nih_21818,00021818_025,1,PA,37,M,Consolidation|Pneumonia,False,False,True,0.9661687,1
+nih_21818,00021818_026,1,PA,37,M,Consolidation|Pneumonia,False,True,True,0.96513623,1
+nih_21821,00021821_003,0,AP,52,M,No Finding,False,False,False,0.99389416,1
+nih_21835,00021835_017,1,AP,39,F,Infiltration|Pneumonia,False,False,False,0.9960408,1
+nih_21835,00021835_030,1,AP,39,F,Edema|Infiltration|Pleural_Thickening|Pneumonia,False,False,False,0.9806394,1
+nih_21860,00021860_003,1,AP,46,F,Pneumonia,True,True,True,0.9613631,1
+nih_21916,00021916_005,0,AP,58,M,No Finding,False,False,False,0.9887028,1
+nih_21963,00021963_001,0,PA,47,M,No Finding,False,False,False,0.81867826,1
+nih_21965,00021965_012,0,AP,59,M,No Finding,False,False,False,0.44930997,1
+nih_21974,00021974_000,0,PA,48,M,No Finding,False,False,False,0.95121187,1
+nih_21995,00021995_000,0,PA,62,F,No Finding,False,False,False,0.7619658,1
+nih_22012,00022012_000,0,PA,40,F,No Finding,False,False,False,0.79344434,1
+nih_22021,00022021_002,1,PA,57,M,Infiltration|Pneumonia,False,True,True,0.9715236,1
+nih_22023,00022023_002,0,AP,31,M,No Finding,False,False,False,0.99755293,1
+nih_22043,00022043_000,0,PA,40,F,No Finding,False,False,False,0.08952735,0
+nih_22084,00022084_000,1,PA,48,F,Edema|Pneumonia,False,True,True,0.87328327,1
+nih_22091,00022091_000,0,PA,60,M,No Finding,False,False,False,0.91662025,1
+nih_22098,00022098_001,0,AP,46,F,No Finding,False,False,False,0.9963588,1
+nih_22105,00022105_001,0,PA,37,F,No Finding,False,False,False,0.25451782,1
+nih_22106,00022106_024,0,AP,22,M,No Finding,False,False,False,0.58880174,1
+nih_22114,00022114_000,0,PA,38,F,No Finding,False,False,False,0.5598934,1
+nih_22121,00022121_000,0,PA,47,F,No Finding,False,False,False,0.6551428,1
+nih_22127,00022127_000,0,PA,58,M,No Finding,False,False,False,0.8823341,1
+nih_22150,00022150_000,0,PA,66,M,No Finding,False,False,False,0.9687066,1
+nih_22175,00022175_000,0,PA,73,M,No Finding,False,False,False,0.753863,1
+nih_22178,00022178_000,1,PA,67,M,Atelectasis|Pneumonia,False,True,True,0.9606791,1
+nih_22187,00022187_004,0,AP,22,M,No Finding,False,False,False,0.81259906,1
+nih_22214,00022214_000,0,PA,50,M,No Finding,False,False,False,0.4389803,1
+nih_22215,00022215_012,1,PA,53,F,Atelectasis|Cardiomegaly|Effusion|Infiltration|Pneumonia,False,True,True,0.9528758,1
+nih_22255,00022255_002,0,PA,69,M,No Finding,False,False,False,0.9884199,1
+nih_22290,00022290_015,1,AP,58,M,Effusion|Pneumonia,False,True,True,0.9661134,1
+nih_22290,00022290_016,1,AP,58,M,Effusion|Pneumonia,False,False,True,0.9791363,1
+nih_22290,00022290_017,1,AP,58,M,Effusion|Pneumonia,False,False,True,0.99077386,1
+nih_22329,00022329_001,1,PA,21,M,Pneumonia,True,False,False,0.79544014,1
+nih_22340,00022340_000,0,PA,38,M,No Finding,False,False,False,0.9143437,1
+nih_22349,00022349_001,0,PA,25,F,No Finding,False,False,False,0.3001268,1
+nih_22359,00022359_000,0,PA,60,M,No Finding,False,False,False,0.99895287,1
+nih_22387,00022387_000,0,PA,33,F,No Finding,False,False,False,0.93252057,1
+nih_22475,00022475_000,0,PA,24,M,No Finding,False,False,False,0.65565926,1
+nih_22493,00022493_003,0,PA,33,M,No Finding,False,False,False,0.7835935,1
+nih_22498,00022498_000,0,PA,49,F,No Finding,False,False,False,0.83868825,1
+nih_22501,00022501_000,0,PA,73,M,No Finding,False,False,False,0.97364897,1
+nih_22536,00022536_000,0,PA,50,M,No Finding,False,False,False,0.9255943,1
+nih_22567,00022567_000,0,PA,59,F,No Finding,False,False,False,0.7107285,1
+nih_22572,00022572_073,1,AP,51,M,Infiltration|Pneumonia,False,True,True,0.98696125,1
+nih_22609,00022609_000,0,PA,37,M,No Finding,False,False,False,0.7642136,1
+nih_22611,00022611_011,0,PA,30,F,No Finding,False,False,False,0.44370496,1
+nih_22618,00022618_000,0,PA,66,F,No Finding,False,False,False,0.56814575,1
+nih_22629,00022629_001,0,PA,43,M,No Finding,False,False,False,0.83969545,1
+nih_22688,00022688_001,0,AP,28,M,No Finding,False,False,False,0.97312105,1
+nih_22709,00022709_000,0,PA,20,M,No Finding,False,False,False,0.41512504,1
+nih_22795,00022795_000,0,PA,57,F,No Finding,False,False,False,0.86271596,1
+nih_22821,00022821_000,0,PA,48,F,No Finding,False,False,False,0.3826535,1
+nih_22832,00022832_025,0,PA,55,M,No Finding,False,False,False,0.78411555,1
+nih_22833,00022833_000,0,PA,51,M,No Finding,False,False,False,0.9786461,1
+nih_22846,00022846_003,0,PA,52,F,No Finding,False,False,False,0.26006842,1
+nih_22880,00022880_002,0,PA,27,M,No Finding,False,False,False,0.966074,1
+nih_22922,00022922_000,0,PA,47,M,No Finding,False,False,False,0.8821401,1
+nih_22961,00022961_008,1,PA,61,F,Atelectasis|Effusion|Infiltration|Pneumonia,False,True,True,0.69454056,1
+nih_22962,00022962_000,0,PA,21,F,No Finding,False,False,False,0.7096803,1
+nih_22977,00022977_018,0,PA,42,M,No Finding,False,False,False,0.992993,1
+nih_22993,00022993_011,1,AP,55,M,Infiltration|Pneumonia,False,False,False,0.99533075,1
+nih_22993,00022993_016,1,AP,55,M,Edema|Pneumonia,False,False,False,0.96563053,1
+nih_22993,00022993_017,1,AP,55,M,Edema|Pneumonia,False,False,False,0.9978308,1
+nih_22993,00022993_018,1,AP,56,M,Edema|Pneumonia,False,False,False,0.9822942,1
+nih_23061,00023061_001,0,PA,61,F,No Finding,False,False,False,0.8755646,1
+nih_23089,00023089_004,1,PA,59,M,Infiltration|Pneumonia,False,True,True,0.9955597,1
+nih_23117,00023117_000,0,PA,80,F,No Finding,False,False,False,0.89196026,1
+nih_23132,00023132_000,0,PA,56,F,No Finding,False,False,False,0.23646519,1
+nih_23138,00023138_008,1,AP,40,M,Infiltration|Pneumonia,False,False,True,0.83073115,1
+nih_23138,00023138_009,1,AP,40,M,Consolidation|Pneumonia,False,True,True,0.97985625,1
+nih_23158,00023158_003,0,AP,65,F,No Finding,False,False,False,0.761265,1
+nih_23168,00023168_011,0,AP,22,M,No Finding,False,False,False,0.31997353,1
+nih_23172,00023172_000,0,PA,52,F,No Finding,False,False,False,0.68157053,1
+nih_23178,00023178_002,1,PA,58,F,Consolidation|Pneumonia,False,True,True,0.8913979,1
+nih_23190,00023190_008,1,AP,65,F,Atelectasis|Infiltration|Pneumonia,False,False,False,0.9171913,1
+nih_23206,00023206_000,0,PA,59,M,No Finding,False,False,False,0.98662424,1
+nih_23207,00023207_001,0,PA,52,M,No Finding,False,False,False,0.8089938,1
+nih_23211,00023211_023,0,AP,30,F,No Finding,False,False,False,0.9996488,1
+nih_23271,00023271_002,1,PA,40,F,Edema|Pneumonia,False,False,False,0.7793413,1
+nih_23271,00023271_006,1,AP,40,F,Edema|Infiltration|Pneumonia,False,False,False,0.8508131,1
+nih_23271,00023271_016,1,AP,40,F,Infiltration|Pneumonia,False,False,False,0.9524286,1
+nih_23283,00023283_005,1,PA,50,F,Atelectasis|Effusion|Infiltration|Pneumonia,False,True,True,0.39230502,1
+nih_23302,00023302_000,0,PA,39,F,No Finding,False,False,False,0.7113203,1
+nih_23339,00023339_000,0,PA,40,M,No Finding,False,False,False,0.8729193,1
+nih_23344,00023344_000,0,PA,43,F,No Finding,False,False,False,0.2240672,1
+nih_23363,00023363_000,0,PA,27,M,No Finding,False,False,False,0.79791504,1
+nih_23382,00023382_000,0,PA,33,M,No Finding,False,False,False,0.6152164,1
+nih_23411,00023411_000,0,PA,23,M,No Finding,False,False,False,0.18273194,1
+nih_23415,00023415_000,0,PA,32,F,No Finding,False,False,False,0.51658505,1
+nih_23420,00023420_000,0,PA,33,M,No Finding,False,False,False,0.76373494,1
+nih_23442,00023442_000,0,PA,27,F,No Finding,False,False,False,0.6158341,1
+nih_23519,00023519_000,0,PA,28,F,No Finding,False,False,False,0.09576276,0
+nih_23525,00023525_000,0,PA,39,M,No Finding,False,False,False,0.75960743,1
+nih_23541,00023541_000,0,PA,34,M,No Finding,False,False,False,0.8523253,1
+nih_23557,00023557_000,0,PA,18,F,No Finding,False,False,False,0.75783294,1
+nih_23567,00023567_000,0,PA,34,F,No Finding,False,False,False,0.7144809,1
+nih_23572,00023572_000,0,PA,36,M,No Finding,False,False,False,0.77505744,1
+nih_23574,00023574_000,0,PA,57,M,No Finding,False,False,False,0.6779274,1
+nih_23584,00023584_000,0,PA,29,F,No Finding,False,False,False,0.2255509,1
+nih_23619,00023619_000,0,PA,48,M,No Finding,False,False,False,0.8812236,1
+nih_23660,00023660_000,0,PA,53,M,No Finding,False,False,False,0.98671234,1
+nih_23684,00023684_002,0,PA,61,M,No Finding,False,False,False,0.39460027,1
+nih_23706,00023706_000,0,PA,42,M,No Finding,False,False,False,0.89149666,1
+nih_23737,00023737_000,0,PA,45,F,No Finding,False,False,False,0.5828524,1
+nih_23759,00023759_000,0,PA,36,M,No Finding,False,False,False,0.914877,1
+nih_23773,00023773_000,0,PA,34,F,No Finding,False,False,False,0.22222869,1
+nih_23786,00023786_000,0,PA,29,F,No Finding,False,False,False,0.20524707,1
+nih_23809,00023809_000,0,PA,29,F,No Finding,False,False,False,0.39541093,1
+nih_23811,00023811_000,0,PA,32,M,No Finding,False,False,False,0.040853187,0
+nih_23820,00023820_000,0,PA,32,M,No Finding,False,False,False,0.71490556,1
+nih_23821,00023821_000,0,PA,30,F,No Finding,False,False,False,0.56725955,1
+nih_23828,00023828_000,0,PA,31,M,No Finding,False,False,False,0.5341185,1
+nih_23849,00023849_000,0,PA,48,F,No Finding,False,False,False,0.8900269,1
+nih_23873,00023873_000,0,PA,21,F,No Finding,False,False,False,0.65505344,1
+nih_23889,00023889_000,0,PA,21,F,No Finding,False,False,False,0.56598634,1
+nih_23890,00023890_000,0,PA,28,F,No Finding,False,False,False,0.5956226,1
+nih_23932,00023932_000,0,PA,35,M,No Finding,False,False,False,0.88130534,1
+nih_23947,00023947_000,0,PA,19,F,No Finding,False,False,False,0.5298846,1
+nih_23953,00023953_000,0,PA,27,F,No Finding,False,False,False,0.51865786,1
+nih_23973,00023973_001,0,PA,38,M,No Finding,False,False,False,0.7981277,1
+nih_23979,00023979_000,0,PA,23,F,No Finding,False,False,False,0.612348,1
+nih_23981,00023981_000,0,PA,21,F,No Finding,False,False,False,0.1504344,1
+nih_23985,00023985_000,0,PA,23,F,No Finding,False,False,False,0.23214407,1
+nih_23986,00023986_000,0,PA,46,M,No Finding,False,False,False,0.9224175,1
+nih_24032,00024032_000,0,PA,22,M,No Finding,False,False,False,0.51131,1
+nih_24050,00024050_000,0,PA,37,M,No Finding,False,False,False,0.6020831,1
+nih_24056,00024056_000,0,PA,42,M,No Finding,False,False,False,0.9134134,1
+nih_24063,00024063_000,0,PA,32,M,No Finding,False,False,False,0.8010138,1
+nih_24074,00024074_000,0,PA,27,M,No Finding,False,False,False,0.8412239,1
+nih_24084,00024084_000,0,PA,28,F,No Finding,False,False,False,0.7542662,1
+nih_24109,00024109_000,0,PA,48,M,No Finding,False,False,False,0.9107634,1
+nih_24115,00024115_000,0,PA,34,F,No Finding,False,False,False,0.48792133,1
+nih_24156,00024156_000,0,PA,50,F,No Finding,False,False,False,0.6304943,1
+nih_24161,00024161_000,0,PA,54,M,No Finding,False,False,False,0.924016,1
+nih_24174,00024174_000,0,PA,35,M,No Finding,False,False,False,0.58177185,1
+nih_24180,00024180_000,0,PA,27,M,No Finding,False,False,False,0.8045406,1
+nih_24211,00024211_000,0,PA,34,M,No Finding,False,False,False,0.42706066,1
+nih_24229,00024229_000,0,PA,51,M,No Finding,False,False,False,0.817466,1
+nih_24255,00024255_000,0,PA,39,M,No Finding,False,False,False,0.336577,1
+nih_24286,00024286_000,0,PA,42,M,No Finding,False,False,False,0.9791408,1
+nih_24312,00024312_000,0,PA,69,F,No Finding,False,False,False,0.91659844,1
+nih_24337,00024337_000,0,PA,23,F,No Finding,False,False,False,0.26221496,1
+nih_24347,00024347_000,0,PA,22,M,No Finding,False,False,False,0.42507324,1
+nih_24348,00024348_000,0,PA,29,M,No Finding,False,False,False,0.32113612,1
+nih_24381,00024381_000,0,PA,26,F,No Finding,False,False,False,0.6026806,1
+nih_24518,00024518_000,0,PA,24,M,No Finding,False,False,False,0.50125015,1
+nih_24524,00024524_000,1,PA,35,M,Atelectasis|Pneumonia,False,False,False,0.9190556,1
+nih_24532,00024532_000,0,PA,30,M,No Finding,False,False,False,0.7200418,1
+nih_24544,00024544_000,0,PA,24,F,No Finding,False,False,False,0.7597981,1
+nih_24564,00024564_000,0,PA,22,F,No Finding,False,False,False,0.17904621,1
+nih_24573,00024573_000,0,PA,49,F,No Finding,False,False,False,0.9794733,1
+nih_24598,00024598_000,0,PA,41,M,No Finding,False,False,False,0.9141684,1
+nih_24612,00024612_000,0,PA,23,M,No Finding,False,False,False,0.9543383,1
+nih_24614,00024614_000,0,PA,27,F,No Finding,False,False,False,0.15688038,1
+nih_24624,00024624_000,0,PA,32,F,No Finding,False,False,False,0.8923578,1
+nih_24630,00024630_000,0,PA,46,M,No Finding,False,False,False,0.86306465,1
+nih_24643,00024643_000,0,PA,38,F,No Finding,False,False,False,0.09244421,0
+nih_24658,00024658_000,0,PA,44,M,No Finding,False,False,False,0.7540894,1
+nih_24670,00024670_000,0,PA,28,F,No Finding,False,False,False,0.25021362,1
+nih_24690,00024690_000,0,PA,46,F,No Finding,False,False,False,0.96214366,1
+nih_24719,00024719_000,0,PA,30,F,No Finding,False,False,False,0.33999988,1
+nih_24756,00024756_000,0,PA,23,F,No Finding,False,False,False,0.49186188,1
+nih_24802,00024802_000,0,PA,19,M,No Finding,False,False,False,0.89313483,1
+nih_24842,00024842_000,0,PA,31,M,No Finding,False,False,False,0.5411008,1
+nih_24882,00024882_000,0,PA,34,M,No Finding,False,False,False,0.8284139,1
+nih_24887,00024887_000,0,PA,36,M,No Finding,False,False,False,0.87415725,1
+nih_24902,00024902_000,0,PA,35,M,No Finding,False,False,False,0.87155956,1
+nih_24952,00024952_000,0,PA,38,F,No Finding,False,False,False,0.097307935,0
+nih_24994,00024994_000,0,PA,22,F,No Finding,False,False,False,0.2504526,1
+nih_25023,00025023_000,0,PA,50,F,No Finding,False,False,False,0.5983633,1
+nih_25038,00025038_000,0,PA,31,M,No Finding,False,False,False,0.6844097,1
+nih_25042,00025042_000,0,PA,58,F,No Finding,False,False,False,0.5748102,1
+nih_25053,00025053_000,0,PA,35,F,No Finding,False,False,False,0.6087183,1
+nih_25080,00025080_000,0,PA,45,F,No Finding,False,False,False,0.49099085,1
+nih_25087,00025087_000,0,PA,46,F,No Finding,False,False,False,0.9166385,1
+nih_25125,00025125_000,0,PA,44,M,No Finding,False,False,False,0.8656316,1
+nih_25135,00025135_000,0,PA,44,M,No Finding,False,False,False,0.86892223,1
+nih_25290,00025290_003,1,AP,44,F,Edema|Infiltration|Pneumonia,False,False,False,0.9818569,1
+nih_25290,00025290_007,1,AP,45,F,Effusion|Pneumonia,False,False,False,0.9727625,1
+nih_25297,00025297_007,0,PA,43,M,No Finding,False,False,False,0.97358423,1
+nih_25302,00025302_000,0,PA,25,F,No Finding,False,False,False,0.3213763,1
+nih_25393,00025393_000,0,PA,22,M,No Finding,False,False,False,0.98974365,1
+nih_25395,00025395_003,0,PA,66,F,No Finding,False,False,False,0.7094577,1
+nih_25402,00025402_001,0,PA,53,F,No Finding,False,False,False,0.22534655,1
+nih_25406,00025406_000,0,PA,57,M,No Finding,False,False,False,0.80392575,1
+nih_25415,00025415_000,0,PA,39,M,No Finding,False,False,False,0.92009133,1
+nih_25421,00025421_001,1,AP,62,F,Pneumonia,True,False,False,0.97065663,1
+nih_25421,00025421_006,1,PA,62,F,Infiltration|Pneumonia,False,False,False,0.90258455,1
+nih_25438,00025438_000,0,PA,26,M,No Finding,False,False,False,0.58482647,1
+nih_25443,00025443_000,0,AP,45,M,No Finding,False,False,False,0.89613247,1
+nih_25444,00025444_019,1,PA,21,M,Consolidation|Pneumonia,False,False,False,0.5904355,1
+nih_25455,00025455_000,0,AP,51,M,No Finding,False,False,False,0.37284133,1
+nih_25473,00025473_005,1,AP,24,F,Edema|Infiltration|Pneumonia,False,False,False,0.653086,1
+nih_25484,00025484_000,0,PA,47,M,No Finding,False,False,False,0.8759367,1
+nih_25528,00025528_001,0,PA,65,M,No Finding,False,False,False,0.8392652,1
+nih_25543,00025543_019,1,PA,42,F,Atelectasis|Effusion|Pneumonia,False,False,False,0.9685065,1
+nih_25574,00025574_001,0,PA,67,M,No Finding,False,False,False,0.81466264,1
+nih_25618,00025618_000,0,PA,41,F,No Finding,False,False,False,0.94773424,1
+nih_25623,00025623_008,0,PA,51,M,No Finding,False,False,False,0.9876195,1
+nih_25650,00025650_009,0,AP,56,M,No Finding,False,False,False,0.9388553,1
+nih_25656,00025656_008,0,AP,63,M,No Finding,False,False,False,0.9849214,1
+nih_25687,00025687_000,0,PA,32,F,No Finding,False,False,False,0.7745469,1
+nih_25708,00025708_000,0,AP,47,M,No Finding,False,False,False,0.97040606,1
+nih_25735,00025735_000,0,PA,57,F,No Finding,False,False,False,0.9089734,1
+nih_25739,00025739_000,0,PA,58,F,No Finding,False,False,False,0.98514867,1
+nih_25742,00025742_000,0,PA,58,M,No Finding,False,False,False,0.9427738,1
+nih_25757,00025757_000,0,AP,66,F,No Finding,False,False,False,0.9232558,1
+nih_25782,00025782_000,0,PA,68,M,No Finding,False,False,False,0.94720954,1
+nih_25787,00025787_007,1,AP,27,M,Edema|Infiltration|Pneumonia,False,False,False,0.99953365,1
+nih_25809,00025809_000,0,PA,40,F,No Finding,False,False,False,0.66364324,1
+nih_25820,00025820_000,0,PA,48,F,No Finding,False,False,False,0.14969145,1
+nih_25838,00025838_002,0,AP,71,M,No Finding,False,False,False,0.69995517,1
+nih_25872,00025872_000,0,PA,64,M,No Finding,False,False,False,0.9034787,1
+nih_25877,00025877_001,0,PA,44,F,No Finding,False,False,False,0.98685175,1
+nih_25891,00025891_000,0,PA,24,M,No Finding,False,False,False,0.75456727,1
+nih_25904,00025904_001,0,PA,19,M,No Finding,False,False,False,0.40172362,1
+nih_25936,00025936_002,0,PA,59,M,No Finding,False,False,False,0.8073095,1
+nih_25954,00025954_042,0,PA,57,F,No Finding,False,False,False,0.6477454,1
+nih_25962,00025962_000,1,PA,18,F,Consolidation|Infiltration|Pneumonia,False,True,True,0.91472876,1
+nih_26044,00026044_000,0,PA,49,F,No Finding,False,False,False,0.89156824,1
+nih_26099,00026099_005,1,AP,23,M,Edema|Infiltration|Pneumonia,False,False,False,0.99488753,1
+nih_26116,00026116_000,0,PA,44,M,No Finding,False,False,False,0.9968322,1
+nih_26157,00026157_000,0,PA,47,M,No Finding,False,False,False,0.72947794,1
+nih_26179,00026179_003,1,AP,26,F,Pneumonia,True,False,False,0.91277415,1
+nih_26196,00026196_001,1,PA,64,M,Mass|Nodule|Pneumonia,False,True,True,0.84020394,1
+nih_26232,00026232_005,1,AP,27,F,Edema|Pneumonia,False,False,False,0.98661023,1
+nih_26260,00026260_000,0,PA,31,M,No Finding,False,False,False,0.96726716,1
+nih_26284,00026284_000,0,PA,46,M,No Finding,False,False,False,0.38407516,1
+nih_26346,00026346_001,1,AP,58,M,Edema|Pneumonia,False,False,False,0.9983891,1
+nih_26366,00026366_001,1,AP,23,M,Pneumonia,True,False,False,0.6435136,1
+nih_26386,00026386_001,0,PA,48,F,No Finding,False,False,False,0.27404305,1
+nih_26395,00026395_000,0,PA,56,F,No Finding,False,False,False,0.6440294,1
+nih_26461,00026461_004,0,AP,69,M,No Finding,False,False,False,0.9945034,1
+nih_26515,00026515_004,0,PA,66,M,No Finding,False,False,False,0.93794084,1
+nih_26535,00026535_000,0,PA,26,F,No Finding,False,False,False,0.8519889,1
+nih_26540,00026540_000,0,PA,21,F,No Finding,False,False,False,0.43215993,1
+nih_26560,00026560_010,1,AP,46,F,Cardiomegaly|Consolidation|Pneumonia,False,False,False,0.9484268,1
+nih_26578,00026578_000,0,PA,70,F,No Finding,False,False,False,0.84206563,1
+nih_26643,00026643_000,0,PA,60,M,No Finding,False,False,False,0.4861765,1
+nih_26662,00026662_000,0,PA,60,F,No Finding,False,False,False,0.82801217,1
+nih_26693,00026693_000,0,PA,30,F,No Finding,False,False,False,0.54023945,1
+nih_26713,00026713_015,1,AP,62,F,Consolidation|Effusion|Pneumonia,False,False,False,0.98910016,1
+nih_26776,00026776_000,0,PA,27,M,No Finding,False,False,False,0.6207943,1
+nih_26809,00026809_000,0,PA,28,M,No Finding,False,False,False,0.35889706,1
+nih_26811,00026811_000,0,PA,27,F,No Finding,False,False,False,0.14152212,1
+nih_26818,00026818_017,1,AP,31,M,Edema|Pneumonia,False,False,False,0.9818818,1
+nih_26839,00026839_000,0,PA,37,F,No Finding,False,False,False,0.35487178,1
+nih_26847,00026847_000,0,PA,26,M,No Finding,False,False,False,0.54948574,1
+nih_26848,00026848_007,1,AP,22,M,Atelectasis|Emphysema|Infiltration|Pneumothorax|Pneumonia,False,True,True,0.94503844,1
+nih_26848,00026848_023,1,AP,22,M,Edema|Infiltration|Pneumonia,False,False,True,0.9986357,1
+nih_26848,00026848_028,1,AP,22,M,Edema|Infiltration|Pneumonia,False,False,True,0.99375594,1
+nih_26855,00026855_001,0,PA,37,F,No Finding,False,False,False,0.9383485,1
+nih_26873,00026873_000,0,PA,62,M,No Finding,False,False,False,0.7138901,1
+nih_26883,00026883_001,1,AP,55,F,Pneumonia,True,False,False,0.6458238,1
+nih_26928,00026928_002,0,PA,69,F,No Finding,False,False,False,0.5063626,1
+nih_26977,00026977_000,0,PA,56,M,No Finding,False,False,False,0.21369675,1
+nih_27055,00027055_000,0,PA,29,M,No Finding,False,False,False,0.5251441,1
+nih_27057,00027057_000,0,PA,29,M,No Finding,False,False,False,0.793324,1
+nih_27074,00027074_000,0,PA,38,F,No Finding,False,False,False,0.7324584,1
+nih_27084,00027084_000,0,PA,42,M,No Finding,False,False,False,0.9201969,1
+nih_27093,00027093_002,1,AP,30,F,Pneumothorax|Pneumonia,False,True,True,0.9937597,1
+nih_27099,00027099_000,0,PA,57,F,No Finding,False,False,False,0.6538483,1
+nih_27108,00027108_003,0,AP,59,F,No Finding,False,False,False,0.8418711,1
+nih_27171,00027171_000,0,PA,42,F,No Finding,False,False,False,0.90587646,1
+nih_27215,00027215_000,0,AP,29,F,No Finding,False,False,False,0.6216728,1
+nih_27223,00027223_000,0,PA,59,M,No Finding,False,False,False,0.9099048,1
+nih_27241,00027241_000,0,PA,53,M,No Finding,False,False,False,0.38174435,1
+nih_27263,00027263_000,0,PA,52,F,No Finding,False,False,False,0.9191459,1
+nih_27271,00027271_000,0,PA,42,F,No Finding,False,False,False,0.19828065,1
+nih_27281,00027281_000,0,PA,59,M,No Finding,False,False,False,0.8558163,1
+nih_27291,00027291_001,0,PA,52,M,No Finding,False,False,False,0.99793494,1
+nih_27313,00027313_000,0,PA,49,F,No Finding,False,False,False,0.59155774,1
+nih_27332,00027332_000,0,PA,64,F,No Finding,False,False,False,0.6826739,1
+nih_27335,00027335_000,0,PA,26,F,No Finding,False,False,False,0.46540043,1
+nih_27359,00027359_001,0,PA,18,F,No Finding,False,False,False,0.4040498,1
+nih_27365,00027365_003,0,PA,63,F,No Finding,False,False,False,0.97969407,1
+nih_27536,00027536_000,0,PA,71,M,No Finding,False,False,False,0.643778,1
+nih_27572,00027572_001,0,AP,26,M,No Finding,False,False,False,0.6242384,1
+nih_27584,00027584_005,0,AP,75,M,No Finding,False,False,False,0.9643827,1
+nih_27605,00027605_000,0,PA,62,M,No Finding,False,False,False,0.99054015,1
+nih_27616,00027616_001,0,AP,59,M,No Finding,False,False,False,0.9809528,1
+nih_27690,00027690_002,0,AP,51,M,No Finding,False,False,False,0.9938543,1
+nih_27700,00027700_001,0,AP,65,M,No Finding,False,False,False,0.95639724,1
+nih_27708,00027708_000,0,PA,71,M,No Finding,False,False,False,0.64740294,1
+nih_27722,00027722_000,0,PA,61,F,No Finding,False,False,False,0.9537592,1
+nih_27756,00027756_000,0,PA,72,M,No Finding,False,False,False,0.94385517,1
+nih_27758,00027758_004,1,PA,49,F,Atelectasis|Effusion|Pneumonia,False,True,True,0.968903,1
+nih_27837,00027837_001,1,AP,50,M,Mass|Nodule|Pneumonia|Pneumothorax,False,True,True,0.9914409,1
+nih_27847,00027847_002,0,PA,46,M,No Finding,False,False,False,0.8409166,1
+nih_27851,00027851_000,0,PA,41,M,No Finding,False,False,False,0.777955,1
+nih_27861,00027861_001,0,PA,48,F,No Finding,False,False,False,0.42195147,1
+nih_27916,00027916_000,0,PA,34,M,No Finding,False,False,False,0.95674235,1
+nih_27917,00027917_000,0,PA,47,M,No Finding,False,False,False,0.35341343,1
+nih_27975,00027975_001,0,PA,30,M,No Finding,False,False,False,0.3629323,1
+nih_28038,00028038_000,0,PA,47,F,No Finding,False,False,False,0.62916034,1
+nih_28043,00028043_000,0,PA,45,F,No Finding,False,False,False,0.4308738,1
+nih_28067,00028067_002,0,AP,64,F,No Finding,False,False,False,0.98831826,1
+nih_28079,00028079_001,0,PA,22,F,No Finding,False,False,False,0.14883436,1
+nih_28080,00028080_000,0,PA,62,M,No Finding,False,False,False,0.89594054,1
+nih_28106,00028106_000,1,PA,28,M,Infiltration|Pneumonia,False,False,False,0.71922976,1
+nih_28111,00028111_000,0,PA,30,F,No Finding,False,False,False,0.8374286,1
+nih_28160,00028160_001,0,AP,18,M,No Finding,False,False,False,0.42202723,1
+nih_28168,00028168_000,0,PA,50,M,No Finding,False,False,False,0.64367723,1
+nih_28188,00028188_000,0,PA,30,F,No Finding,False,False,False,0.100823976,0
+nih_28208,00028208_005,1,PA,64,M,Infiltration|Pneumonia,False,True,True,0.9995247,1
+nih_28217,00028217_000,0,PA,44,F,No Finding,False,False,False,0.7979804,1
+nih_28241,00028241_000,0,PA,60,F,No Finding,False,False,False,0.94393724,1
+nih_28242,00028242_001,0,AP,61,F,No Finding,False,False,False,0.8892262,1
+nih_28272,00028272_000,0,PA,45,F,No Finding,False,False,False,0.72960585,1
+nih_28285,00028285_014,1,AP,19,M,Effusion|Infiltration|Nodule|Pneumonia,False,True,True,0.93655115,1
+nih_28295,00028295_000,0,PA,27,M,No Finding,False,False,False,0.05719302,0
+nih_28332,00028332_000,0,PA,19,M,No Finding,False,False,False,0.49174136,1
+nih_28351,00028351_000,0,PA,48,M,No Finding,False,False,False,0.6437254,1
+nih_28368,00028368_000,0,PA,20,F,No Finding,False,False,False,0.5609238,1
+nih_28390,00028390_000,0,PA,54,F,No Finding,False,False,False,0.65604097,1
+nih_28454,00028454_016,1,AP,58,F,Edema|Infiltration|Pneumonia,False,True,True,0.9939871,1
+nih_28509,00028509_032,0,AP,64,M,No Finding,False,False,False,0.99456006,1
+nih_28511,00028511_000,0,PA,48,F,No Finding,False,False,False,0.8041938,1
+nih_28514,00028514_000,0,PA,38,M,No Finding,False,False,False,0.9856317,1
+nih_28533,00028533_000,0,PA,35,F,No Finding,False,False,False,0.717954,1
+nih_28538,00028538_000,0,PA,54,M,No Finding,False,False,False,0.8636736,1
+nih_28543,00028543_000,0,PA,52,F,No Finding,False,False,False,0.68835473,1
+nih_28552,00028552_004,1,PA,67,M,Consolidation|Pneumonia,False,False,False,0.99290437,1
+nih_28565,00028565_000,0,PA,64,M,No Finding,False,False,False,0.82398605,1
+nih_28646,00028646_002,0,AP,43,F,No Finding,False,False,False,0.5186677,1
+nih_28647,00028647_000,0,PA,28,F,No Finding,False,False,False,0.39464495,1
+nih_28674,00028674_000,0,AP,36,F,No Finding,False,False,False,0.965998,1
+nih_28709,00028709_000,0,PA,28,F,No Finding,False,False,False,0.34618995,1
+nih_28728,00028728_000,0,AP,70,F,No Finding,False,False,False,0.8352936,1
+nih_28749,00028749_000,0,PA,48,F,No Finding,False,False,False,0.113460995,0
+nih_28764,00028764_002,1,PA,24,F,Pneumonia,True,False,False,0.9152959,1
+nih_28764,00028764_003,1,PA,24,F,Infiltration|Pneumonia,False,False,False,0.7751653,1
+nih_28764,00028764_004,1,PA,24,F,Effusion|Infiltration|Pneumonia,False,False,False,0.3607786,1
+nih_28819,00028819_002,1,AP,47,M,Edema|Pneumonia,False,False,False,0.9757286,1
+nih_28865,00028865_000,0,PA,60,M,No Finding,False,False,False,0.87592524,1
+nih_28883,00028883_000,0,PA,18,M,No Finding,False,False,False,0.4592606,1
+nih_28901,00028901_001,0,PA,68,M,No Finding,False,False,False,0.87385356,1
+nih_28924,00028924_005,1,AP,72,F,Pneumonia,True,False,False,0.99696165,1
+nih_28986,00028986_000,0,PA,74,M,No Finding,False,False,False,0.9202281,1
+nih_29016,00029016_000,0,PA,72,M,No Finding,False,False,False,0.863284,1
+nih_29024,00029024_000,0,PA,52,M,No Finding,False,False,False,0.92055583,1
+nih_29051,00029051_000,0,PA,61,M,No Finding,False,False,False,0.35029748,1
+nih_29072,00029072_000,0,PA,55,M,No Finding,False,False,False,0.89641446,1
+nih_29076,00029076_000,0,PA,56,M,No Finding,False,False,False,0.8035326,1
+nih_29103,00029103_000,0,PA,57,M,No Finding,False,False,False,0.6032711,1
+nih_29117,00029117_000,0,PA,34,F,No Finding,False,False,False,0.3187594,1
+nih_29154,00029154_000,1,PA,20,M,Nodule|Pneumonia,False,False,False,0.283578,1
+nih_29209,00029209_000,0,PA,40,M,No Finding,False,False,False,0.8933612,1
+nih_29240,00029240_000,0,PA,60,F,No Finding,False,False,False,0.70023483,1
+nih_29253,00029253_000,0,PA,54,F,No Finding,False,False,False,0.13239458,1
+nih_29311,00029311_003,0,PA,29,M,No Finding,False,False,False,0.80901945,1
+nih_29363,00029363_000,0,PA,61,M,No Finding,False,False,False,0.8884803,1
+nih_29385,00029385_003,0,AP,52,M,No Finding,False,False,False,0.7351113,1
+nih_29386,00029386_000,0,PA,32,F,No Finding,False,False,False,0.15706593,1
+nih_29417,00029417_000,0,PA,38,M,No Finding,False,False,False,0.48512417,1
+nih_29422,00029422_004,1,AP,50,F,Edema|Infiltration|Pneumonia,False,False,False,0.9912043,1
+nih_29424,00029424_000,0,PA,27,M,No Finding,False,False,False,0.3309366,1
+nih_29431,00029431_000,1,AP,65,M,Edema|Infiltration|Pneumonia,False,True,True,0.99625516,1
+nih_29431,00029431_001,1,PA,65,M,Infiltration|Pneumonia,False,False,True,0.93748665,1
+nih_29441,00029441_000,0,PA,23,M,No Finding,False,False,False,0.8218782,1
+nih_29453,00029453_000,0,PA,36,M,No Finding,False,False,False,0.31239086,1
+nih_29458,00029458_000,0,PA,49,F,No Finding,False,False,False,0.36876494,1
+nih_29469,00029469_009,1,AP,59,M,Infiltration|Pneumonia,False,True,True,0.9856656,1
+nih_29469,00029469_012,1,AP,59,M,Edema|Effusion|Infiltration|Pneumonia,False,False,True,0.9647271,1
+nih_29489,00029489_000,0,PA,29,M,No Finding,False,False,False,0.40816647,1
+nih_29518,00029518_000,0,PA,24,M,No Finding,False,False,False,0.7641005,1
+nih_29520,00029520_001,0,AP,33,M,No Finding,False,False,False,0.96631503,1
+nih_29536,00029536_000,0,PA,43,M,No Finding,False,False,False,0.94610673,1
+nih_29537,00029537_003,1,AP,42,F,Consolidation|Pneumonia,False,False,False,0.96504796,1
+nih_29543,00029543_001,0,PA,59,F,No Finding,False,False,False,0.9122209,1
+nih_29564,00029564_000,0,PA,36,F,No Finding,False,False,False,0.32758397,1
+nih_29583,00029583_000,0,PA,45,M,No Finding,False,False,False,0.9604804,1
+nih_29603,00029603_000,0,PA,29,F,No Finding,False,False,False,0.65834063,1
+nih_29625,00029625_000,0,PA,18,F,No Finding,False,False,False,0.26949343,1
+nih_29682,00029682_001,0,PA,29,F,No Finding,False,False,False,0.4791069,1
+nih_29686,00029686_000,0,PA,68,M,No Finding,False,False,False,0.6346698,1
+nih_29714,00029714_000,0,PA,71,M,No Finding,False,False,False,0.58402157,1
+nih_29724,00029724_000,0,PA,29,M,No Finding,False,False,False,0.80794084,1
+nih_29747,00029747_002,1,PA,47,F,Effusion|Infiltration|Pneumonia,False,False,False,0.17197843,1
+nih_29762,00029762_000,0,AP,49,F,No Finding,False,False,False,0.35778144,1
+nih_29772,00029772_000,0,PA,54,F,No Finding,False,False,False,0.67947054,1
+nih_29782,00029782_000,0,PA,45,M,No Finding,False,False,False,0.97299206,1
+nih_29799,00029799_000,0,PA,51,F,No Finding,False,False,False,0.61307853,1
+nih_29808,00029808_003,1,PA,32,M,Cardiomegaly|Consolidation|Effusion|Pneumonia,False,True,True,0.97947925,1
+nih_29831,00029831_000,0,PA,72,M,No Finding,False,False,False,0.95769525,1
+nih_29843,00029843_001,1,AP,53,F,Atelectasis|Effusion|Pneumonia,False,False,False,0.99950194,1
+nih_29861,00029861_012,1,AP,63,F,Edema|Effusion|Pneumonia,False,False,True,0.9974595,1
+nih_29861,00029861_013,1,AP,63,F,Edema|Infiltration|Pneumonia,False,True,True,0.9618184,1
+nih_29868,00029868_000,0,PA,54,F,No Finding,False,False,False,0.29883158,1
+nih_29883,00029883_006,1,AP,63,M,Edema|Infiltration|Pneumonia,False,False,False,0.99927574,1
+nih_29884,00029884_000,0,PA,67,M,No Finding,False,False,False,0.9828452,1
+nih_29887,00029887_000,0,PA,21,M,No Finding,False,False,False,0.12950619,1
+nih_29916,00029916_001,0,AP,53,M,No Finding,False,False,False,0.9991978,1
+nih_29948,00029948_001,0,PA,65,F,No Finding,False,False,False,0.7892536,1
+nih_29954,00029954_000,0,PA,23,F,No Finding,False,False,False,0.47427297,1
+nih_29966,00029966_000,0,PA,53,F,No Finding,False,False,False,0.5386406,1
+nih_29968,00029968_000,0,PA,21,F,No Finding,False,False,False,0.21846792,1
+nih_29974,00029974_000,0,PA,63,M,No Finding,False,False,False,0.77235687,1
+nih_30016,00030016_000,0,PA,41,M,No Finding,False,False,False,0.8405184,1
+nih_30033,00030033_000,0,PA,19,F,No Finding,False,False,False,0.39380917,1
+nih_30042,00030042_000,0,PA,67,M,No Finding,False,False,False,0.7837829,1
+nih_30088,00030088_000,0,PA,60,M,No Finding,False,False,False,0.80794346,1
+nih_30111,00030111_017,0,PA,51,M,No Finding,False,False,False,0.8817463,1
+nih_30145,00030145_002,0,PA,40,F,No Finding,False,False,False,0.37140867,1
+nih_30153,00030153_001,0,PA,49,F,No Finding,False,False,False,0.68256307,1
+nih_30164,00030164_000,0,PA,22,F,No Finding,False,False,False,0.25750935,1
+nih_30229,00030229_000,0,PA,39,M,No Finding,False,False,False,0.72312987,1
+nih_30232,00030232_000,0,PA,21,F,No Finding,False,False,False,0.47697923,1
+nih_30233,00030233_002,0,AP,43,M,No Finding,False,False,False,0.72792137,1
+nih_30268,00030268_000,0,PA,62,F,No Finding,False,False,False,0.5725114,1
+nih_30317,00030317_000,0,PA,74,F,No Finding,False,False,False,0.4202469,1
+nih_30341,00030341_000,0,PA,37,F,No Finding,False,False,False,0.3504011,1
+nih_30367,00030367_000,0,PA,32,M,No Finding,False,False,False,0.6930665,1
+nih_30398,00030398_000,1,PA,55,F,Consolidation|Effusion|Pneumonia,False,False,False,0.9935434,1
+nih_30432,00030432_000,0,PA,42,M,No Finding,False,False,False,0.63547915,1
+nih_30472,00030472_000,0,PA,37,F,No Finding,False,False,False,0.42105317,1
+nih_30502,00030502_000,0,PA,34,F,No Finding,False,False,False,0.80397165,1
+nih_30516,00030516_000,0,PA,50,F,No Finding,False,False,False,0.13239765,1
+nih_30522,00030522_000,0,PA,26,M,No Finding,False,False,False,0.34616393,1
+nih_30527,00030527_001,0,PA,34,M,No Finding,False,False,False,0.92762077,1
+nih_30578,00030578_000,0,PA,28,F,No Finding,False,False,False,0.5652341,1
+nih_30629,00030629_000,0,PA,41,F,No Finding,False,False,False,0.5261821,1
+nih_30637,00030637_016,1,AP,48,M,Consolidation|Pneumonia,False,False,False,0.9959649,1
+nih_30650,00030650_004,0,PA,66,M,No Finding,False,False,False,0.99400085,1
+nih_30705,00030705_000,0,PA,41,F,No Finding,False,False,False,0.6470087,1
+nih_30712,00030712_000,0,PA,57,M,No Finding,False,False,False,0.791199,1
+nih_30724,00030724_000,0,PA,50,F,No Finding,False,False,False,0.19969279,1
+nih_30800,00030800_000,0,PA,33,F,No Finding,False,False,False,0.3150984,1

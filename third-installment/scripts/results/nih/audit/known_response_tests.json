@@ -1,0 +1,65 @@
+{
+  "threshold": 0.4846183955669403,
+  "original": {
+    "auc_roc": 0.8925247564315864,
+    "positive_rate": 0.35714285714285715,
+    "sensitivity": 0.8463611859838275,
+    "specificity": 0.8059299191374663
+  },
+  "bbox_occlusion": {
+    "images": 114,
+    "median_drop_box": 0.07505714893341064,
+    "median_drop_mirror": 0.010942786931991577,
+    "fraction_box_drop_greater": 0.7982456140350878,
+    "wilcoxon_p": 9.587139415678791e-11,
+    "detected_before": 0.8947368421052632,
+    "detected_after_box_occlusion": 0.8333333333333334
+  },
+  "center_occluded": {
+    "auc_roc": 0.7199986438149486,
+    "positive_rate": 0.6482479784366577,
+    "sensitivity": 0.8355795148247979,
+    "specificity": 0.4141958670260557
+  },
+  "border_occluded": {
+    "auc_roc": 0.8830435698665369,
+    "positive_rate": 0.4474393530997305,
+    "sensitivity": 0.889487870619946,
+    "specificity": 0.6999101527403414
+  },
+  "horizontal_flip": {
+    "auc_roc": 0.8896622372694183,
+    "positive_rate": 0.3915094339622642,
+    "sensitivity": 0.862533692722372,
+    "specificity": 0.7654986522911051,
+    "median_abs_score_change": 0.0407915934920311
+  },
+  "out_of_domain": {
+    "uniform_gray": {
+      "images": 200,
+      "median_score": 0.738470733165741,
+      "positive_rate": 1.0
+    },
+    "gaussian_noise": {
+      "images": 200,
+      "median_score": 0.6816644668579102,
+      "positive_rate": 1.0
+    },
+    "inverted_xray": {
+      "images": 200,
+      "median_score": 0.3970920443534851,
+      "positive_rate": 0.305
+    },
+    "rotated_90_xray": {
+      "images": 200,
+      "median_score": 0.6273549795150757,
+      "positive_rate": 0.915
+    }
+  },
+  "kermany_pediatric_test": {
+    "auc_roc": 0.5774382322894727,
+    "positive_rate": 0.9087875417130145,
+    "sensitivity": 0.9316109422492401,
+    "specificity": 0.15352697095435686
+  }
+}
