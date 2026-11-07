@@ -1,0 +1,24 @@
+{
+  "source_metadata": "Data_Entry_2017_v2020.csv (NIH Clinical Center, nihcc.app.box.com/v/ChestXray-NIHCC)",
+  "seed": 42,
+  "min_age": 18,
+  "views": [
+    "PA",
+    "AP"
+  ],
+  "label_definition": {
+    "positive": "'Pneumonia' in Finding Labels (co-findings allowed)",
+    "negative": "Finding Labels == 'No Finding' and patient never labeled Pneumonia",
+    "excluded": "pediatric, non-frontal and every other label combination"
+  },
+  "design": "case-control; 3.0 control images per case image; one image per control patient",
+  "case_patient_fractions": {
+    "adapt_train": 0.7,
+    "adapt_val": 0.15,
+    "external_test": 0.15
+  },
+  "control_allocation": "controls per split = global control/case ratio x case images in that split",
+  "reserved_for_audit": "110 patients with radiologist Pneumonia bounding boxes forced into external_test",
+  "selection_rule": "Decided from metadata before any image is downloaded or any model is trained; external_test never informs training, early stopping, threshold or model selection.",
+  "leakage_check": "passed"
+}

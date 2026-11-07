@@ -1,0 +1,4 @@
+split,images,patients,positives,prevalence,ap_fraction,bbox_images
+adapt_train,3200,2980,800,0.25,0.268125,0
+adapt_val,592,568,148,0.25,0.27364864864864863,0
+external_test,1484,1347,371,0.25,0.2944743935309973,114
