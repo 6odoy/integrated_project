@@ -123,5 +123,13 @@ def paired_patient_bootstrap_difference(y, scores_a, threshold_a, scores_b,
         },
     }
 
+def _finite_or_none(value):
+    """NaN/inf no son JSON válido: se escriben como null."""
+    if isinstance(value, dict): return {k: _finite_or_none(v) for k, v in value.items()}
+    if isinstance(value, (list, tuple)): return [_finite_or_none(v) for v in value]
+    if isinstance(value, (float, np.floating)) and not np.isfinite(value): return None
+    if isinstance(value, np.generic): return value.item()
+    return value
+
 def write_json(path, payload):
-    Path(path).write_text(json.dumps(payload, indent=2, default=str), encoding="utf8")
+    Path(path).write_text(json.dumps(_finite_or_none(payload), indent=2, default=str, allow_nan=False), encoding="utf8")

@@ -55,16 +55,21 @@ def main():
     parser.add_argument("--out", required=True, type=Path)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--n-boot", type=int, default=1000)
+    # Nombres de split: por defecto Kermany; para NIH, adapt_train/adapt_val/external_test.
+    parser.add_argument("--train-split", default="train")
+    parser.add_argument("--val-split", default="val")
+    parser.add_argument("--test-split", default="test")
+    parser.add_argument("--predictions-name", default="predictions_kermany_test.csv")
     args = parser.parse_args()
 
     frame = pd.read_csv(args.partition)
-    expected = {"train", "val", "test"}
-    if set(frame.split.unique()) != expected:
-        raise ValueError(f"La particion debe contener exactamente {sorted(expected)}")
+    names = {"train": args.train_split, "val": args.val_split, "test": args.test_split}
+    if set(frame.split.unique()) != set(names.values()):
+        raise ValueError(f"La particion debe contener exactamente {sorted(names.values())}")
     verify_no_leakage(frame)
-    splits = {split: frame[frame.split == split].reset_index(drop=True) for split in expected}
-    features = {split: intensity_histograms(splits[split], args.images_root) for split in expected}
-    labels = {split: splits[split].label.to_numpy(dtype=int) for split in expected}
+    splits = {split: frame[frame.split == name].reset_index(drop=True) for split, name in names.items()}
+    features = {split: intensity_histograms(splits[split], args.images_root) for split in names}
+    labels = {split: splits[split].label.to_numpy(dtype=int) for split in names}
     val_auc, model, hyperparameters = select_random_forest(
         features["train"], labels["train"], features["val"], labels["val"], args.seed)
     val_scores = model.predict_proba(features["val"])[:, 1]
@@ -78,7 +83,7 @@ def main():
         "hyperparameters_selected_on_validation": hyperparameters,
         "best_validation_auc": float(val_auc),
         "threshold": float(threshold),
-        "threshold_from": "Kermany validation only; specificity_minimum=0.80",
+        "threshold_from": f"{args.val_split} only; specificity_minimum=0.80",
         "patients": int(test.patient_id.nunique()), "images": int(len(test)),
         "prevalence": float(labels["test"].mean()),
         "partition": str(args.partition),
@@ -90,7 +95,7 @@ def main():
     pd.DataFrame({"patient_id": test.patient_id, "study_id": test.study_id,
                   "label": labels["test"], "score": test_scores,
                   "prediction": (test_scores >= threshold).astype(int)}).to_csv(
-                      args.out / "predictions_kermany_test.csv", index=False)
+                      args.out / args.predictions_name, index=False)
     write_json(args.out / "metrics.json", result)
     print(json.dumps(result, indent=2))
 
