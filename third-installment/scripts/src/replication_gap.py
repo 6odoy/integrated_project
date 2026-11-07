@@ -87,7 +87,28 @@ def main() -> None:
     frame.to_csv(args.out / "replication_gap_by_run.csv", index=False)
     summary = frame.groupby(["partition", "mode"]).agg(["mean", "std"]).drop(columns="seed")
     summary.to_csv(args.out / "replication_gap_summary.csv")
+    write_table(frame[frame["mode"] == "finetune_partial"], args.out / "table_replication.tex")
     print(frame.groupby(["partition", "mode"]).mean(numeric_only=True).round(3).T.to_string())
+
+
+def write_table(frame: pd.DataFrame, path: Path) -> None:
+    """Fine-tuning parcial por partición: media y DE de las semillas, coma decimal."""
+    def cell(values):
+        text = f"{values.mean():.3f}" + (f" $\\pm$ {values.std():.3f}" if len(values) > 1 else "")
+        return text.replace(".", "{,}")
+    rows = [r"Rahman et al. (DenseNet201, partición por imagen) & -- & 0{,}990 / 0{,}970 & -- & -- \\"]
+    names = {"patient": "Esta réplica, partición por paciente", "image": "Esta réplica, partición por imagen"}
+    for key in ("patient", "image"):
+        part = frame[frame.partition == key]
+        if part.empty:
+            continue
+        rows.append(f"{names[key]} ({len(part)} sem.) & {cell(part.auc_roc)} & "
+                    f"{cell(part.sensitivity_protocol)} / {cell(part.specificity_protocol)} & "
+                    f"{cell(part['sensitivity_at_0.5'])} / {cell(part['specificity_at_0.5'])} & "
+                    f"{cell(part.specificity_at_rahman_sensitivity)} \\\\")
+    path.write_text("\\begin{tabular}{lcccc}\n\\toprule\n"
+                    "Fuente & AUC-ROC & Sens. / Espec. (protocolo) & Sens. / Espec. (umbral 0,5) & Espec. a sens. 0,99 \\\\\n"
+                    "\\midrule\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

@@ -15,8 +15,8 @@ import pandas as pd
 METRICS = ("sensitivity", "specificity", "auc_roc", "auprc", "f1")
 NAMES = {
     "baseline_random_forest": "Random Forest (histograma)",
-    "zero_shot_kermany_threshold": "Kermany directo, umbral Kermany",
-    "zero_shot_nih_val_threshold": "Kermany directo, umbral NIH val",
+    "zero_shot_kermany_threshold": "Kermany directo (parcial), umbral Kermany",
+    "zero_shot_nih_val_threshold": "Kermany directo (parcial), umbral NIH val",
     "adapt_frozen": "Traslado: extractor congelado",
     "adapt_finetune_partial": "Traslado: fine-tuning parcial",
     "adapt_imagenet_finetune_partial": "Control: ImageNet $\\to$ NIH",
@@ -152,7 +152,7 @@ def learning_curve(results: Path, runs: pd.DataFrame, figures: Path, out: Path) 
         if key in reference:
             ax.axhline(reference[key], color="0.4", linestyle=style, linewidth=1, label=f"AUC {NAMES[key]}")
     ax.set(xscale="log", xlabel="% de pacientes de adapt_train usados (escala log)", ylabel="Métrica en external_test",
-           title="Traslado con datos escasos (fine-tuning parcial, media $\\pm$ DE de 3 semillas)")
+           title="Datos escasos: fine-tuning parcial (media $\\pm$ DE, 3 semillas)")
     ax.set_xticks(x); ax.set_xticklabels([f"{v:g}" for v in x])
     ax.legend(fontsize=6.5, loc="lower right"); ax.grid(alpha=.25)
     fig.tight_layout(); fig.savefig(figures / "learning_curve.png", dpi=170); plt.close(fig)
@@ -199,12 +199,12 @@ def audit_tables(results: Path, out: Path) -> None:
                 ("Tórax central ocluido (60\\%)", t["center_occluded"]["auc_roc"], t["center_occluded"]["positive_rate"], "AUC $\\to$ 0,5"),
                 ("Marco periférico ocluido (10\\%)", t["border_occluded"]["auc_roc"], t["border_occluded"]["positive_rate"], "AUC $\\approx$ original"),
                 ("Volteo horizontal", t["horizontal_flip"]["auc_roc"], t["horizontal_flip"]["positive_rate"], "AUC $\\approx$ original"),
-                ("Kermany pediátrico (test)", t["kermany_pediatric_test"]["auc_roc"], t["kermany_pediatric_test"]["positive_rate"], "Retención del origen")]
+                ("Kermany pediátrico (test)", t["kermany_pediatric_test"]["auc_roc"], t["kermany_pediatric_test"]["positive_rate"], "Población no vista")]
         lines = ["\\begin{tabular}{lccl}", "\\toprule", "Prueba & AUC-ROC & Tasa de positivos & Respuesta esperada \\\\", "\\midrule"]
         lines += [f"{a} & {comma(b)} & {comma(c)} & {d} \\\\" for a, b, c, d in rows]
         lines.append("\\midrule")
         for name, label in (("uniform_gray", "Gris uniforme"), ("gaussian_noise", "Ruido gaussiano"),
-                            ("inverted_xray", "Radiografía invertida"), ("rotated_90_xray", "Radiografía rotada 90°")):
+                            ("inverted_xray", "Radiografía invertida"), ("rotated_90_xray", "Radiografía rotada $90^\\circ$")):
             o = t["out_of_domain"][name]
             lines.append(f"{label} (fuera de dominio) & -- & {comma(o['positive_rate'])} & Sin positivos confiados \\\\")
         lines += ["\\bottomrule", "\\end{tabular}"]

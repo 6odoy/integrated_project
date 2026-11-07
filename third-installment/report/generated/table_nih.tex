@@ -1,0 +1,12 @@
+\begin{tabular}{lcccccc}
+\toprule
+Configuración & Sens. & Espec. & AUC-ROC & AUPRC & F1 & Espec.$\geq$0,80 \\
+\midrule
+Random Forest (histograma) & 0{,}639 & 0{,}820 & 0{,}804 & 0{,}623 & 0{,}587 & 1/1 \\
+Kermany directo (parcial), umbral Kermany & 0{,}982 $\pm$ 0{,}005 & 0{,}154 $\pm$ 0{,}017 & 0{,}835 $\pm$ 0{,}005 & 0{,}630 & 0{,}435 & 0/3 \\
+Kermany directo (parcial), umbral NIH val & 0{,}723 $\pm$ 0{,}009 & 0{,}817 $\pm$ 0{,}001 & 0{,}835 $\pm$ 0{,}005 & 0{,}630 & 0{,}636 & 3/3 \\
+Traslado: extractor congelado & 0{,}776 $\pm$ 0{,}053 & 0{,}816 $\pm$ 0{,}007 & 0{,}865 $\pm$ 0{,}024 & 0{,}681 & 0{,}666 & 3/3 \\
+Traslado: fine-tuning parcial & 0{,}818 $\pm$ 0{,}003 & 0{,}816 $\pm$ 0{,}014 & 0{,}890 $\pm$ 0{,}005 & 0{,}745 & 0{,}691 & 3/3 \\
+Control: ImageNet $\to$ NIH & 0{,}845 $\pm$ 0{,}008 & 0{,}806 $\pm$ 0{,}002 & 0{,}894 $\pm$ 0{,}002 & 0{,}741 & 0{,}697 & 3/3 \\
+\bottomrule
+\end{tabular}

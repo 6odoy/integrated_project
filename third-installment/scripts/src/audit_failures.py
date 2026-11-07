@@ -3,8 +3,9 @@
 * Subgrupos (vista AP/PA, sexo, edad, neumonía sola o con co-hallazgos):
   sensibilidad y especificidad con IC bootstrap por paciente.
 * Calibración: ECE (10 bins), Brier y diagrama de fiabilidad del modelo
-  Kermany sin adaptar y del final. Se ajusta temperature scaling solo en
-  adapt_val; la BCE ponderada desplaza las probabilidades hacia el positivo.
+  Kermany sin adaptar y del final. Se ajustan, solo en adapt_val, temperature
+  scaling y Platt (pendiente e intercepto): la BCE ponderada desplaza las
+  probabilidades hacia el positivo, y una temperatura no corrige ese sesgo.
 * Valor predictivo a prevalencias distintas de la artificial del 25 %.
 """
 from __future__ import annotations
@@ -20,6 +21,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from scipy.optimize import minimize_scalar
+from sklearn.linear_model import LogisticRegression
 
 from nih_common import patient_bootstrap  # noqa: F401  (fija sys.path de Fase 2)
 from common import write_json
@@ -116,16 +118,20 @@ def main() -> None:
     y = final.label.to_numpy()
     temperature = fit_temperature(val.label.to_numpy(), val.score.to_numpy())
     scaled = 1 / (1 + np.exp(-logit(final.score.to_numpy()) / temperature))
+    platt = LogisticRegression(C=1e6).fit(logit(val.score.to_numpy())[:, None], val.label.to_numpy())
+    platted = platt.predict_proba(logit(final.score.to_numpy())[:, None])[:, 1]
     calibration = {}
     curves = {"Kermany sin adaptar": (zero.label.to_numpy(), zero.score.to_numpy()),
               "Final (adaptado)": (y, final.score.to_numpy()),
-              f"Final + temperatura (T={temperature:.2f})": (y, scaled)}
+              f"Final + temperatura (T={temperature:.2f})": (y, scaled),
+              "Final + Platt": (y, platted)}
     for name, (yy, pp) in curves.items():
         calibration[name] = {"ece": ece(yy, pp), "brier": float(np.mean((pp - yy) ** 2)),
                              "mean_predicted": float(pp.mean()), "observed_prevalence": float(yy.mean())}
-    # El umbral es monótono en la temperatura: la decisión no cambia, solo la lectura de la probabilidad.
+    # Ambas transformaciones son monótonas: la decisión no cambia, solo la lectura de la probabilidad.
     calibration["temperature_fitted_on"] = "NIH adapt_val"
     calibration["temperature"] = temperature
+    calibration["platt_slope"], calibration["platt_intercept"] = float(platt.coef_[0, 0]), float(platt.intercept_[0])
 
     # Valor predictivo según prevalencia (sensibilidad y especificidad fijas).
     sens = float((final.score[y == 1] >= threshold).mean())

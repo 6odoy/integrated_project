@@ -1,0 +1,53 @@
+{
+  "sensitivity": 0.6388140161725068,
+  "specificity": 0.8203054806828391,
+  "sensitivity_at_specificity_minimum": 0.6388140161725068,
+  "specificity_constraint_satisfied": true,
+  "auc_roc": 0.8041499262574379,
+  "auprc": 0.6233039281097277,
+  "f1": 0.5866336633663366,
+  "tp": 237,
+  "fn": 134,
+  "tn": 913,
+  "fp": 200,
+  "model": "Random Forest sobre histograma de intensidad (Fase 1)",
+  "seed": 42,
+  "hyperparameters_selected_on_validation": {
+    "n_estimators": 300,
+    "max_depth": 10,
+    "min_samples_leaf": 1
+  },
+  "best_validation_auc": 0.7934471633795959,
+  "threshold": 0.4584654831557494,
+  "threshold_from": "adapt_val only; specificity_minimum=0.80",
+  "patients": 1347,
+  "images": 1484,
+  "prevalence": 0.25,
+  "partition": "third-installment/scripts/results/metadata/partition_nih.csv",
+  "bootstrap_95": {
+    "sensitivity": [
+      0.5747065297138665,
+      0.6909340137669119
+    ],
+    "specificity": [
+      0.7976166792977138,
+      0.8418738488768869
+    ],
+    "sensitivity_at_specificity_minimum": [
+      null,
+      null
+    ],
+    "auc_roc": [
+      0.768955439766792,
+      0.8363136053927187
+    ],
+    "auprc": [
+      0.5439900324624026,
+      0.6936231733926548
+    ],
+    "f1": [
+      0.5235811460766799,
+      0.6386646853863496
+    ]
+  }
+}

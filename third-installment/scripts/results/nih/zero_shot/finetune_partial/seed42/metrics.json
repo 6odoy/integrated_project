@@ -1,0 +1,121 @@
+{
+  "source_run": "second-installment/scripts/results/kermany/finetune_partial/seed42",
+  "mode": "finetune_partial",
+  "seed": 42,
+  "adapt_val_at_kermany_threshold": {
+    "sensitivity": 0.972972972972973,
+    "specificity": 0.18693693693693691,
+    "sensitivity_at_specificity_minimum": null,
+    "specificity_constraint_satisfied": false,
+    "auc_roc": 0.7943298027757487,
+    "auprc": 0.5440764806856999,
+    "f1": 0.44104134762633995,
+    "tp": 144,
+    "fn": 4,
+    "tn": 83,
+    "fp": 361
+  },
+  "weights_updated": false,
+  "kermany_threshold": {
+    "threshold": 0.03310539573431015,
+    "sensitivity": 0.9784366576819407,
+    "specificity": 0.17430368373764604,
+    "sensitivity_at_specificity_minimum": null,
+    "specificity_constraint_satisfied": false,
+    "auc_roc": 0.8319904679564953,
+    "auprc": 0.6183137718518037,
+    "f1": 0.43920145190562615,
+    "tp": 363,
+    "fn": 8,
+    "tn": 194,
+    "fp": 919,
+    "bootstrap_95": {
+      "sensitivity": [
+        0.9604015084885797,
+        0.992288903937567
+      ],
+      "specificity": [
+        0.15191937111735782,
+        0.19698590133838162
+      ],
+      "auc_roc": [
+        0.8021661660320002,
+        0.860166714609471
+      ],
+      "auprc": [
+        0.5382268007186205,
+        0.6876653424532443
+      ],
+      "f1": [
+        0.3917455845920243,
+        0.4818208819962819
+      ]
+    },
+    "random_subset_without_bbox_reserve": {
+      "sensitivity": 0.9625,
+      "specificity": 0.17430368373764604,
+      "sensitivity_at_specificity_minimum": null,
+      "specificity_constraint_satisfied": false,
+      "auc_roc": 0.7850769317160827,
+      "auprc": 0.3635161001589594,
+      "f1": 0.24979724249797242,
+      "tp": 154,
+      "fn": 6,
+      "tn": 194,
+      "fp": 919
+    }
+  },
+  "nih_val_threshold": {
+    "threshold": 0.8419017195701599,
+    "sensitivity": 0.7142857142857143,
+    "specificity": 0.8176100628930818,
+    "sensitivity_at_specificity_minimum": 0.7142857142857143,
+    "specificity_constraint_satisfied": true,
+    "auc_roc": 0.8319904679564953,
+    "auprc": 0.6183137718518037,
+    "f1": 0.6317044100119189,
+    "tp": 265,
+    "fn": 106,
+    "tn": 910,
+    "fp": 203,
+    "bootstrap_95": {
+      "sensitivity": [
+        0.6553596331259386,
+        0.7673954279199591
+      ],
+      "specificity": [
+        0.7952678852139139,
+        0.8408249542418408
+      ],
+      "sensitivity_at_specificity_minimum": [
+        null,
+        null
+      ],
+      "auc_roc": [
+        0.8021661660320002,
+        0.860166714609471
+      ],
+      "auprc": [
+        0.5382268007186205,
+        0.6876653424532443
+      ],
+      "f1": [
+        0.573789866474846,
+        0.6827336581825721
+      ]
+    },
+    "random_subset_without_bbox_reserve": {
+      "sensitivity": 0.625,
+      "specificity": 0.8176100628930818,
+      "sensitivity_at_specificity_minimum": 0.625,
+      "specificity_constraint_satisfied": true,
+      "auc_roc": 0.7850769317160827,
+      "auprc": 0.3635161001589594,
+      "f1": 0.4319654427645788,
+      "tp": 100,
+      "fn": 60,
+      "tn": 910,
+      "fp": 203
+    }
+  }
+}
