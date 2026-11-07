@@ -1,0 +1,20 @@
+{
+  "rule": "max mean best_val_auc on NIH adapt_val across seeds",
+  "validation": {
+    "frozen": {
+      "mean_val_auc": 0.81259130752374,
+      "seeds": 3
+    },
+    "finetune_partial": {
+      "mean_val_auc": 0.8369501258014771,
+      "seeds": 3
+    },
+    "imagenet_finetune_partial": {
+      "mean_val_auc": 0.8434938316695074,
+      "seeds": 3
+    }
+  },
+  "chosen_configuration": "imagenet_finetune_partial",
+  "audited_run": "third-installment/scripts/results/nih/adapt/imagenet_finetune_partial/seed42",
+  "source_run": "second-installment/scripts/results/kermany/finetune_partial/seed42"
+}

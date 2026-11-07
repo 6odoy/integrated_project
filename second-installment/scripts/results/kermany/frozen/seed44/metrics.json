@@ -1,44 +1,55 @@
 {
-  "sensitivity": 0.9578947368421052,
-  "specificity": 0.7974683544303798,
-  "auc_roc": 0.9782557659972717,
-  "auprc": 0.9926211743008444,
-  "f1": 0.9437037037037037,
+  "sensitivity": 0.9680851063829787,
+  "specificity": 0.8257261410788381,
+  "sensitivity_at_specificity_minimum": 0.9680851063829787,
+  "specificity_constraint_satisfied": true,
+  "auc_roc": 0.9818575086077515,
+  "auprc": 0.9937572449461776,
+  "f1": 0.9528795811518325,
   "tp": 637,
-  "fn": 28,
-  "tn": 189,
-  "fp": 48,
+  "fn": 21,
+  "tn": 199,
+  "fp": 42,
   "seed": 44,
   "mode": "frozen",
-  "threshold": 0.1299475133419037,
-  "best_epoch": 26,
-  "best_val_auc": 0.9778946061183095,
-  "inference_ms_image": 14.662510400012252,
-  "elapsed_seconds": 947.6465397920001,
-  "cache_build_seconds": 36.97313424999993,
+  "threshold": 0.16025373339653015,
+  "best_epoch": 30,
+  "best_val_auc": 0.9884114583333333,
+  "elapsed_seconds": 1180.5343466970003,
+  "epochs_run": 30,
+  "cache_build_seconds": 73.4076884279998,
   "trainable_parameters": 1025,
-  "device": "mps",
-  "prevalence": 0.7372505543237251,
+  "total_parameters": 6954881,
+  "device": "cuda",
+  "prevalence": 0.731924360400445,
+  "inference_ms_image": 20.689264000111507,
+  "inference_ms_p25": 19.955126000127166,
+  "inference_ms_p75": 21.840987250243415,
+  "inference_repeats": 100,
   "bootstrap_95": {
     "sensitivity": [
-      0.9421718049947082,
-      0.9726884684070897
+      0.9534458140424465,
+      0.9801863960683067
     ],
     "specificity": [
-      0.7468887879038256,
-      0.848412323104946
+      0.7725171297342068,
+      0.875
+    ],
+    "sensitivity_at_specificity_minimum": [
+      null,
+      null
     ],
     "auc_roc": [
-      0.9698045542075393,
-      0.9853205003430351
+      0.9741023647948083,
+      0.9879837760402893
     ],
     "auprc": [
-      0.9889658298606745,
-      0.99529862546103
+      0.9905620014859953,
+      0.9959874565945286
     ],
     "f1": [
-      0.9282851144442867,
-      0.9573951759885873
+      0.9396279394371586,
+      0.9641262986278093
     ]
   }
 }

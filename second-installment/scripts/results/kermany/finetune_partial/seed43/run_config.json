@@ -19,7 +19,8 @@
   "seed": 43,
   "mode": "finetune_partial",
   "pretrained": true,
-  "class_positive_weight": 0.3694564998149872,
-  "dataset": "Kermany only; BRAX not used",
-  "torch": "2.13.0"
+  "class_positive_weight": 0.3704201680672269,
+  "frozen_batchnorm_in_eval": true,
+  "dataset": "Kermany only; NIH not used",
+  "torch": "2.7.1+cu118"
 }

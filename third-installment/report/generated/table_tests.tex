@@ -1,0 +1,16 @@
+\begin{tabular}{lccl}
+\toprule
+Prueba & AUC-ROC & Tasa de positivos & Respuesta esperada \\
+\midrule
+Original & 0{,}893 & 0{,}357 & Referencia \\
+Tórax central ocluido (60\%) & 0{,}720 & 0{,}648 & AUC $\to$ 0,5 \\
+Marco periférico ocluido (10\%) & 0{,}883 & 0{,}447 & AUC $\approx$ original \\
+Volteo horizontal & 0{,}890 & 0{,}392 & AUC $\approx$ original \\
+Kermany pediátrico (test) & 0{,}577 & 0{,}909 & Población no vista \\
+\midrule
+Gris uniforme (fuera de dominio) & -- & 1{,}000 & Sin positivos confiados \\
+Ruido gaussiano (fuera de dominio) & -- & 1{,}000 & Sin positivos confiados \\
+Radiografía invertida (fuera de dominio) & -- & 0{,}305 & Sin positivos confiados \\
+Radiografía rotada $90^\circ$ (fuera de dominio) & -- & 0{,}915 & Sin positivos confiados \\
+\bottomrule
+\end{tabular}

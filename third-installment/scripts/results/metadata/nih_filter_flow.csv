@@ -1,0 +1,7 @@
+stage,images,patients,prevalence
+raw,112120,30805,
+frontal_PA_AP_age>=18,106718,29324,
+cases_pneumonia,1319,938,
+control_pool_no_finding_never_pneumonia,50426,22832,
+controls_sampled_one_image_per_patient,3957,3957,
+selected,5276,4895,0.25

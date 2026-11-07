@@ -1,0 +1,74 @@
+{
+  "sensitivity": 0.8463611859838275,
+  "specificity": 0.8059299191374663,
+  "sensitivity_at_specificity_minimum": 0.8463611859838275,
+  "specificity_constraint_satisfied": true,
+  "auc_roc": 0.8925247564315864,
+  "auprc": 0.7300616699047748,
+  "f1": 0.6970033296337403,
+  "tp": 314,
+  "fn": 57,
+  "tn": 897,
+  "fp": 216,
+  "bootstrap_95": {
+    "sensitivity": [
+      0.7999685534591195,
+      0.8856497683564977
+    ],
+    "specificity": [
+      0.7830772429921563,
+      0.827773660839573
+    ],
+    "sensitivity_at_specificity_minimum": [
+      null,
+      null
+    ],
+    "auc_roc": [
+      0.868213492009895,
+      0.9138653482157002
+    ],
+    "auprc": [
+      0.6557236384310609,
+      0.7859113951866235
+    ],
+    "f1": [
+      0.6467643058117652,
+      0.7400296192896927
+    ]
+  },
+  "random_subset_without_bbox_reserve": {
+    "sensitivity": 0.75625,
+    "specificity": 0.8059299191374663,
+    "sensitivity_at_specificity_minimum": 0.75625,
+    "specificity_constraint_satisfied": true,
+    "auc_roc": 0.847826819407008,
+    "auprc": 0.49522020200594546,
+    "f1": 0.4869215291750503,
+    "tp": 121,
+    "fn": 39,
+    "tn": 897,
+    "fp": 216
+  },
+  "seed": 42,
+  "mode": "finetune_partial",
+  "source": "imagenet",
+  "train_fraction": 1.0,
+  "adapt_train_images": 3200,
+  "adapt_train_patients": 2980,
+  "threshold": 0.4846183955669403,
+  "threshold_from": "NIH adapt_val",
+  "best_epoch": 11,
+  "best_val_auc": 0.8447772096420747,
+  "epochs_run": 16,
+  "elapsed_seconds": 498.5933585669991,
+  "trainable_parameters": 2161153,
+  "class_positive_weight": 3.0,
+  "device": "cuda",
+  "prevalence": 0.25,
+  "images": 1484,
+  "patients": 1347,
+  "inference_ms_image": 20.35655600047903,
+  "inference_ms_p25": 19.118330252240412,
+  "inference_ms_p75": 24.131131997819466,
+  "inference_repeats": 100
+}

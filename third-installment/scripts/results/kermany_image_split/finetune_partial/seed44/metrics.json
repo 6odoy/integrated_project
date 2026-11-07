@@ -1,0 +1,55 @@
+{
+  "sensitivity": 0.9797191887675507,
+  "specificity": 0.8649789029535865,
+  "sensitivity_at_specificity_minimum": 0.9797191887675507,
+  "specificity_constraint_satisfied": true,
+  "auc_roc": 0.9891783013092675,
+  "auprc": 0.9961278715487496,
+  "f1": 0.9654112221368178,
+  "tp": 628,
+  "fn": 13,
+  "tn": 205,
+  "fp": 32,
+  "seed": 44,
+  "mode": "finetune_partial",
+  "threshold": 0.1257653385400772,
+  "best_epoch": 13,
+  "best_val_auc": 0.9957720997915547,
+  "elapsed_seconds": 732.9183785279965,
+  "epochs_run": 18,
+  "cache_build_seconds": 68.15628095799912,
+  "trainable_parameters": 2161153,
+  "total_parameters": 6954881,
+  "device": "cuda",
+  "prevalence": 0.7300683371298405,
+  "inference_ms_image": 20.117549996939488,
+  "inference_ms_p25": 19.62105500024336,
+  "inference_ms_p75": 21.641517501848284,
+  "inference_repeats": 100,
+  "bootstrap_95": {
+    "sensitivity": [
+      0.9684301265849613,
+      0.9896187851995398
+    ],
+    "specificity": [
+      0.8190026627935124,
+      0.9065500733003482
+    ],
+    "sensitivity_at_specificity_minimum": [
+      null,
+      null
+    ],
+    "auc_roc": [
+      0.9836090239187765,
+      0.9940886703071492
+    ],
+    "auprc": [
+      0.9940656464153442,
+      0.9978697952283144
+    ],
+    "f1": [
+      0.9549389276426352,
+      0.9747815881792311
+    ]
+  }
+}

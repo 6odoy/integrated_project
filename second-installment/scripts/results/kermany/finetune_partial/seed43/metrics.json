@@ -1,44 +1,55 @@
 {
-  "sensitivity": 0.9939849624060151,
-  "specificity": 0.890295358649789,
-  "auc_roc": 0.9951524380571682,
-  "auprc": 0.9983347193181468,
-  "f1": 0.977810650887574,
-  "tp": 661,
-  "fn": 4,
-  "tn": 211,
-  "fp": 26,
+  "sensitivity": 0.9924012158054711,
+  "specificity": 0.8215767634854771,
+  "sensitivity_at_specificity_minimum": 0.9924012158054711,
+  "specificity_constraint_satisfied": true,
+  "auc_roc": 0.993391264866501,
+  "auprc": 0.997634711725393,
+  "f1": 0.9645494830132939,
+  "tp": 653,
+  "fn": 5,
+  "tn": 198,
+  "fp": 43,
   "seed": 43,
   "mode": "finetune_partial",
-  "threshold": 0.03291696310043335,
-  "best_epoch": 20,
-  "best_val_auc": 0.993066191994039,
-  "inference_ms_image": 12.415239600022687,
-  "elapsed_seconds": 750.3692813329999,
-  "cache_build_seconds": 30.810542582999915,
+  "threshold": 0.07157387584447861,
+  "best_epoch": 14,
+  "best_val_auc": 0.9966471354166666,
+  "elapsed_seconds": 813.8349431299994,
+  "epochs_run": 19,
+  "cache_build_seconds": 72.66523742100071,
   "trainable_parameters": 2161153,
-  "device": "mps",
-  "prevalence": 0.7372505543237251,
+  "total_parameters": 6954881,
+  "device": "cuda",
+  "prevalence": 0.731924360400445,
+  "inference_ms_image": 22.547657999894,
+  "inference_ms_p25": 20.663336250208886,
+  "inference_ms_p75": 28.01911324968387,
+  "inference_repeats": 100,
   "bootstrap_95": {
     "sensitivity": [
-      0.9871031635101452,
-      0.9985796460533093
+      0.9854818106898987,
+      0.9985096870342772
     ],
     "specificity": [
-      0.8495528936942274,
-      0.9259537434430138
+      0.774770159503766,
+      0.8702989577106994
+    ],
+    "sensitivity_at_specificity_minimum": [
+      null,
+      null
     ],
     "auc_roc": [
-      0.9916669285958544,
-      0.9979302087518857
+      0.9895711345943489,
+      0.9964396041936423
     ],
     "auprc": [
-      0.9970120304354027,
-      0.99929608659321
+      0.9961111440969502,
+      0.9987679511576887
     ],
     "f1": [
-      0.9685807096451774,
-      0.9854872149274361
+      0.9531107483094546,
+      0.9746939802921384
     ]
   }
 }

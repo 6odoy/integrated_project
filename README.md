@@ -1,87 +1,82 @@
 # Integrated Project — Pneumonia Detection in Chest X-Rays
 
 The Deep Learning project that critically replicates Rahman et al.'s (2020)
-approach to pneumonia detection in chest X-rays. Beyond reproducing the method,
-it evaluates both its direct domain shift and its patient-level local
-adaptation from pediatric images from Guangzhou (Kermany) to an adult Latin
-American population (BRAX).
+transfer-learning approach to pneumonia detection in chest X-rays, transfers it
+from pediatric images from Guangzhou (Kermany) to adults (NIH ChestX-ray14), and
+audits what the transferred model actually learned.
 
-The first installment contains the article review, local problem framing, and a
-reproducible baseline: [`first-installment/report/main.tex`](first-installment/report/main.tex).
-The second installment replicates the transfer approach with DenseNet121 and
-tests it internally on Kermany:
-[`second-installment/report/main.tex`](second-installment/report/main.tex).
+| Installment | Report |
+|---|---|
+| Phase 1: article review, local problem, baseline | [`first-installment/report/main.tex`](first-installment/report/main.tex) |
+| Phase 2: replication on Kermany and transfer strategy | [`second-installment/report/main.tex`](second-installment/report/main.tex) |
+| Phase 3: transfer to NIH, explainability audit, verdict | [`third-installment/report/main.tex`](third-installment/report/main.tex) |
 
 ## Research question and scope
 
-> Does a pretrained CNN fine-tuned on Kermany, and then adapted with an
-> isolated local BRAX partition, retain sufficient sensitivity for triage and
-> outperform a classical baseline under an equivalent data split?
+> Does a pretrained CNN, adapted with an isolated patient-level partition of
+> adult chest X-rays, retain enough sensitivity for triage, outperform a
+> classical baseline under the same split, and rely on clinically pertinent
+> signal rather than shortcuts?
 
 The task is binary image-level classification: `1 = pneumonia` and `0 = no
 findings`. Pneumonia sensitivity is prioritized, subject to a minimum
-specificity of 0.80; AUC-ROC, AUPRC, and F1 are also reported.
-
-The scope deliberately excludes bacterial-versus-viral classification because
-BRAX does not provide an equivalent label. This is experimental decision support
-for triage, not a clinical system ready for diagnosis or deployment.
+specificity of 0.80 fixed on validation; AUC-ROC, AUPRC, and F1 are also
+reported. This is experimental decision support for triage, not a clinical
+system ready for diagnosis or deployment.
 
 ## Data
 
 | Role | Dataset | Population and use |
 |---|---|---|
-| Training, validation, and internal testing | Chest X-Ray Pneumonia / Kermany | Pediatric chest X-rays from Guangzhou. A patient-level 70/15/15 split is rebuilt; Kaggle's original split is not used. |
-| Local adaptation and isolated external test | BRAX | Adult chest X-rays from Hospital Albert Einstein, São Paulo. Only frontal binary cases are used; patient-level `adapt_train/adapt_val/external_test` prevents test leakage. |
-| Alternative if BRAX is unavailable | PadChest | Adult Spanish dataset for external evaluation. |
+| Replication | Chest X-Ray Pneumonia / Kermany | Pediatric chest X-rays from Guangzhou. A patient-level 70/15/15 split is rebuilt; Kaggle's original split is not used. |
+| Local transfer and isolated external test | NIH ChestX-ray14 | Adult chest X-rays from the NIH Clinical Center. Case-control subset (prevalence 0.25), patient-level `adapt_train/adapt_val/external_test`; radiologist bounding boxes reserved for the Grad-CAM audit. |
 
-The external evaluation measures the domain gap between pediatric Guangzhou and
-adult São Paulo data; it cannot establish generalizability to all of Colombia.
-In BRAX, labels are extracted from radiology reports through NLP, and uncertain
-cases (`-1`) are excluded from binary evaluation and reserved for Phase 3.
+BRAX (adult, São Paulo) was the planned local dataset but access was not
+granted; the professor approved NIH as the replacement, keeping the BRAX
+protocol unchanged. NIH is not Latin American, so the transfer measures the
+pediatric → adult and Chinese → US shift and says nothing about Colombian
+patients. NIH labels come from NLP over radiology reports.
 
 ## Project status
 
 - Completed (Phase 1): critical review of Rahman et al., local problem framing,
-  methodological definition, and a classical baseline on Kermany.
-- Completed (Phase 2): transfer learning with DenseNet121 at 224 × 224 across
-  seeds 42, 43 and 44, augmentation only during training, weighted binary loss,
-  and early stopping on validation AUC. DenseNet201 was dropped for compute
-  budget; the reduction is declared in the report.
-- Completed (Phase 2): internal Kermany testing of both transfer
-  configurations, six runs in 73.4 minutes.
-- Ready to execute (Phase 2): BRAX adaptation and isolated external test.
-  `prepare_brax.py` and `adapt_brax.py` implement the protocol, but BRAX is
-  not available locally, so no local-transfer metric is reported.
-- Next (Phase 3): Grad-CAM audit, uncertainty analysis, and assessment of
-  shortcuts such as text, hospital markers, or regions outside the lung
-  parenchyma.
+  and a Random Forest baseline.
+- Completed (Phase 2, re-run for Phase 3): DenseNet121 transfer on Kermany,
+  frozen extractor vs. partial fine-tuning, seeds 42/43/44, with validation
+  loss logged. Phase 3 fixed a NORMAL-patient grouping leak (3,427 → 3,288
+  patients) and a BatchNorm layer that kept updating in the "frozen" extractor.
+- Completed (Phase 3): zero-shot evaluation on NIH, adaptation from Kermany
+  (both modes) and from ImageNet, a data-scarcity curve, Random Forest on the
+  same split, paired patient bootstrap, Grad-CAM against radiologist boxes,
+  known-response tests, subgroup and calibration analysis, and the replication
+  gap with Rahman et al. Details in [`third-installment/README.md`](third-installment/README.md).
 
-### Phase 2 results on the Kermany test split
+### Main results
 
-| Configuration | Sens. | Spec. | AUC-ROC | AUPRC | F1 |
-|---|---|---|---|---|---|
-| Frozen extractor | 0.959 ± 0.004 | 0.792 ± 0.008 | 0.978 ± 0.001 | 0.992 | 0.944 |
-| Partial fine-tuning | **0.992 ± 0.001** | **0.869 ± 0.016** | **0.996 ± 0.001** | **0.999** | **0.973** |
+Kermany test (mean ± SD over three seeds):
 
-The CNN will only be justified if it exceeds the best baseline by at least 5%
-in sensitivity (non-overlapping 95% bootstrap confidence intervals), sustains
-the advantage across all three seeds, has viable inference time, and produces
-clinically plausible Grad-CAM maps.
+| Configuration | Sens. | Spec. | AUC-ROC |
+|---|---|---|---|
+| Frozen extractor | 0.969 ± 0.003 | 0.811 ± 0.012 | 0.982 |
+| Partial fine-tuning | 0.991 ± 0.001 | 0.852 ± 0.023 | 0.994 |
 
-Partial fine-tuning clears the four quantifiable requirements against the
-Phase 1 Random Forest: +5.56 points of sensitivity, per-seed confidence bounds
-(0.985, 0.987, 0.984) above the baseline's upper bound of 0.955, an advantage
-in all three seeds, and 11.9 ms per image. The frozen extractor gains only
-2.26 points and its intervals overlap the baseline. The Grad-CAM requirement
-belongs to Phase 3, so the CNN is not yet justified — it only clears the
-numerical bar.
+NIH `external_test` (1,484 images):
 
-Two caveats the report develops. All three frozen runs fall below the 0.80
-specificity floor on test (0.781, 0.797, 0.797) because the threshold is picked
-exactly on the constraint boundary and keeps no margin; their bootstrap
-intervals still contain 0.80. And the uncertainty set reserved for Phase 3 is
-empty: Kermany carries no `-1` labels, so that analysis depends entirely on
-BRAX.
+| Configuration | Sens. | Spec. | AUC-ROC |
+|---|---|---|---|
+| Random Forest | 0.639 | 0.820 | 0.804 |
+| Kermany model, no adaptation, threshold re-picked on NIH | 0.723 | 0.817 | 0.835 |
+| Kermany → NIH, frozen | 0.776 ± 0.053 | 0.816 ± 0.007 | 0.865 ± 0.024 |
+| Kermany → NIH, partial | 0.818 ± 0.003 | 0.816 ± 0.014 | 0.890 ± 0.005 |
+| ImageNet → NIH, partial (final model) | 0.845 ± 0.008 | 0.806 ± 0.002 | 0.894 ± 0.002 |
+
+The CNN beats the Random Forest in every seed (paired 95% intervals exclude
+zero), but the Kermany step adds nothing over ImageNet. The audit shows the
+model uses the lesion (occluding the radiologist box lowers the score far more
+than the mirrored region) yet also leans on the AP/portable acquisition view:
+specificity is 0.43 on AP films and sensitivity 0.62 on PA films. Probabilities
+are shifted by the class weight and are corrected by Platt scaling (ECE 0.165 →
+0.042); the model has no out-of-distribution rejection.
 
 ## Reproduce the current baseline
 
@@ -132,8 +127,10 @@ make phase2-figures
 ```
 
 `phase2-train` runs two configurations across three seeds and chains the
-figures. It took 73.4 minutes on an Apple Silicon machine using PyTorch's MPS
-backend; expect considerably longer on CPU only. Runs that already hold a
+figures. The original Phase 2 sweep took 73.4 minutes on Apple Silicon (MPS);
+the Phase 3 re-run took about 1 h 50 min on an NVIDIA GTX 1650, because the
+frozen runs, with BatchNorm now truly frozen, reach the 30-epoch cap. Expect
+considerably longer on CPU only. Runs that already hold a
 `metrics.json` are skipped, so an interrupted sweep resumes where it stopped.
 
 Each run writes to `second-installment/scripts/results/kermany/<mode>/seed<n>/`:
@@ -147,22 +144,21 @@ run practical on machines whose endpoint security software inspects every file
 open. It prepends the same resize the transform used to apply, so results are
 numerically equivalent.
 
-After obtaining BRAX legally, normalize its metadata into a pre-registered
-patient-level adaptation split. `external_test` stays out of training,
-early stopping, threshold selection, and model selection; `adapt_train` and
-`adapt_val` are the local transfer data:
+The BRAX scripts (`prepare_brax.py`, `adapt_brax.py`) are kept for when access
+is granted; the local transfer actually executed is the NIH one below.
+
+## Reproduce Phase 3
+
+With Kermany downloaded, everything else runs from one command:
 
 ```bash
-python second-installment/scripts/src/prepare_brax.py --metadata <csv> --out <out.csv>
-python second-installment/scripts/src/adapt_brax.py --manifest <out.csv> \
-  --images-root <brax-images> --source-run <kermany-run> \
-  --config second-installment/scripts/configs/densenet121.json \
-  --mode frozen --out <results-frozen>
-python second-installment/scripts/src/adapt_brax.py --manifest <out.csv> \
-  --images-root <brax-images> --source-run <kermany-run> \
-  --config second-installment/scripts/configs/densenet121.json \
-  --mode finetune_partial --out <results-partial>
+make final    # Phase 2 re-run, NIH data, transfer, audit, tables, replication gap
+make resume   # the same, in the background under a supervisor that restarts stalls
+make status   # finished stages, last log lines and GPU usage
 ```
+
+Every stage is resumable. The NIH-specific steps, data sources and outputs are
+described in [`third-installment/README.md`](third-installment/README.md).
 
 ## Reproducible baseline design
 
@@ -245,6 +241,18 @@ infer them.
             ├── prepare_brax.py
             ├── evaluate_brax.py
             └── figures.py
+└── third-installment/
+    ├── README.md                 # NIH data, experiments and unattended runs
+    ├── report/
+    │   ├── main.tex              # Final report
+    │   ├── figures/              # Grad-CAM, calibration, curves
+    │   └── generated/            # Tables built from the results
+    └── scripts/
+        ├── download_nih.sh       # NIH metadata with SHA-256
+        ├── run_final.sh          # Stage runner behind `make resume`
+        ├── supervise_final.sh    # Restarts the runner if it dies or stalls
+        ├── results/              # NIH partition, runs, audit; checkpoints untracked
+        └── src/                  # prepare, fetch, adapt, audit and summary scripts
 ```
 
 ## References
@@ -253,7 +261,9 @@ infer them.
   DenseNet201, and SqueezeNet.
 - Kermany et al. (2018): pediatric dataset used for training and internal
   testing.
-- Reis et al. (2022): BRAX, the adult Brazilian external dataset.
+- Wang et al. (2017): NIH ChestX-ray14, the adult dataset used for the local
+  transfer.
+- Reis et al. (2022): BRAX, the adult Brazilian dataset originally planned.
 
 Full citations and methodological limitations are available in the
 [report](first-installment/report/main.tex).

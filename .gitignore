@@ -13,3 +13,11 @@ second-installment/scripts/results/training.log
 **/__MACOSX/
 **/._*
 *.DS_Store
+
+# Registros de ejecuciones largas lanzadas en segundo plano.
+logs/
+
+# Fase 3: imágenes y metadatos NIH se descargan con make phase3-data.
+third-installment/scripts/data/
+third-installment/scripts/results/**/*.pt
+informe_tercera_entrega_overleaf.zip

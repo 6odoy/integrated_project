@@ -1,15 +1,15 @@
 {
-  "sensitivity": 0.9368421052631579,
-  "specificity": 0.759493670886076,
-  "sensitivity_at_specificity_minimum": NaN,
+  "sensitivity": 0.9285714285714286,
+  "specificity": 0.7883817427385892,
+  "sensitivity_at_specificity_minimum": null,
   "specificity_constraint_satisfied": false,
-  "auc_roc": 0.9468703404079819,
-  "auprc": 0.9809589377734628,
-  "f1": 0.9263940520446097,
-  "tp": 623,
-  "fn": 42,
-  "tn": 180,
-  "fp": 57,
+  "auc_roc": 0.9419812332101554,
+  "auprc": 0.9770834594228689,
+  "f1": 0.9257575757575758,
+  "tp": 611,
+  "fn": 47,
+  "tn": 190,
+  "fp": 51,
   "model": "Random Forest sobre histograma de intensidad (Fase 1)",
   "seed": 42,
   "hyperparameters_selected_on_validation": {
@@ -17,37 +17,37 @@
     "max_depth": null,
     "min_samples_leaf": 1
   },
-  "best_validation_auc": 0.9632784148142015,
-  "threshold": 0.365,
-  "threshold_from": "Kermany validation only; specificity_minimum=0.80",
-  "patients": 514,
-  "images": 902,
-  "prevalence": 0.7372505543237251,
+  "best_validation_auc": 0.9660774739583332,
+  "threshold": 0.445,
+  "threshold_from": "val only; specificity_minimum=0.80",
+  "patients": 494,
+  "images": 899,
+  "prevalence": 0.731924360400445,
   "partition": "second-installment/scripts/results/metadata/partition_kermany.csv",
   "bootstrap_95": {
     "sensitivity": [
-      0.9179456824512534,
-      0.95513
+      0.9080983456869697,
+      0.948360008536065
     ],
     "specificity": [
-      0.7065591883676989,
-      0.8149779735682819
+      0.7307522123893806,
+      0.838187658947932
     ],
     "sensitivity_at_specificity_minimum": [
-      NaN,
-      NaN
+      null,
+      null
     ],
     "auc_roc": [
-      0.9317458049909236,
-      0.9605072628034249
+      0.9242208897390878,
+      0.9577236015095001
     ],
     "auprc": [
-      0.9732312436188412,
-      0.9870660294576986
+      0.9662449857727936,
+      0.9855737184836132
     ],
     "f1": [
-      0.9097237942561184,
-      0.9422319492691116
+      0.9081890193049253,
+      0.9403468907968529
     ]
   }
 }

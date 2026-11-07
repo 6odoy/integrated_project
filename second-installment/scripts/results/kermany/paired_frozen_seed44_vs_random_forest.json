@@ -1,0 +1,74 @@
+{
+  "model_a": {
+    "sensitivity": 0.9680851063829787,
+    "specificity": 0.8257261410788381,
+    "sensitivity_at_specificity_minimum": 0.9680851063829787,
+    "specificity_constraint_satisfied": true,
+    "auc_roc": 0.9818575086077515,
+    "auprc": 0.9937572449461776,
+    "f1": 0.9528795811518325,
+    "tp": 637,
+    "fn": 21,
+    "tn": 199,
+    "fp": 42
+  },
+  "model_b": {
+    "sensitivity": 0.9285714285714286,
+    "specificity": 0.7883817427385892,
+    "sensitivity_at_specificity_minimum": null,
+    "specificity_constraint_satisfied": false,
+    "auc_roc": 0.9419812332101554,
+    "auprc": 0.9770834594228689,
+    "f1": 0.9257575757575758,
+    "tp": 611,
+    "fn": 47,
+    "tn": 190,
+    "fp": 51
+  },
+  "difference_a_minus_b_bootstrap_95": {
+    "n_boot_requested": 1000,
+    "n_boot_valid": 1000,
+    "n_boot_discarded_degenerate": 0,
+    "metrics": {
+      "sensitivity": {
+        "estimate": 0.03951367781155013,
+        "ci_95": [
+          0.020028621723537005,
+          0.06028422023170568
+        ]
+      },
+      "specificity": {
+        "estimate": 0.03734439834024894,
+        "ci_95": [
+          -0.02101285429426011,
+          0.09445472185223543
+        ]
+      },
+      "auc_roc": {
+        "estimate": 0.039876275397596084,
+        "ci_95": [
+          0.02557509619817442,
+          0.055568614338377224
+        ]
+      },
+      "auprc": {
+        "estimate": 0.01667378552330867,
+        "ci_95": [
+          0.00906605557069734,
+          0.026090561167662694
+        ]
+      },
+      "f1": {
+        "estimate": 0.027122005394256687,
+        "ci_95": [
+          0.012547437834827832,
+          0.04370167753791334
+        ]
+      }
+    }
+  },
+  "unit": "paciente",
+  "paired_images": 899,
+  "paired_patients": 494,
+  "interpretation": "La evidencia comparativa es el IC bootstrap pareado de A - B; no se infiere significancia por solapamiento de IC marginales."
+}
