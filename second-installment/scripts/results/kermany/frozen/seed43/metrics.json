@@ -1,44 +1,55 @@
 {
-  "sensitivity": 0.9548872180451128,
-  "specificity": 0.7974683544303798,
-  "auc_roc": 0.9780463817772279,
-  "auprc": 0.9925415166084823,
-  "f1": 0.9421364985163204,
-  "tp": 635,
-  "fn": 30,
-  "tn": 189,
-  "fp": 48,
+  "sensitivity": 0.9665653495440729,
+  "specificity": 0.8091286307053942,
+  "sensitivity_at_specificity_minimum": 0.9665653495440729,
+  "specificity_constraint_satisfied": true,
+  "auc_roc": 0.9817503058431813,
+  "auprc": 0.9937270224308852,
+  "f1": 0.9492537313432836,
+  "tp": 636,
+  "fn": 22,
+  "tn": 195,
+  "fp": 46,
   "seed": 43,
   "mode": "frozen",
-  "threshold": 0.19768784940242767,
-  "best_epoch": 20,
-  "best_val_auc": 0.9787708186722965,
-  "inference_ms_image": 14.333864549962527,
-  "elapsed_seconds": 702.173589125,
-  "cache_build_seconds": 31.23585358299988,
+  "threshold": 0.12622472643852234,
+  "best_epoch": 30,
+  "best_val_auc": 0.9884635416666667,
+  "elapsed_seconds": 1233.2954611580003,
+  "epochs_run": 30,
+  "cache_build_seconds": 74.83793466299994,
   "trainable_parameters": 1025,
-  "device": "mps",
-  "prevalence": 0.7372505543237251,
+  "total_parameters": 6954881,
+  "device": "cuda",
+  "prevalence": 0.731924360400445,
+  "inference_ms_image": 21.27560550002272,
+  "inference_ms_p25": 20.67971900021348,
+  "inference_ms_p75": 23.519286750115498,
+  "inference_repeats": 100,
   "bootstrap_95": {
     "sensitivity": [
-      0.9373149809374299,
-      0.9689191097877539
+      0.9514837250453073,
+      0.9799139167862266
     ],
     "specificity": [
-      0.7477322149735943,
-      0.847464602078538
+      0.7589136904761904,
+      0.856
+    ],
+    "sensitivity_at_specificity_minimum": [
+      null,
+      null
     ],
     "auc_roc": [
-      0.9687661878117494,
-      0.9850516789018244
+      0.9740258339602911,
+      0.9881083456920331
     ],
     "auprc": [
-      0.9888242607960647,
-      0.995351732717979
+      0.9906279166836646,
+      0.9960713412475645
     ],
     "f1": [
-      0.9265706834945928,
-      0.9553993116057917
+      0.9351418028918351,
+      0.962207114286433
     ]
   }
 }

@@ -1,29 +1,29 @@
 {
   "model_a": {
-    "sensitivity": 0.9924812030075187,
-    "specificity": 0.8649789029535865,
-    "sensitivity_at_specificity_minimum": 0.9924812030075187,
+    "sensitivity": 0.9908814589665653,
+    "specificity": 0.8589211618257262,
+    "sensitivity_at_specificity_minimum": 0.9908814589665653,
     "specificity_constraint_satisfied": true,
-    "auc_roc": 0.9963008787792266,
-    "auprc": 0.9987591207292581,
-    "f1": 0.9727339719970524,
-    "tp": 660,
-    "fn": 5,
-    "tn": 205,
-    "fp": 32
+    "auc_roc": 0.9937570154750344,
+    "auprc": 0.9978409404487674,
+    "f1": 0.9702380952380952,
+    "tp": 652,
+    "fn": 6,
+    "tn": 207,
+    "fp": 34
   },
   "model_b": {
-    "sensitivity": 0.9368421052631579,
-    "specificity": 0.759493670886076,
-    "sensitivity_at_specificity_minimum": NaN,
+    "sensitivity": 0.9285714285714286,
+    "specificity": 0.7883817427385892,
+    "sensitivity_at_specificity_minimum": null,
     "specificity_constraint_satisfied": false,
-    "auc_roc": 0.9468703404079819,
-    "auprc": 0.9809589377734628,
-    "f1": 0.9263940520446097,
-    "tp": 623,
-    "fn": 42,
-    "tn": 180,
-    "fp": 57
+    "auc_roc": 0.9419812332101554,
+    "auprc": 0.9770834594228689,
+    "f1": 0.9257575757575758,
+    "tp": 611,
+    "fn": 47,
+    "tn": 190,
+    "fp": 51
   },
   "difference_a_minus_b_bootstrap_95": {
     "n_boot_requested": 1000,
@@ -31,44 +31,44 @@
     "n_boot_discarded_degenerate": 0,
     "metrics": {
       "sensitivity": {
-        "estimate": 0.05563909774436082,
+        "estimate": 0.06231003039513672,
         "ci_95": [
-          0.03821562520459795,
-          0.07460101800058318
+          0.046279788859956913,
+          0.08000333889816356
         ]
       },
       "specificity": {
-        "estimate": 0.10548523206751048,
+        "estimate": 0.07053941908713701,
         "ci_95": [
-          0.03703324225865215,
-          0.1749314610225363
+          0.01309343858470499,
+          0.13048587885544405
         ]
       },
       "auc_roc": {
-        "estimate": 0.04943053837124467,
+        "estimate": 0.051775782264879,
         "ci_95": [
-          0.035959486150532086,
-          0.06331823963669088
+          0.03757478673700733,
+          0.06789114293902326
         ]
       },
       "auprc": {
-        "estimate": 0.01780018295579533,
+        "estimate": 0.020757481025898472,
         "ci_95": [
-          0.011845111327764788,
-          0.025109657142443027
+          0.01279099054262152,
+          0.03099639430894194
         ]
       },
       "f1": {
-        "estimate": 0.04633991995244269,
+        "estimate": 0.044480519480519454,
         "ci_95": [
-          0.03143048181652038,
-          0.062002291453630724
+          0.031053659955824174,
+          0.05948854025103086
         ]
       }
     }
   },
   "unit": "paciente",
-  "paired_images": 902,
-  "paired_patients": 514,
+  "paired_images": 899,
+  "paired_patients": 494,
   "interpretation": "La evidencia comparativa es el IC bootstrap pareado de A - B; no se infiere significancia por solapamiento de IC marginales."
 }
