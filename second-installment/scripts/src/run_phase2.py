@@ -9,8 +9,11 @@ for mode in ("frozen","finetune_partial"):
     out=Path(a.results)/"kermany"/mode/f"seed{seed}"
     # Una corrida reutilizable requiere tanto las métricas como el checkpoint.
     # Los checkpoints no se versionan; si faltan, hay que regenerarlos para que
-    # BRAX pueda cargar exactamente el modelo que produjo las predicciones.
-    if (out/"metrics.json").exists() and (out/"best_checkpoint.pt").exists():
+    # NIH pueda cargar exactamente el modelo que produjo las predicciones. El
+    # checkpoint se escribe desde la primera época y metrics.json al final: si
+    # las métricas son anteriores al checkpoint, la corrida quedó interrumpida.
+    metrics_file, checkpoint = out/"metrics.json", out/"best_checkpoint.pt"
+    if metrics_file.exists() and checkpoint.exists() and metrics_file.stat().st_mtime >= checkpoint.stat().st_mtime:
         print(f"[omitida] {mode}/seed{seed} ya completa"); continue
     command=[sys.executable,str(Path(__file__).with_name("train.py")),"--partition",a.partition,"--images-root",a.images_root,"--config",a.config,"--mode",mode,"--seed",str(seed),"--out",str(out),"--n-boot",str(a.n_boot)]
     if a.no_pretrained: command.append("--no-pretrained")
