@@ -20,3 +20,4 @@ logs/
 # Fase 3: imágenes y metadatos NIH se descargan con make phase3-data.
 third-installment/scripts/data/
 third-installment/scripts/results/**/*.pt
+informe_tercera_entrega_overleaf.zip
