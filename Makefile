@@ -16,6 +16,7 @@ help:
 	@echo "  make phase3-run       Evaluación directa, traslado (2 modos + control ImageNet), curva y RF en NIH."
 	@echo "  make phase3-audit     Elige el modelo final por validación; Grad-CAM, pruebas y fallas."
 	@echo "  make phase3-report    Tablas y figuras de la entrega final."
+	@echo "  make final            Todo lo anterior en orden; reanudable tras un corte."
 
 download-kermany:
 	bash first-installment/scripts/download_kermany.sh
@@ -70,3 +71,16 @@ phase3-replication:
 	for seed in 42 43 44; do test -f $(P3)/results/kermany_image_split/finetune_partial/seed$$seed/metrics.json || \
 	  TORCH_HOME=/tmp/phase2-torch $(PYTHON) second-installment/scripts/src/train.py --partition $(P3)/results/metadata/partition_kermany_image_level.csv --images-root first-installment/scripts/data/chest_xray --config second-installment/scripts/configs/densenet121.json --mode finetune_partial --seed $$seed --out $(P3)/results/kermany_image_split/finetune_partial/seed$$seed || exit 1; done
 	$(PYTHON) $(P3)/src/replication_gap.py --kermany-results $(KERMANY_RESULTS) --image-split-results $(P3)/results/kermany_image_split --out third-installment/report/generated
+
+# Todo el cómputo de la entrega final, en orden. Es reanudable: cada etapa omite
+# las corridas completas, así que tras un corte basta con volver a ejecutarlo.
+.PHONY: final
+final:
+	$(MAKE) phase2-train
+	$(MAKE) phase2-compare-rf-finetune
+	$(MAKE) phase2-figures
+	$(MAKE) phase3-data
+	$(MAKE) phase3-run
+	$(MAKE) phase3-audit
+	$(MAKE) phase3-report
+	$(MAKE) phase3-replication
