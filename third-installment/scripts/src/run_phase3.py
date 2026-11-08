@@ -71,7 +71,7 @@ def main() -> None:
             "--predictions-name", "predictions_nih_external_test.csv", done=out / "metrics.json")
     if stage("compare"):
         pairs = [(f"adapt/{mode}/seed{seed}", "baseline_random_forest", f"{mode}_seed{seed}_vs_rf")
-                 for mode in ("frozen", "finetune_partial") for seed in seeds]
+                 for mode in ("frozen", "finetune_partial", "imagenet_finetune_partial") for seed in seeds]
         pairs += [(f"adapt/finetune_partial/seed{seed}", f"adapt/frozen/seed{seed}", f"partial_vs_frozen_seed{seed}")
                   for seed in seeds]
         pairs += [(f"adapt/finetune_partial/seed{seed}", f"adapt/imagenet_finetune_partial/seed{seed}",

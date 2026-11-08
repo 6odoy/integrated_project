@@ -71,12 +71,12 @@ def results_table(runs: pd.DataFrame, out: Path) -> pd.DataFrame:
 
 
 def paired_table(results: Path, out: Path) -> None:
-    labels = {"finetune_partial": "Parcial $-$ RF", "frozen": "Congelado $-$ RF",
+    labels = {"imagenet_finetune_partial": "Final (ImageNet $\\to$ NIH) $-$ RF", "finetune_partial": "Parcial $-$ RF", "frozen": "Congelado $-$ RF",
               "partial_vs_frozen": "Parcial $-$ congelado", "kermany_vs_imagenet": "Kermany $\\to$ NIH $-$ ImageNet $\\to$ NIH"}
     rows = []
     for path in sorted(results.glob("paired/*.json")):
         name = path.stem
-        kind = next(k for k in ("partial_vs_frozen", "kermany_vs_imagenet", "finetune_partial", "frozen") if name.startswith(k))
+        kind = next(k for k in ("partial_vs_frozen", "kermany_vs_imagenet", "imagenet_finetune_partial", "finetune_partial", "frozen") if name.startswith(k))
         seed = int(name.split("seed")[1].split("_")[0])
         diff = load(path)["difference_a_minus_b_bootstrap_95"]["metrics"]
         rows.append({"comparison": kind, "seed": seed,
@@ -188,7 +188,8 @@ def audit_tables(results: Path, out: Path) -> None:
             return f" [{comma(lo, 2)}; {comma(hi, 2)}]"
         lines = ["\\begin{tabular}{lrrcc}", "\\toprule", "Subgrupo & Imágenes & Positivas & Sensibilidad [IC 95\\%] & Especificidad [IC 95\\%] \\\\", "\\midrule"]
         for _, r in sub.iterrows():
-            lines.append(f"{r.subgroup} & {r.images} & {r.positives} & {comma(r.sensitivity, 2)}{ci(r.sensitivity_ci)} & "
+            name = r.subgroup.replace(">=", r"$\geq$")
+            lines.append(f"{name} & {r.images} & {r.positives} & {comma(r.sensitivity, 2)}{ci(r.sensitivity_ci)} & "
                          f"{comma(r.specificity, 2)}{ci(r.specificity_ci)} \\\\")
         lines += ["\\bottomrule", "\\end{tabular}"]
         (out / "table_subgroups.tex").write_text("\n".join(lines) + "\n")
@@ -196,8 +197,8 @@ def audit_tables(results: Path, out: Path) -> None:
         t = load(audit / "known_response_tests.json")
         g = pd.read_csv(audit / "gradcam_summary.csv", index_col=0) if (audit / "gradcam_summary.csv").exists() else None
         rows = [("Original", t["original"]["auc_roc"], t["original"]["positive_rate"], "Referencia"),
-                ("Tórax central ocluido (60\\%)", t["center_occluded"]["auc_roc"], t["center_occluded"]["positive_rate"], "AUC $\\to$ 0,5"),
-                ("Marco periférico ocluido (10\\%)", t["border_occluded"]["auc_roc"], t["border_occluded"]["positive_rate"], "AUC $\\approx$ original"),
+                ("Tórax central ocluido (cuadro central de 60\\% del lado)", t["center_occluded"]["auc_roc"], t["center_occluded"]["positive_rate"], "AUC $\\to$ 0,5"),
+                ("Marco periférico ocluido (franja de 10\\% por lado; 35\\% del área)", t["border_occluded"]["auc_roc"], t["border_occluded"]["positive_rate"], "AUC $\\approx$ original"),
                 ("Volteo horizontal", t["horizontal_flip"]["auc_roc"], t["horizontal_flip"]["positive_rate"], "AUC $\\approx$ original"),
                 ("Kermany pediátrico (test)", t["kermany_pediatric_test"]["auc_roc"], t["kermany_pediatric_test"]["positive_rate"], "Población no vista")]
         lines = ["\\begin{tabular}{lccl}", "\\toprule", "Prueba & AUC-ROC & Tasa de positivos & Respuesta esperada \\\\", "\\midrule"]

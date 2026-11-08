@@ -85,7 +85,7 @@ def main() -> None:
     frame = pd.DataFrame(rows)
     args.out.mkdir(parents=True, exist_ok=True)
     frame.to_csv(args.out / "replication_gap_by_run.csv", index=False)
-    summary = frame.groupby(["partition", "mode"]).agg(["mean", "std"]).drop(columns="seed")
+    summary = frame.groupby(["partition", "mode"]).agg(["mean", lambda v: v.std(ddof=0)]).rename(columns={"<lambda_0>": "std"}).drop(columns="seed")
     summary.to_csv(args.out / "replication_gap_summary.csv")
     write_table(frame[frame["mode"] == "finetune_partial"], args.out / "table_replication.tex")
     print(frame.groupby(["partition", "mode"]).mean(numeric_only=True).round(3).T.to_string())
@@ -94,7 +94,7 @@ def main() -> None:
 def write_table(frame: pd.DataFrame, path: Path) -> None:
     """Fine-tuning parcial por partición: media y DE de las semillas, coma decimal."""
     def cell(values):
-        text = f"{values.mean():.3f}" + (f" $\\pm$ {values.std():.3f}" if len(values) > 1 else "")
+        text = f"{values.mean():.3f}" + (f" $\\pm$ {values.std(ddof=0):.3f}" if len(values) > 1 else "")
         return text.replace(".", "{,}")
     rows = [r"Rahman et al. (DenseNet201, partición por imagen) & -- & 0{,}990 / 0{,}970 & -- & -- \\"]
     names = {"patient": "Esta réplica, partición por paciente", "image": "Esta réplica, partición por imagen"}
