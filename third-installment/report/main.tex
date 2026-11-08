@@ -77,7 +77,23 @@ La figura~\ref{fig:curvas} permite diagnosticar el sobreajuste con la curva clá
 \caption{Desempeño en \texttt{external\_test} según la fracción de pacientes de \texttt{adapt\_train} usada (fine-tuning parcial desde Kermany). Las líneas horizontales son referencias de AUC.}\label{fig:curva}
 \end{figure}
 
-\textbf{Modelo final.} La regla, fijada antes de ver el test, es el máximo AUC medio en \texttt{adapt\_val}. La elige el fine-tuning parcial desde ImageNet: 0,843, frente a 0,837 del parcial desde Kermany y 0,813 del congelado. Es también la configuración más estable ($\pm0{,}002$) y cuesta lo mismo de entrenar (tabla~\ref{tab:costo}). Se audita la semilla 42: en test obtiene AUC 0,893, sensibilidad 0,846 y especificidad 0,806 con umbral 0,485. Frente al artículo se conservó el flujo y la ventaja de transferir desde ImageNet. Cambió el nivel de desempeño (AUC 0,89 frente a 0,99), y la tarea en adultos explica buena parte de ello: el 83\% de las neumonías de NIH coexisten con otros hallazgos, las etiquetas provienen de NLP y se mezclan vistas PA y AP.
+\textbf{Modelo final.} La regla, fijada antes de ver el test, es el máximo AUC medio en \texttt{adapt\_val}. La elige el fine-tuning parcial desde ImageNet: 0,843, frente a 0,837 del parcial desde Kermany y 0,813 del congelado. Es también la configuración más estable ($\pm0{,}002$) y cuesta lo mismo de entrenar (tabla~\ref{tab:costo}). La tabla~\ref{tab:config} resume su configuración. Se descongela solo el último bloque denso porque la distancia de dominio es grande: los bloques tempranos codifican bordes y texturas genéricos, útiles también en radiografías, mientras \texttt{denseblock4} combina rasgos de alto nivel propios de ImageNet que deben reaprenderse. Su tasa diez veces menor que la de la cabeza evita destruir esos pesos en las primeras épocas. Se audita la semilla 42: en test obtiene AUC 0,893, sensibilidad 0,846 y especificidad 0,806 con umbral 0,485, es decir, 314 verdaderos positivos, 57 falsos negativos, 216 falsos positivos y 897 verdaderos negativos. Frente al artículo se conservó el flujo y la ventaja de transferir desde ImageNet. Cambió el nivel de desempeño (AUC 0,89 frente a 0,99), y la tarea en adultos explica buena parte de ello: el 83\% de las neumonías de NIH coexisten con otros hallazgos, las etiquetas provienen de NLP y se mezclan vistas PA y AP.
+
+\begin{table}[h]\centering\small
+\caption{Configuración definitiva del modelo final (ImageNet $\rightarrow$ NIH, fine-tuning parcial).}\label{tab:config}
+\begin{tabular}{ll}\toprule
+Elemento & Decisión \\\midrule
+Arquitectura y pesos & DenseNet121, ImageNet; cabeza lineal de una salida \\
+Capas entrenables & \texttt{denseblock4}, \texttt{norm5} y cabeza (2.161.153 de 6.954.881 parámetros); BatchNorm congeladas en evaluación \\
+Entrada & $224\times224$, gris replicado a RGB, normalización ImageNet \\
+Aumento (solo entrenamiento) & Afín: $\pm10^\circ$, traslación y escala de 5\%; sin volteo \\
+Pérdida & BCE ponderada, \texttt{pos\_weight} $=3$ (negativos/positivos de \texttt{adapt\_train}) \\
+Optimizador & Adam, $10^{-4}$ en la cabeza y $10^{-5}$ en el bloque; \emph{weight decay} $10^{-4}$; lote de 16 \\
+Parada & Máximo AUC en \texttt{adapt\_val}; ReduceLROnPlateau (factor 0,1, paciencia 2); paciencia 5; tope de 30 épocas \\
+Umbral & Máxima sensibilidad con especificidad $\geq0{,}80$ en \texttt{adapt\_val} \\
+Semillas & 42, 43 y 44; se audita la 42 \\\bottomrule
+\end{tabular}
+\end{table}
 
 \section{Auditoría mediante explicabilidad}\label{sec:auditoria}
 Se calcularon mapas Grad-CAM \parencite{selvaraju2017} sobre la última capa convolucional (tras \texttt{norm5}) y se midieron contra las 114 cajas del radiólogo. La energía del mapa dentro de la caja es el 9,2\% del total, para una caja que ocupa en promedio el 6,0\% de la imagen: una concentración de 1,40 veces lo esperado al azar. El máximo del mapa cae dentro de la caja en el 22\% de las imágenes, frente a un 9,8\% esperado al azar. La localización es real pero débil, e idéntica a la del modelo Kermany sin adaptar (1,40 y 22\%): el ajuste no la mejoró. En cambio, el modelo final pone el 50,5\% de su energía en el marco periférico, que ocupa el 35\% de la imagen. El modelo Kermany pone ahí el 30,9\%. Esa es la zona de los marcadores de lateralidad y del texto \texttt{PORTABLE} que el hospital imprime en las placas AP (figura~\ref{fig:gradcam}, primera fila).
